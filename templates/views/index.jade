@@ -7,9 +7,14 @@ block content
 		if !user
 			p
 				a(href='/user/signup').btn.btn-lg.btn-primary Signup for the course
+			p or
+			p
+				a(href='/keystone/signin').btn.btn-lg.btn-primary Signin	
+				
 		if user && !user.payed
 			p
 				a(href='/user/pay').btn.btn-lg.btn-primary Pay for the course
-		else
+				
+		if user && user.payed
 			p
 				a(href='/user/dashboard', style='margin-right: 10px').btn.btn-lg.btn-primary Start Training
