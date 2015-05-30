@@ -5,7 +5,7 @@ exports = module.exports = function(req, res) {
 	console.log('signup');
 
 	if (req.user) {
-		return res.redirect('/dashboard');
+		return res.redirect('/');
 	}
 
 	var view = new keystone.View(req, res);
