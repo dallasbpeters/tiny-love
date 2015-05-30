@@ -2,6 +2,8 @@ var keystone = require('keystone');
 
 exports = module.exports = function(req, res) {
 
+	console.log('signup');
+
 	if (req.user) {
 		return res.redirect('/dashboard');
 	}
@@ -10,9 +12,10 @@ exports = module.exports = function(req, res) {
 	var locals = res.locals;
 
 	locals.section = 'user';
-	locals.form = req.body;
+	locals.formData = req.body || {};
+	locals.validationErrors = {};
 
-	view.on('post', { action: 'join' }, function(next) {
+	view.on('post', { action: 'signup' }, function(next) {
 
 		if (!req.body.firstname || !req.body.lastname || !req.body.email || !req.body.password) {
 			req.flash('error', 'Please enter a name, email and password.');
@@ -43,18 +46,19 @@ exports = module.exports = function(req, res) {
 			newUser.save(function(err) {
 
 				if (err) {
+					console.log('save error', err);
 					req.flash('error', 'We are having trouble creating your user record.  Please contact us directly.');
 					return next();
 				}
 
 				var onSuccess = function() {
 
-					res.redirect('/dashboard');
+					res.redirect('/user/pay');
 				};
 
 				var onFail = function(err) {
 
-					console.log(err);
+					console.log('fail', err);
 					req.flash('error', 'There was a problem signing you in, please try again.');
 					return next();
 				};
@@ -63,4 +67,6 @@ exports = module.exports = function(req, res) {
 			});
 		});
 	});
+
+	view.render('user/signup');
 };
