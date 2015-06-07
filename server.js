@@ -88,12 +88,18 @@ keystone.set('email tests', require('./routes/emails'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	'posts': ['posts', 'post-categories'],
-	'galleries': 'galleries',
-	'enquiries': 'enquiries',
+	'modules': ['modules', 'lessons'],
 	'users': 'users',
 	'pages': 'pages'
 });
+
+// keystone.set('nav', {
+// 	'posts': ['posts', 'post-categories'],
+// 	'galleries': 'galleries',
+// 	'enquiries': 'enquiries',
+// 	'users': 'users',
+// 	'pages': 'pages'
+// });
 
 // Start Keystone to connect to your database and initialise the web server
 
