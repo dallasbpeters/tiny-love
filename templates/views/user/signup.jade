@@ -1,0 +1,26 @@
+extends ../../layouts/default
+
+block content
+	.container
+		h1 Signup
+		
+		form(method='post')
+			input(type='hidden', name='action', value='signup')
+			.form-group
+				label First Name
+				input(type='text', name='firstname', value=formData['firstname']).form-control
+			
+			.form-group
+				label Last Name
+				input(type='text', name='lastname', value=formData['lastname']).form-control
+				
+			.form-group(class=validationErrors.email ? 'has-error' : null)
+				label Email
+				input(type='email', name='email', value=formData['email']).form-control
+
+			.form-group(class=validationErrors.password ? 'has-error' : null)
+				label Password
+				input(type='password', name='password', value=formData['password']).form-control
+
+			.form-actions
+				button(type='submit').btn.btn-primary Send

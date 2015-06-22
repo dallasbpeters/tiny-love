@@ -1,0 +1,24 @@
+extends ../layouts/default
+
+block content
+	.container: .jumbotron
+		h1 Tiny Love Doula Training
+		hr
+		if !user
+			p
+				a(href='/user/signup').btn.btn-lg.btn-primary Signup for the course
+			p or
+			p
+				a(href='/keystone/signin').btn.btn-lg.btn-primary Signin	
+				
+		if user && !user.payed
+			p
+				a(href='/user/pay').btn.btn-lg.btn-primary Pay for the course
+				
+		if user && (user.payed || user.isAdmin)
+			p
+				a(href='/user/dashboard', style='margin-right: 10px').btn.btn-lg.btn-primary Start Training
+				
+		if user && user.isAdmin
+			p
+				a(href='/keystone', style='margin-right: 10px').btn.btn-lg.btn-primary Admin
