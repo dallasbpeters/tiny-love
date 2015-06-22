@@ -29,7 +29,7 @@ gulp.task('watch:lint', function () {
 });
 
 gulp.task('sass', function(){
-	gulp.src('./public/scss/**/*.scss')
+	gulp.src('./public/styles/**/*.scss')
 		.pipe(sass())
 		.pipe(gulp.dest('./public/css'));
 	});
