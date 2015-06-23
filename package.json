@@ -24,7 +24,7 @@
     "npm": ">=1.3.14"
   },
   "scripts": {
-    "dev": "gulp sass & gulp watch:lint & nodemon -e js,jade server.js",
+    "dev": "gulp sass & gulp sass:watch & gulp watch:lint & nodemon -e js,jade server.js",
     "start": "node server.js"
   },
   "main": "server.js"
