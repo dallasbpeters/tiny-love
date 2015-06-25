@@ -30,9 +30,11 @@ gulp.task('watch:lint', function () {
 
 gulp.task('sass', function(){
 	gulp.src('./public/styles/**/*.scss')
-		.pipe(sass())
+		.pipe(sass({
+			includePaths: require('node-bourbon').includePaths
+		}))
 		.pipe(gulp.dest('./public/css'));
-	});
+});
 
 gulp.task('sass:watch', function () {
   gulp.watch('./public/styles/**/*.scss', ['sass']);
