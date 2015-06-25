@@ -3,6 +3,22 @@ extends ../layouts/default
 block content
     .section.section--first
             .introduction
+
+                //- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
+                //- ... or completely change this header to suit your design.
+
+                a.introduction--logo-white(href='/') Tiny Love
+                //- ul
+                //-     each link in navLinks
+                //-         li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+                ul.introduction__access
+                    if user
+                        if user.canAccessKeystone
+                            li: a(href='/keystone') Open Admin
+                        li: a(href='/keystone/signout') Sign Out
+                    else
+                        li: a(href='/keystone/signin') Sign In
+
                 h2.introduction__headline An emotional headline that captures the spirit of becoming a doula.
                 if !user
 

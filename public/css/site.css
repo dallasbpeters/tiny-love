@@ -403,7 +403,7 @@ h2 {
 h3 {
   font-family: "Learning Curve Pro";
   font-size: 2.6em;
-  line-height: .8;
+  line-height: .7;
   color: #71B3A7; }
 
 p {
@@ -458,7 +458,7 @@ p {
   font-size: 2.8em; }
 
 .home-column {
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto; }
 
 .button {
@@ -487,60 +487,72 @@ p {
     background-color: #ea4331; }
 
 body.home {
-  background-image: url("../../images/home-flower.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-attachment: fixed;
   text-align: center; }
 
 .section {
   padding: 4em 1em; }
   .section > div {
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto; }
   .section.section--white {
     background-color: #ffffff; }
   .section.section--tan {
     background-color: #F6F3F1; }
 
-.home-header {
-  max-width: 1000px;
-  margin: 3em auto;
-  padding: 0 1em;
-  position: relative; }
+.section--first {
+  background-image: url("../../images/home-flower.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 80%;
+  padding: 12em 1em 4em; }
+  @media only screen and (max-width: 480px) {
+    .section--first {
+      padding: 8em 1em; } }
 
-.home-header--logo-white {
+.introduction {
+  color: white; }
+  .introduction .button {
+    margin: 1.25rem 0; }
+
+.introduction--logo-white {
   display: block;
   height: 80px;
   width: 180px;
   text-indent: -5000px;
   background-image: url("../../images/tiny-love-logo-full-white.svg");
   background-repeat: no-repeat;
-  background-size: 100%; }
-
-.home-header__access {
+  background-size: 100%;
   position: absolute;
-  top: 0;
-  right: 0; }
-  .home-header__access li {
+  top: 1em;
+  left: 1em; }
+  @media only screen and (max-width: 40em) {
+    .introduction--logo-white {
+      height: 56px;
+      width: 140px; } }
+
+.introduction__access {
+  position: absolute;
+  top: 1em;
+  right: 1em; }
+  .introduction__access li {
     display: inline-block;
     margin-left: 1em; }
-  .home-header__access a {
+  .introduction__access a {
     font-family: "Diehl Deco";
     color: white;
     text-decoration: none; }
 
-.introduction {
-  color: white; }
-  .introduction .button {
-    margin-bottom: 1.25rem; }
-
 .introduction__headline {
   font-size: 2.3em;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
+  @media only screen and (max-width: 480px) {
+    .introduction__headline {
+      font-size: 2em; } }
 
 .scroll-instructions {
   font-family: "Learning Curve Pro";
+  line-height: .8;
   font-size: 2.8em;
   margin: 0 0 1em 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
