@@ -13,10 +13,10 @@ body.home {
         margin: 0 auto;
     }
     &.section--white {
-        background-color: white;
+        background-color: #ffffff;
     }
     &.section--tan {
-        background-color: #F6F3F1;
+        background-color: $tan;
     }
 }
 
@@ -53,17 +53,25 @@ body.home {
 .introduction {
     color: white;
     .button {
-        margin-bottom: 2em;
+        margin-bottom: 1.25rem;
     }
 }
 
 .introduction__headline {
     font-size: 2.3em;
-    margin-bottom: 1em;
     text-shadow: $text-shadow-style;
 }
 .scroll-instructions {
     font-family: $cursive;
     font-size: 2.8em;
-    margin: 0 0 1em 0
+    margin: 0 0 1em 0;
+    text-shadow: $text-shadow-style;
+}
+
+
+.how-it-works {
+    background-image: url('../images/cherry-blossom.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    padding-top: 5em;
 }
