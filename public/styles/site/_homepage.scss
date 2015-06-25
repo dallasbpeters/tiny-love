@@ -23,6 +23,7 @@ body.home {
 .home-header {
     max-width: 1000px;
     margin: 3em auto;
+    padding: 0 1em;
     position: relative;
 }
 .home-header--logo-white {
@@ -31,6 +32,7 @@ body.home {
     width: 180px;
     text-indent: -5000px;
     background-image: url('../../images/tiny-love-logo-full-white.svg');
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 .home-header__access {
@@ -50,8 +52,18 @@ body.home {
 
 .introduction {
     color: white;
+    .button {
+        margin-bottom: 2em;
+    }
 }
 
 .introduction__headline {
-    font-size: 2em;
+    font-size: 2.3em;
+    margin-bottom: 1em;
+    text-shadow: $text-shadow-style;
+}
+.scroll-instructions {
+    font-family: $cursive;
+    font-size: 2.8em;
+    margin: 0 0 1em 0
 }

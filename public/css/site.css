@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -357,9 +358,9 @@ th {
 
 @font-face {
   font-family: 'Diehl Deco';
-  src: url("../../fonts/DIEHLD__.eot");
+  src: url("../../fonts/DIEHLD.eot");
   /* IE9 Compat Modes */
-  src: url("../../fonts/DIEHLD__.eot?#iefix") format("embedded-opentype"), url("../../fonts/DIEHLD__.woff") format("woff"), url("../../fonts/DIEHLD__.ttf") format("truetype"), url("../../fonts/DIEHLD__.svg#0b53f6c79a610ae68458958c48464b61") format("svg");
+  src: url("../../fonts/DIEHLD.eot?#iefix") format("embedded-opentype"), url("../../fonts/DIEHLD.woff") format("woff"), url("../../fonts/DIEHLD.ttf") format("truetype"), url("../../fonts/DIEHLD.svg#0b53f6c79a610ae68458958c48464b61") format("svg");
   /* Legacy iOS */
   font-style: normal;
   font-weight: 400; }
@@ -378,7 +379,8 @@ html {
 
 body {
   height: 100%;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  color: #313d4c; }
 
 ul, ol {
   margin: 0;
@@ -386,14 +388,83 @@ ul, ol {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  line-height: 1.2; }
+  line-height: 1.3; }
 
 h1, h2 {
   font-family: "Diehl Deco"; }
 
+/*!
+  Ionicons, v1.0.0
+  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
+  https://twitter.com/benjsperry  https://twitter.com/ionicframework
+  MIT License: https://github.com/driftyco/ionicons
+
+  Android-style icons originally built by Google’s
+  Material Design Icons: https://github.com/google/material-design-icons
+  used under CC BY http://creativecommons.org/licenses/by/4.0/
+  Modified icons to fit ionicon’s grid from original.
+*/
+@font-face {
+  font-family: "TinyLove-Linea";
+  src: url("../iconfont/fonts/ionicons.eot?v=1.0.0");
+  src: url("../iconfont/fonts/ionicons.eot?v=1.0.0#iefix") format("embedded-opentype"), url("../iconfont/fonts/ionicons.ttf?v=1.0.0") format("truetype"), url("../iconfont/fonts/ionicons.woff?v=1.0.0") format("woff"), url("../iconfont/fonts/ionicons.svg?v=1.0.0#Ionicons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.ion, .tinylove-linea,
+.icon-arrows_check:before,
+.icon-arrows_circle_check:before,
+.icon-arrows_down_double:before {
+  display: inline-block;
+  font-family: "TinyLove-Linea";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-arrows_check:before {
+  content: ""; }
+
+.icon-arrows_circle_check:before {
+  content: ""; }
+
+.icon-arrows_down_double:before {
+  content: ""; }
+
+[class^="icon-"] {
+  font-size: 2.8em; }
+
 .home-column {
   max-width: 700px;
   margin: 0 auto; }
+
+.button {
+  display: inline-block;
+  font-family: "Diehl Deco";
+  background-color: #313d4c;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.6em 1.5em;
+  border-radius: 2px;
+  position: relative;
+  -webkit-transition: background-color 500ms ease;
+  -moz-transition: background-color 500ms ease;
+  transition: background-color 500ms ease; }
+  .button:active {
+    opacity: 0.65; }
+  .button:hover {
+    background-color: #27313c; }
+
+.button--red {
+  background-color: #ee6556;
+  box-shadow: 0px 3px #DC2B27; }
+  .button--red:hover {
+    background-color: #ea4331; }
 
 body.home {
   background-image: url("../../images/home-flower.jpg");
@@ -415,6 +486,7 @@ body.home {
 .home-header {
   max-width: 1000px;
   margin: 3em auto;
+  padding: 0 1em;
   position: relative; }
 
 .home-header--logo-white {
@@ -423,6 +495,7 @@ body.home {
   width: 180px;
   text-indent: -5000px;
   background-image: url("../../images/tiny-love-logo-full-white.svg");
+  background-repeat: no-repeat;
   background-size: 100%; }
 
 .home-header__access {
@@ -439,6 +512,15 @@ body.home {
 
 .introduction {
   color: white; }
+  .introduction .button {
+    margin-bottom: 2em; }
 
 .introduction__headline {
-  font-size: 2em; }
+  font-size: 2.3em;
+  margin-bottom: 1em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
+
+.scroll-instructions {
+  font-family: "Learning Curve Pro";
+  font-size: 2.8em;
+  margin: 0 0 1em 0; }

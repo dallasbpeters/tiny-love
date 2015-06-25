@@ -1,0 +1,19 @@
+{
+    "repo": "driftyco/ionicons",
+    "development": {},
+    "version": "1.0.0",
+    "styles": [
+        "css/tinylove-linea.css"
+    ],
+    "name": "TinyLove-Linea",
+    "dependencies": {},
+    "keywords": [],
+    "license": "MIT",
+    "fonts": [
+        "fonts/tinylove-linea.eot",
+        "fonts/tinylove-linea.svg",
+        "fonts/tinylove-linea.ttf",
+        "fonts/tinylove-linea.woff"
+    ],
+    "description": "The premium icon font for Ionic Framework."
+}
