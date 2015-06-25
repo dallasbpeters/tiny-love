@@ -398,7 +398,7 @@ h1, h2 {
 body.home {
   background-image: url("../../images/home-flower.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% auto;
   background-attachment: fixed;
   text-align: center; }
 
