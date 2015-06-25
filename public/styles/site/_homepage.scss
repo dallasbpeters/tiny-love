@@ -1,0 +1,57 @@
+body.home {
+    background-image: url('../../images/home-flower.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.section {
+    padding: 4em 1em;
+    & > div {
+        max-width: $section-max-width;
+        margin: 0 auto;
+    }
+    &.section--white {
+        background-color: white;
+    }
+    &.section--tan {
+        background-color: #F6F3F1;
+    }
+}
+
+.home-header {
+    max-width: 1000px;
+    margin: 3em auto;
+    position: relative;
+}
+.home-header--logo-white {
+    display: block;
+    height: 80px;
+    width: 180px;
+    text-indent: -5000px;
+    background-image: url('../../images/tiny-love-logo-full-white.svg');
+    background-size: 100%;
+}
+.home-header__access {
+    position: absolute;
+    top: 0;
+    right: 0;
+    li {
+        display: inline-block;
+        margin-left: 1em;
+    }
+    a {
+        font-family: $display-font;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.introduction {
+    color: white;
+}
+
+.introduction__headline {
+    font-size: 2em;
+}

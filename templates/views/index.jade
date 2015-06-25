@@ -1,58 +1,64 @@
 extends ../layouts/default
 
 block content
-    .section.intro
-        a.logo.white(href='/') Tiny Love
-        h2 An emotional headline that captures the spirit of becoming a doula.
-        if !user
-            p
-                a(href='/user/signup').button.red Signup for the program!
-            p Still curious? Keep scrolling.
+    .section.section--first
+            .introduction
+                h2.introduction__headline An emotional headline that captures the spirit of becoming a doula.
+                if !user
 
-    .section.how-it-works
-        h2 How does the program work?
-        h3 We’ve designed this program so that you need no prior experience to jump right in.
-        p The course is a mix of online materials and real world experiences. It consists of books, videos, articles, and practical activities to help you start your business as a doula.
-        p Rather than bore you with a pre-recorder similar, we leverage resources in your community and on the web to keep your learning experience fun and engaging. The assignments are designed to help you network and start becoming active in and around your city or town.
-        p We’ve poured the experience of over 1400 births into the course and know you will find it to be a valuable, business-building, active training program. Its concise and fulfilling and will prepare you for a future of doula practice.
-        a(href="#").button.dark Tips for a successful experience
+                    a(href='/user/signup').button.red Signup for the program!
+                    p Still curious? Keep scrolling.
+
+    .section.section--white
+        .how-it-works
+            h2 How does the program work?
+            h3 We’ve designed this program so that you need no prior experience to jump right in.
+            p The course is a mix of online materials and real world experiences. It consists of books, videos, articles, and practical activities to help you start your business as a doula.
+            p Rather than bore you with a pre-recorder similar, we leverage resources in your community and on the web to keep your learning experience fun and engaging. The assignments are designed to help you network and start becoming active in and around your city or town.
+            p We’ve poured the experience of over 1400 births into the course and know you will find it to be a valuable, business-building, active training program. Its concise and fulfilling and will prepare you for a future of doula practice.
+            a(href="#").button.dark Tips for a successful experience
 
 
-    .section.requirements
-        h2 What are the requirements?
-        ul
-            li Complete the online modules.
-            li Obtain three evaluations from Mother and Partner or other family or friend.
-            li Sign a commitment to operate within the Tiny Love Standards of Practice
-            li Read the required reading materials.
-            li Access to the internet through a computer, tablet, or smartphone.
-            li Attend a free childbirth class, (you may be required to pay a fee to attend a class if you cannot find a free on in your area).
+    .section.section--tan
+        .requirements
+            h2 What are the requirements?
+            ul
+                li Complete the online modules.
+                li Obtain three evaluations from Mother and Partner or other family or friend.
+                li Sign a commitment to operate within the Tiny Love Standards of Practice
+                li Read the required reading materials.
+                li Access to the internet through a computer, tablet, or smartphone.
+                li Attend a free childbirth class, (you may be required to pay a fee to attend a class if you cannot find a free on in your area).
 
-    .section.books
-        h2 What books will I need?
+    .section.section--white
+        .books
+            h2 What books will I need?
 
-    .section.mentors
-        h2 Who are the mentors?
+    .section.section--tan
+        .mentors
+            h2 Who are the mentors?
 
-        .bio-teaser
-            h3 Jessica
-            p Mom of Two, Birth Doula, CPM, LM- Homebirth Midwife.
-            a(href="#").button.dark More about Jessica
+            .bio-teaser
+                h3 Jessica
+                p Mom of Two, Birth Doula, CPM, LM- Homebirth Midwife.
+                a(href="#").button.dark More about Jessica
 
-        .bio-teaser
-                h3 Kristen
-                p Mom of three, Birth Doula, CPM, LDM - Midwife
-                a(href="#").button.dark More about Kristen
+            .bio-teaser
+                    h3 Kristen
+                    p Mom of three, Birth Doula, CPM, LDM - Midwife
+                    a(href="#").button.dark More about Kristen
 
-    .section.cost
-        h2 How much does it cost?
-        h3 The course is a one time cost of #[span.price $460.00]
-        p While there are no fees for things like doula training organizations, packet fees, application fees, membership fees or certification renewals we do require that you purchase the books on the required reading list and highly recommend that you purchase The Labor Progress Handbook. You can find these books new or used at a local bookstore or at many online retailers.
-        p Since all materials are available immediately online there are no refunds offered after you have purchased the program.
-        p Payments can be made online using your credit card or your PayPal account.
+    .section.section--white
+        .cost
+            h2 How much does it cost?
+            h3 The course is a one time cost of #[span.price $460.00]
+            p While there are no fees for things like doula training organizations, packet fees, application fees, membership fees or certification renewals we do require that you purchase the books on the required reading list and highly recommend that you purchase The Labor Progress Handbook. You can find these books new or used at a local bookstore or at many online retailers.
+            p Since all materials are available immediately online there are no refunds offered after you have purchased the program.
+            p Payments can be made online using your credit card or your PayPal account.
 
-    .section.get-started
-        h2 Let’s get started!
-        p You're just a few steps away from beginning your new career as a birth doula.
-        a(href="#").button.red Start your doula career today!
-        small Still have questions? Check out our FAQ page or send us an email and we'll get right back with an answer.
+    .section.section--tan
+        .get-started
+            h2 Let’s get started!
+            p You're just a few steps away from beginning your new career as a birth doula.
+            a(href="#").button.red Start your doula career today!
+            small Still have questions? Check out our FAQ page or send us an email and we'll get right back with an answer.
