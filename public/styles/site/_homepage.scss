@@ -12,11 +12,11 @@ body.home {
         max-width: $section-max-width;
         margin: 0 auto;
     }
-    &.section--white {
-        background-color: #ffffff;
-    }
-    &.section--tan {
-        background-color: $tan;
+    &.section--white {background-color: #ffffff;}
+    &.section--tan {background-color: $tan;}
+    &.section--teal {
+        background-color: $teal;
+        color: white;
     }
 }
 
@@ -159,5 +159,17 @@ color: white;
     img {
         max-width: 180px;
         margin: 0 auto 1em auto;
+    }
+}
+
+.get-started {
+    h3 {color:white}
+    small {
+        display: block;
+        font-size: .9em;
+        opacity: .9;
+    }
+    .button {
+        margin-bottom: 1.25rem;
     }
 }

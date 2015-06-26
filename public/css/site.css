@@ -510,6 +510,18 @@ p {
   border: 6px solid #FFFFFF;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2); }
 
+.price {
+  color: #313D4C;
+  position: relative;
+  top: .1em;
+  margin-left: .5em;
+  display: inline-block;
+  -webkit-transform: scale(1.4) rotate(-3deg);
+  -moz-transform: scale(1.4) rotate(-3deg);
+  -ms-transform: scale(1.4) rotate(-3deg);
+  -o-transform: scale(1.4) rotate(-3deg);
+  transform: scale(1.4) rotate(-3deg); }
+
 body.home {
   text-align: center; }
   @media only screen and (max-width: 40em) {
@@ -529,6 +541,9 @@ body.home {
     background-color: #ffffff; }
   .section.section--tan {
     background-color: #F6F3F1; }
+  .section.section--teal {
+    background-color: #71B3A7;
+    color: white; }
 
 .section--first {
   background-image: url("../../images/home-flower.jpg");
@@ -667,3 +682,14 @@ body.home {
   .bio-teaser img {
     max-width: 180px;
     margin: 0 auto 1em auto; }
+
+.get-started h3 {
+  color: white; }
+
+.get-started small {
+  display: block;
+  font-size: .9em;
+  opacity: .9; }
+
+.get-started .button {
+  margin-bottom: 1.25rem; }
