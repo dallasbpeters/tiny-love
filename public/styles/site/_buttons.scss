@@ -25,6 +25,13 @@
         background-color: darken($red, 8%);
     }
 }
+.button--teal {
+    background-color: $teal;
+    box-shadow: 0px 3px $teal-dark;
+    &:hover {
+        background-color: darken($teal, 8%);
+    }
+}
 
 .button--small {
     font-size: .9em;

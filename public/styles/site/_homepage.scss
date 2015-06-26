@@ -14,8 +14,12 @@ body.home {
     }
     &.section--white {background-color: #ffffff;}
     &.section--tan {background-color: $tan;}
-    &.section--teal {
-        background-color: $teal;
+    &.section--red {
+        background-color: $red;
+        color: white;
+    }
+    &.section--blue {
+        background-color: $deep-blue-dark;
         color: white;
     }
 }
@@ -26,16 +30,16 @@ body.home {
     background-size: cover;
     background-position: center center;
     min-height: 80%;
-    padding: 12em 1em 4em;
+    padding: 12em 1em 4em 1em;
     @media only screen and (max-width: 480px) {
-        padding: 8em 1em;
+        padding: 8em 1.5em 3em 1.5em;
     }
 }
 
 .introduction {
     color: white;
     .button {
-        margin: 1.25rem 0;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -83,6 +87,10 @@ body.home {
     font-size: 2.8em;
     margin: 0 0 1em 0;
     text-shadow: $text-shadow-style;
+    text-align: center !important;
+    @media only screen and (max-width: 40em) {
+        font-size: 2.3em;
+    }
 }
 
 
@@ -156,6 +164,12 @@ color: white;
     float: left;
     width: 46%;
     padding: 2%;
+    @media only screen and (max-width: 40em) {
+        float: none;
+        width: 100%;
+        padding: 1em;
+        p {text-align: center !important;}
+    }
     img {
         max-width: 180px;
         margin: 0 auto 1em auto;
@@ -163,7 +177,6 @@ color: white;
 }
 
 .get-started {
-    h3 {color:white}
     small {
         display: block;
         font-size: .9em;

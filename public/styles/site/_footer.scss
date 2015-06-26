@@ -1,0 +1,18 @@
+.site-footer {
+    background-color: $deep-blue;
+    color: white;
+    padding: 3em 1em;
+    @media only screen and (max-width: 40em) {
+        padding: 2em 1em;
+        .logo {
+            width: 80px;
+        }
+    }
+}
+
+.made-in {
+    font-family: $cursive;
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center !important;
+}
