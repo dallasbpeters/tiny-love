@@ -1,9 +1,13 @@
 body.home {
     text-align: center;
+    @media only screen and (max-width: 40em) {
+        p {text-align: justify;}
+    }
 }
 
 .section {
     padding: 4em 1em;
+    @include clearfix;
     & > div {
         max-width: $section-max-width;
         margin: 0 auto;
@@ -128,10 +132,32 @@ body.home {
     bottom: 15px;
     right: -34px;
     background-color: $red;
-    color: white;
+color: white;
     text-transform: uppercase;
     font-size: .75em;
     letter-spacing: .08em;
     padding: .5em 3em;
     @include transform(rotate(-35deg));
+}
+
+.mentors {
+    position: relative;
+    max-width: 650px !important;
+    &:after {
+        content: url('../../images/bouquet-1.svg');
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include transform(translateY(50%)translateX(-50%));
+    }
+}
+
+.bio-teaser {
+    float: left;
+    width: 46%;
+    padding: 2%;
+    img {
+        max-width: 180px;
+        margin: 0 auto 1em auto;
+    }
 }
