@@ -71,6 +71,12 @@ body.home {
         font-family: $display-font;
         color: white;
         text-decoration: none;
+        display: inline-block;
+        @include transition(all 200ms ease-in-out);
+        &:hover {
+            color: $red;
+            @include transform(scale(1.05));
+        }
     }
 }
 
