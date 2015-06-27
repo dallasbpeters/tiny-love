@@ -5,6 +5,7 @@
 
 @import "colors";
 @import "base";
+@import "mixins";
 
 @import "../iconfont/scss/ionicons";
 
@@ -14,4 +15,5 @@
 @import "site/images";
 @import "site/typography";
 @import "site/homepage";
+@import "site/forms";
 @import "site/footer";

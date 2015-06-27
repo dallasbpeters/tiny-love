@@ -1,0 +1,12 @@
+@mixin torn-page {
+    &:after {
+        content: "";
+        height: 14px;
+        width: 100%;
+        position: absolute;
+        top:100%;
+        z-index: 5;
+        background-image: url('../images/cut-effect.svg');
+        background-repeat: repeat-x;
+    }
+}

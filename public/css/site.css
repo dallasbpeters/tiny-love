@@ -492,7 +492,13 @@ p {
   position: relative;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
-  transition: all 500ms ease; }
+  transition: all 500ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none; }
   .button:active {
     opacity: 0.65; }
   .button:hover {
@@ -730,6 +736,93 @@ body.home {
 
 .get-started .button {
   margin-bottom: 1.25rem; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  border: solid 1px #D7D9DC;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 0.55em;
+  font-size: 1.2em;
+  border-radius: 2px; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    box-shadow: 0 0 5px rgba(113, 179, 167, 0.5);
+    border: 1px solid #71b3a7;
+    outline: none; }
+
+.form-group {
+  margin-bottom: 1.5em; }
+  .form-group label {
+    font-weight: 400;
+    display: block;
+    margin-bottom: .25em; }
+
+.return-home {
+  font-family: "Diehl Deco";
+  text-decoration: none;
+  color: #313D4C;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  transition: all 250ms ease;
+  display: block; }
+  .return-home:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: url("/images/logo-flower.svg");
+    margin-right: .5em; }
+  .return-home:hover {
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03); }
+
+.access-form .main {
+  max-width: 440px;
+  margin: 0 auto;
+  padding-top: 5em; }
+
+.single-form {
+  background-color: white;
+  margin: 1em;
+  position: relative;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px; }
+  .single-form:after {
+    content: "";
+    height: 14px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    z-index: 5;
+    background-image: url("../images/cut-effect.svg");
+    background-repeat: repeat-x; }
+
+.single-form__title {
+  text-align: center;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  margin: 0;
+  background-color: #313D4C;
+  background-image: url("../images/bg-get-started@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  padding: 2.6em 1em; }
+
+.single-form__form {
+  padding: 2em; }
 
 .site-footer {
   background-color: #313D4C;

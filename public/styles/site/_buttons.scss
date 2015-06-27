@@ -10,6 +10,8 @@
     box-shadow: 0px 3px $deep-blue-dark;
     position: relative;
     @include transition(all 500ms ease);
+    @include appearance(none);
+    border: none;
     &:active {
         opacity: 0.65;
     }
