@@ -11,18 +11,29 @@ input[type="password"] {
     font-size: 1.2em;
     border-radius: 2px;
     &:focus {
-        box-shadow: 0 0 5px rgba($teal, .5);
-        border: 1px solid rgba($teal, 1);
+        box-shadow: 0 0 10px rgba($red, .5);
+        border: 1px solid white;
         outline: none;
+        @include transform(scale(1.03));
     }
 }
 
 .form-group {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
+    &:last-child {
+        margin-bottom: 0;
+    }
     label {
         font-weight: 400;
         display: block;
         margin-bottom: .25em;
+    }
+}
+
+.form-actions {
+    text-align: right;
+    .button {
+        margin-bottom: 0;
     }
 }
 
@@ -51,7 +62,7 @@ input[type="password"] {
 }
 
 .access-form .main {
-    max-width: 440px;
+    max-width: 450px;
     margin: 0 auto;
     padding-top: 5em;
 }
@@ -63,6 +74,8 @@ input[type="password"] {
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
     @include torn-page;
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
 }
 .single-form__title {
     text-align: center;
@@ -75,8 +88,9 @@ input[type="password"] {
     background-size: cover;
     color: white;
     text-shadow: $text-shadow-style;
-    padding: 2.6em 1em;
+    padding: 2.2em 1em;
+    @include filter(grayscale(30%));
 }
 .single-form__form {
-    padding: 2em;
+    padding: 2.2em;
 }
