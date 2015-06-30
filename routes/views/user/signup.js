@@ -47,7 +47,7 @@ exports = module.exports = function(req, res) {
 
 				if (err) {
 					console.log('save error', err);
-					req.flash('error', 'We are having trouble creating your user record.  Please contact us directly.');
+					req.flash('error', 'We are having trouble creating your account. Please contact us directly.');
 					return next();
 				}
 
