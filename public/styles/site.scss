@@ -9,11 +9,15 @@
 
 @import "../iconfont/scss/ionicons";
 
+@import "vendor/remodal";
+@import "vendor/remodal-default-theme";
+
 @import "site/icons";
 @import "site/layout";
 @import "site/buttons";
 @import "site/images";
 @import "site/typography";
+@import "site/flash-messages";
 @import "site/homepage";
 @import "site/forms";
 @import "site/footer";
