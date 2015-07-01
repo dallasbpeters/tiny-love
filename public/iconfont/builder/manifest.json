@@ -1,5 +1,5 @@
 {
-  "build_hash": "75e5b2777778bb842c61232005771f82",
+  "build_hash": "efea8dfdd074f8d81d67c9815859e0c6",
   "prefix": "icon-",
   "version": "1.0.0",
   "name": "TinyLove-Linea",
@@ -661,6 +661,14 @@
       "name": "bag"
     },
     {
+      "code": "0xf146",
+      "name": "basic_ban"
+    },
+    {
+      "code": "0xf14c",
+      "name": "basic_lock_open"
+    },
+    {
       "code": "0xf111",
       "name": "battery-charging"
     },
@@ -875,6 +883,10 @@
     {
       "code": "0xf3c2",
       "name": "easel"
+    },
+    {
+      "code": "0xf14d",
+      "name": "ecommerce_bag"
     },
     {
       "code": "0xf2bf",
