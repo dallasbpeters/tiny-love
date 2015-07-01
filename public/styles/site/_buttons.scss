@@ -28,6 +28,13 @@
         background-color: darken($red, 8%);
     }
 }
+.button--green {
+    background-color: $green;
+    box-shadow: 0px 3px $green-dark;
+    &:hover {
+        background-color: darken($green, 8%);
+    }
+}
 .button--teal {
     background-color: $teal;
     box-shadow: 0px 3px $teal-dark;

@@ -1,6 +1,27 @@
+img {
+  max-width: 100%;
+}
 .image-rounded {
     display: block;
     border-radius: 500px;
     border: 6px solid #FFFFFF;
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.20);
+}
+
+.article-image {
+  width: 50%;
+  border: 6px solid #FFFFFF;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.20);
+  @include transform(rotate(-2deg));
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
+}
+.article-image--fl {
+  float: left;
+  margin: 0 1em 1em -1em;
+}
+.article-image--fr {
+  float: right;
+  margin: 0 -1em 1em 1em;
 }

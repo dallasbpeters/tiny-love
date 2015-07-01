@@ -4,13 +4,7 @@ include ../mixins/html-header
 doctype html
 html
 
-        +html-header
-
-        //- Include template-specific stylesheets by extending the css block
-        block css
-
-        //- Add any other template-specific HEAD tags by extending the head block
-        block head
+    +html-header
 
     body.home
 
@@ -40,6 +34,8 @@ html
         //- jQuery is included by default, and required by both Bootstrap
         //- and the KeystoneJS Content Editor.
         script(src='/js/jquery/jquery-2.1.3.min.js')
+        
+        script(src='/js/remodal.min.js')
 
         //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
         //- which generate links to edit content for users who can access Keystone

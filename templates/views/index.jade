@@ -33,8 +33,28 @@ block content
             p We created a mix of online materials and real world experiences. It consists of books, videos, articles, and practical activities to help you start your business as a doula.
             p Rather than bore you with a pre-recorded siminar, we leverage resources in your community and on the web to keep your learning experience fun and engaging. The assignments are designed to help you network and start becoming active in and around your city or town.
             p We’ve poured the experience of over 1400 births into the course and know you will find it to be a valuable, business-building, active training program. Its concise and fulfilling and will prepare you for a future of doula practice.
-            a(href="#").button.dark Tips to succeed
-
+            
+            a.button.button--small(href='#tips-modal') Tips to succeed
+            .remodal(data-remodal-id='tips-modal', role='dialog', aria-labelledby='tipsModalTitle')
+              button.remodal-close(data-remodal-action='close', aria-label='Close')
+              div
+                h2#tipsModalTitle How to get the most of the course.
+                h3 Get inspired.
+                p This program is designed to be interactive, it encourages you to go in to your community. engage with birth professionals and expecting/postpartum families, we realize that this can be intimidating at first, but once you make these efforts, it   will get easier and you will be well on your way in becoming a skilled professionally certified birth doula.
+                h3 Work at your own speed.
+                p We recommend working at whatever pace allows you to absorb the information and feel prepared. If you go too quickly, the information may not “sink in”, and if you go too slowly, you may forget essential information and may not feel as inspired. So, find what pace works for you and your family.
+                h3 Be organized.
+                p You will keep a portfolio - a designated folder where you keep all of your doula training related papers. You will find that when you start meeting people in your community you will start to get lots of business cards and pamphlets, try and keep them together. Once you complete your portfolio, you will find it will be much easier if you’ve been organized from the beginning.
+                h3 Keep a journal.
+                p If you’ve never kept a journal before or if you’ve always had one, this would be a great time in your life to journal about your blossoming doula experience. Through this process of becoming certified, lots of folks have life changing and eye opening discoveries about themselves, these feelings and experiences can feel very intense, joyous, or just confusing. Writing a journal can be a wonderful tool for self discovery.
+                h3 Meet other doulas.
+                p We highly recommend meeting other doulas in your community, online, or anywhere you can find them. Having support from someone who can understand your experiences can be one of the most valuable professional relationships you can have. Being at a birth and processing all the intense emotions, procedures, events, and outcomes that you have just witnessed, can be overwhelming, to have a friend to process these events with can make these moments not only less intense, but also more joyful.
+                h3 Your portfolio.
+                p Keep your portfolio up to date and organized with all of your assignments and notes. This is evidence that you completed the work and may be audited. The work is not only required for certification but provides you with a useful start in your business.
+                
+              //- button.button.remodal-cancel(data-remodal-action='cancel') Cancel
+              button.button.button--green(data-remodal-action='confirm') Cool. I can do that!
+            //- end .remodal
 
     .section.section--tan
         .requirements
@@ -68,13 +88,25 @@ block content
                 img.image-rounded(src="images/jessica.jpg", alt="Jessica", width="180")
                 h3 Jessica
                 p Mom of Two, Birth Doula, CPM, LM- Homebirth Midwife.
-                a.button.button--small(href="#") More about Jessica
+                a.button.button--small(href="#jessica-modal") More about Jessica
+                .remodal(data-remodal-id='jessica-modal', role='dialog', aria-labelledby='jessicaModalTitle')
+                  button.remodal-close(data-remodal-action='close', aria-label='Close')
+                  div
+                    h3#jessicaModalTitle Meet Jessica
+                    img.article-image.article-image--fl(src="/images/jessica-work.jpg", alt="Jessica at after a birth.")
+                    p Being a doula for more than 20 years and a DONA Birth Doula Trainer for 10, hastaught me that birth is normal, sacred, and something that will affect mothers, children and fathers for the rest of their lives. It sets the foundation for everything that follows. Birth (and pregnancy) teach us that we can accomplish something truly miraculous, we can give of ourselves in ways we never knew, and we can make tough decisions. It also teaches us that when we open up our body and heart, accept support from others, and connect on a deeper level, it brings out the mother in each of us.  I have mentored countless doulas, trained hundreds of birth doulas, and been fortunate enough to have shared birth with so many families from various cultural backgrounds, all while raising my own two amazing and beautiful babies. Through many years of doula training around the country, I have actively worked towards my goal as a doula and a mentor - to bring out the mother, strengthen the family bond, and provide a valuable service. I try to convey that along with sound business development advice here in this on-line course. 
 
             .bio-teaser
                 img.image-rounded(src="images/kristen.jpg", alt="Kristen", width="180")
                 h3 Kristen
                 p Mom of three, Birth Doula, CPM, LDM - Midwife
-                a.button.button--small(href="#") More about Kristen
+                a.button.button--small(href="#kristen-modal") More about Kristen
+                .remodal(data-remodal-id='kristen-modal', role='dialog', aria-labelledby='kirstenModalTitle')
+                  button.remodal-close(data-remodal-action='close', aria-label='Close')
+                  div
+                    h3#kirstenModalTitle Meet Kristen
+                    img.article-image.article-image--fr(src="/images/kristen-work.jpg", alt="Kristen at after a birth.")
+                    p Over the last two decades I have devoted my knowledge, experience and practical understanding in helping to guide mothers and families during pregnancy, birth and postpartum. I have three children and three very different birth experiences. My first was born in a hospital with lots of interventions and very little support, I left that birth confused, frustrated, and in pain. I knew there had to be a better way, I vowed to offer my emotional, physical, and practical support to women in labor as often as they would let me, I had no idea that what I was doing was called a "doula".  When my second baby was born, I gave birth in a hospital with a CNM and not just one doula, but two! It was completely natural and the most empowering experience of my life. After my second son was born, I was convinced that doulas should be available to every woman that wants one and I was going to set out to make that happen. I started mentoring new doulas and simultaneously, started on my path to midwifery. Finally, I had my last baby, at home in water, with two CPM's, and an amazing doula, I couldn't have asked for a better more beautiful birth experience. I love birth, I love watching women transform into mothers, and  I love providing opportunities for women to touch another woman's life on what is arguably the most important day of her life.  Having small children and working as a doula, is not only possible, its extremely rewarding, can you think of a better reason to leave the house?
 
     .section.section--white
         .cost
@@ -96,9 +128,10 @@ block content
                       font(size='2', face='Arial', color='#0079CD') How PayPal Works
             //- PayPal Logo
 
-    .section.section--tan
-        .get-started
-            h2 Let’s get started!
-            h3 You're just a few steps away from beginning your new career as a birth doula.
-            a(href="/user/signup").button.button--red Sign me up!
-            small Still have questions? Check out our FAQ page or send us an email and we'll get right back with an answer.
+    if !user
+      .section.section--tan
+          .get-started
+              h2 Let’s get started!
+              h3 You're just a few steps away from beginning your new career as a birth doula.
+              a(href="/user/signup").button.button--red Sign me up!
+              small Still have questions? Check out our FAQ page or send us an email and we'll get right back with an answer.
