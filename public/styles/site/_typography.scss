@@ -1,0 +1,8 @@
+.price {
+    color: $deep-blue;
+    position: relative;
+    top: .1em;
+    margin-left: .5em;
+    display: inline-block;
+    @include transform(scale(1.4) rotate(-3deg));
+}

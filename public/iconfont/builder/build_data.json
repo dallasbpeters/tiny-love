@@ -1,0 +1,20 @@
+{
+  "build_hash": "fde686976be82390040a63ff3fe29eb9",
+  "prefix": "icon-",
+  "version": "1.0.0",
+  "name": "TinyLove-Linea",
+  "icons": [
+    {
+      "code": "0xf138",
+      "name": "arrows_check"
+    },
+    {
+      "code": "0xf13b",
+      "name": "arrows_circle_check"
+    },
+    {
+      "code": "0xf145",
+      "name": "arrows_down_double"
+    }
+  ]
+}

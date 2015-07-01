@@ -1,23 +1,19 @@
-// Bootstrap
-// =========
-
-// Bootstrap can be removed entirely by deleting this line.
-
-@import "bootstrap/bootstrap";
-
-// The easiest way to customise Bootstrap variables while
-// being able to easily override the source files with new
-// versions is to override the ones you want in another file.
-//
-// You can also add your own custom variables to this file for
-// use in your site stylesheets.
-
+@import "vendor/normalize";
+@import "bourbon";
 @import "site/variables";
 @import "site/fonts";
 
+@import "colors";
+@import "base";
+@import "mixins";
 
-// Site Styles
-// ===========
+@import "../iconfont/scss/ionicons";
 
-// Add your own site style includes here
+@import "site/icons";
 @import "site/layout";
+@import "site/buttons";
+@import "site/images";
+@import "site/typography";
+@import "site/homepage";
+@import "site/forms";
+@import "site/footer";

@@ -1,24 +1,104 @@
 extends ../layouts/default
 
 block content
-	.container: .jumbotron
-		h1 Tiny Love Doula Training
-		hr
-		if !user
-			p
-				a(href='/user/signup').btn.btn-lg.btn-primary Signup for the course
-			p or
-			p
-				a(href='/keystone/signin').btn.btn-lg.btn-primary Signin	
-				
-		if user && !user.payed
-			p
-				a(href='/user/pay').btn.btn-lg.btn-primary Pay for the course
-				
-		if user && (user.payed || user.isAdmin)
-			p
-				a(href='/user/dashboard', style='margin-right: 10px').btn.btn-lg.btn-primary Start Training
-				
-		if user && user.isAdmin
-			p
-				a(href='/keystone', style='margin-right: 10px').btn.btn-lg.btn-primary Admin
+    .section.section--first
+            .introduction
+
+                //- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
+                //- ... or completely change this header to suit your design.
+
+                a.introduction--logo-white(href='/') Tiny Love
+                //- ul
+                //-     each link in navLinks
+                //-         li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+                ul.introduction__access
+                    if user
+                        if user.canAccessKeystone
+                            li: a(href='/keystone') Open Admin
+                        li: a(href='/keystone/signout') Sign Out
+                    else
+                        li: a(href='/keystone/signin') Sign In
+
+                h2.introduction__headline An emotional headline that captures the spirit of becoming a doula.
+                if !user
+
+                    a(href='/user/signup').button.button--red Signup for the program!
+                    p.scroll-instructions Still curious? Keep scrolling.
+                    i.icon-arrows_down_double
+
+    .section.section--white
+        .how-it-works
+            h2 How does the program work?
+            h3 We’ve designed this program so that you need no prior experience to jump right in.
+            p We created a mix of online materials and real world experiences. It consists of books, videos, articles, and practical activities to help you start your business as a doula.
+            p Rather than bore you with a pre-recorded siminar, we leverage resources in your community and on the web to keep your learning experience fun and engaging. The assignments are designed to help you network and start becoming active in and around your city or town.
+            p We’ve poured the experience of over 1400 births into the course and know you will find it to be a valuable, business-building, active training program. Its concise and fulfilling and will prepare you for a future of doula practice.
+            a(href="#").button.dark Tips to succeed
+
+
+    .section.section--tan
+        .requirements
+            h2 What are the requirements?
+            ul.two-column
+                li Access to computer or mobile device with a web browser.
+                li Complete the online modules.
+                li Obtain three evaluations from Mother and Partner or other family or friend.
+                li Sign a commitment to operate within the Tiny Love Standards of Practice
+                li Read the required reading materials.
+                li Access to the internet through a computer, tablet, or smartphone.
+                li Attend a free childbirth class, (you may be required to pay a fee to attend a class if you cannot find a free on in your area).
+
+    .section.section--white
+        .books
+            h2 What books will I need?
+            a.book-link.book-link--required(href="http://www.amazon.com/Birth-Partner-Complete-Childbirth-Companions/dp/155832819X/ref=sr_1_1", target="_blank")
+                img(src="images/book-birth-partner@2x.png", alt="The Birth Partner - Revised 4th Edition: A Complete Guide to Childbirth for Dads, Doulas, and All Other Labor Companions")
+            a.book-link.book-link--required.book-link--wide(href="http://www.amazon.com/Doula-Book-Companion-Healthier-Lawrence/dp/0738215066/ref=sr_1_1", target="_blank")
+                img(src="images/book-doula-book@2x.png", alt="The Doula Book: How a Trained Labor Companion Can Help You Have a Shorter, Easier, and Healthier Birth (A Merloyd Lawrence Book)")
+            a.book-link.book-link--required(href="http://www.amazon.com/Nurturing-Touch-Birth-Support-Handbook-/dp/0964115921/ref=sr_1_1?s=books&ie=UTF8&qid=1435276187&sr=1-1&keywords=the+nurturing+touch+at+birth", target="_blank")
+                img(src="images/book-nurturing-touch@2x.png", alt="The Nurturing Touch at Birth: a Labor Support Handbook- Third Edition")
+            a.book-link(href="http://www.amazon.com/Labor-Progress-Handbook-Interventions-Dystocia/dp/0632052813/ref=sr_1_2?s=books&ie=UTF8&qid=1435276230&sr=1-2&keywords=the+labor+progress+handbook", target="_blank")
+                img(src="images/book-labor-progress@2x.png", alt="The Labor Progress Handbook: Early Interventions to Prevent and Treat Dystocia")
+
+    .section.section--tan
+        .mentors
+            h2 Who are the mentors?
+
+            .bio-teaser
+                img.image-rounded(src="images/jessica.jpg", alt="Jessica", width="180")
+                h3 Jessica
+                p Mom of Two, Birth Doula, CPM, LM- Homebirth Midwife.
+                a.button.button--small(href="#") More about Jessica
+
+            .bio-teaser
+                img.image-rounded(src="images/kristen.jpg", alt="Kristen", width="180")
+                h3 Kristen
+                p Mom of three, Birth Doula, CPM, LDM - Midwife
+                a.button.button--small(href="#") More about Kristen
+
+    .section.section--white
+        .cost
+            h2 How much does it cost?
+            h3 The course is a one time cost of #[span.price $460.00]
+            p While there are no fees for things like doula training organizations, packet fees, application fees, membership fees or certification renewals we do require that you purchase the books on the required reading list and highly recommend that you purchase The Labor Progress Handbook. You can find these books new or used at a local bookstore or at many online retailers.
+            p Since all materials are available immediately online there are no refunds offered after you have purchased the program.
+            p Payments can be made online using your credit card or your PayPal account.
+            //- PayPal Logo
+            table(border='0', cellpadding='10', cellspacing='0', align='center')
+              tr
+                td(align='center')
+              tr
+                td(align='center')
+                  a(href='https://www.paypal.com/webapps/mpp/paypal-popup', title='How PayPal Works', onclick="javascript:window.open('https://www.paypal.com/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;")
+                    img(src='https://www.paypalobjects.com/webstatic/mktg/logo/bdg_now_accepting_pp_2line_w.png', border='0', alt='Now accepting PayPal')
+                  div(style='text-align:center')
+                    a(href='https://www.paypal.com/webapps/mpp/how-paypal-works')
+                      font(size='2', face='Arial', color='#0079CD') How PayPal Works
+            //- PayPal Logo
+
+    .section.section--tan
+        .get-started
+            h2 Let’s get started!
+            h3 You're just a few steps away from beginning your new career as a birth doula.
+            a(href="/user/signup").button.button--red Sign me up!
+            small Still have questions? Check out our FAQ page or send us an email and we'll get right back with an answer.

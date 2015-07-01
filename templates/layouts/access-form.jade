@@ -1,0 +1,44 @@
+include ../mixins/flash-messages
+include ../mixins/html-header
+
+doctype html
+html
+
+        +html-header
+
+        //- Include template-specific stylesheets by extending the css block
+        block css
+
+        //- Add any other template-specific HEAD tags by extending the head block
+        block head
+
+    body.access-form
+
+        a.return-home(href='/') Take me back to the homepage.
+
+        //- BODY
+        main.main(role="main")
+
+            //- The Intro block appears above flash messages (used for temporary information display)
+            block intro
+
+            //- Flash messages allow you to display once-off status messages to users, e.g. form
+            //- validation errors, success messages, etc.
+            +flash-messages(messages)
+
+            //- The content block should contain the body of your template's content
+            block content
+
+
+        //- jQuery is needed for editor
+        script(src='/js/jquery/jquery-2.1.3.min.js')
+
+        //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
+        //- which generate links to edit content for users who can access Keystone
+        if user && user.canAccessKeystone
+            script(src='/keystone/js/content/editor.js')
+
+        //- Add scripts that are globally required by your site here.
+
+        //- Include template-specific javascript files by extending the js block
+        block js

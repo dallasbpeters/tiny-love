@@ -1,0 +1,16 @@
+mixin html-header
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
+        title= title || 'Tiny Love'
+        link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+
+        link(href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,300italic,400italic', rel='stylesheet', type='text/css')
+        //- Customise the stylesheet for your site by editing /public/styles/site.sass
+        link(href="/css/site.css", rel="stylesheet")
+
+        //- This file provides the default styling for the KeystoneJS Content Editor
+        if user && user.canAccessKeystone
+            link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")

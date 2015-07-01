@@ -1,0 +1,13 @@
+// Ionicons Icons
+// --------------------------
+
+.tinylove-linea,
+.#{$ionicons-prefix}arrows_check:before,
+.#{$ionicons-prefix}arrows_circle_check:before,
+.#{$ionicons-prefix}arrows_down_double:before
+{
+  @extend .ion;
+}
+.#{$ionicons-prefix}arrows_check:before { content: $ionicon-var-arrows_check; }
+.#{$ionicons-prefix}arrows_circle_check:before { content: $ionicon-var-arrows_circle_check; }
+.#{$ionicons-prefix}arrows_down_double:before { content: $ionicon-var-arrows_down_double; }

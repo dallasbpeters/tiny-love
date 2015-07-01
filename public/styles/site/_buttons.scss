@@ -1,0 +1,42 @@
+.button {
+    display: inline-block;
+    font-family: $display-font;
+    font-size: 1.2em;
+    background-color: $deep-blue;
+    color: #ffffff;
+    text-decoration: none;
+    padding: .3em 1.5em;
+    border-radius: 2px;
+    box-shadow: 0px 3px $deep-blue-dark;
+    position: relative;
+    @include transition(all 500ms ease);
+    @include appearance(none);
+    border: none;
+    &:active {
+        opacity: 0.65;
+    }
+    &:hover {
+        background-color: darken($deep-blue, 5%);
+        @include transform(scale(1.05));
+    }
+}
+
+.button--red {
+    background-color: $red;
+    box-shadow: 0px 3px $red-dark;
+    &:hover {
+        background-color: darken($red, 8%);
+    }
+}
+.button--teal {
+    background-color: $teal;
+    box-shadow: 0px 3px $teal-dark;
+    &:hover {
+        background-color: darken($teal, 8%);
+    }
+}
+
+.button--small {
+    font-size: .9em;
+    padding: .3em 1.25em;
+}
