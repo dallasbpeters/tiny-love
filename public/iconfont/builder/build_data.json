@@ -1,5 +1,5 @@
 {
-  "build_hash": "fde686976be82390040a63ff3fe29eb9",
+  "build_hash": "75e5b2777778bb842c61232005771f82",
   "prefix": "icon-",
   "version": "1.0.0",
   "name": "TinyLove-Linea",
@@ -15,6 +15,18 @@
     {
       "code": "0xf145",
       "name": "arrows_down_double"
+    },
+    {
+      "code": "0xf146",
+      "name": "basic_ban"
+    },
+    {
+      "code": "0xf14c",
+      "name": "basic_lock_open"
+    },
+    {
+      "code": "0xf14d",
+      "name": "ecommerce_bag"
     }
   ]
 }
