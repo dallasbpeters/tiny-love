@@ -1,0 +1,31 @@
+include ../mixins/flash-messages
+include ../mixins/html-header
+
+doctype html
+html
+    
+    +html-header
+
+    body.home
+        
+        nav.user-navigation
+          ul
+            li: a(href="/user/dashboard") Home
+            li: a(href="#") Resources
+            li: a(href="#") My Account 
+            li: a(href="") Sign Out
+        
+        main.main(role="main")
+            
+            +flash-messages(messages)
+
+            block content
+
+
+        script(src='/js/jquery/jquery-2.1.3.min.js')        
+        script(src='/js/remodal.min.js')
+
+        //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
+        //- which generate links to edit content for users who can access Keystone
+        if user && user.canAccessKeystone
+            script(src='/keystone/js/content/editor.js')
