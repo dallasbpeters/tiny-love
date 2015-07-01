@@ -1,0 +1,13 @@
+.user-content {
+  padding: 1.2em 7em;
+  @media only screen and (max-width: 420px) {
+    padding: 100px .6em .6em .6em;
+  }
+}
+
+.page-title {
+  font-family: $cursive;
+  color: $teal;
+  font-size: 2.75em;
+  margin-bottom: .25em;
+}

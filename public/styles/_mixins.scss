@@ -10,3 +10,10 @@
         background-repeat: repeat-x;
     }
 }
+
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}

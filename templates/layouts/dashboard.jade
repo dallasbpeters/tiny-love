@@ -6,20 +6,33 @@ html
     
     +html-header
 
-    body.home
+    body.dashboard
         
+        //- TODO: This will need some active class highlighting
         nav.user-navigation
-          ul
-            li: a(href="/user/dashboard") Home
-            li: a(href="#") Resources
-            li: a(href="#") My Account 
-            li: a(href="") Sign Out
-        
-        main.main(role="main")
+          ul.user-navigation__ul
+            li
+              a(href="/user/dashboard", data-tooltip="Dashboard")
+                img.user-navigation__logo-icon(src="/images/logo-flower.svg", alt="Home")
+            li
+              a(href="#", data-tooltip="Resources")
+                span.hide-text Resources
+                i.icon-ecommerce_bag
+            li
+              a(href="#", data-tooltip="My Account") 
+                span.hide-text My Account 
+                i.icon-basic_lock_open
+            li
+              a(href="#", data-tooltip="Sign Out") 
+                span.hide-text Sign Out
+                i.icon-basic_ban
+                //- i.icon-arrows_down_double
+      
+        main.user-content(role="main")
             
             +flash-messages(messages)
 
-            block content
+            block module-list
 
 
         script(src='/js/jquery/jquery-2.1.3.min.js')        
