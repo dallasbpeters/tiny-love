@@ -29,21 +29,24 @@ body.home {
 }
 
 .section--first {
-    background-image: url('../../images/home-flower.jpg');
+    background-image: url('../../images/home-flower-darker.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    min-height: 80%;
     padding: 12em 1em 4em 1em;
+    min-height: 768px;
     @media only screen and (max-width: 480px) {
         padding: 8em 1.5em 3em 1.5em;
+    }
+    & > div {
+      max-width: 800px;
     }
 }
 
 .introduction {
     color: white;
     .button {
-        margin-bottom: 1.5rem;
+        margin: 2.5em 0 2.9em 0;
     }
 }
 
@@ -85,17 +88,31 @@ body.home {
 }
 
 .introduction__headline {
-    font-size: 2.3em;
+    font-family: $display-font;
+    font-size: 2.6em;
     text-shadow: $text-shadow-style;
+    margin-bottom: .4em;
     @media only screen and (max-width: 480px) {
         font-size: 2em;
     }
 }
+.introduction__subheadline {
+  font-family: $cursive;
+  text-align: center;
+  line-height: .8;
+  font-size: 3.3em;
+  margin-bottom: 0;
+  color: white;
+  text-shadow: $text-shadow-style;
+  @media only screen and (max-width: 480px) {
+    font-size: 2.4em;
+  }
+}
+
 .scroll-instructions {
-    font-family: $cursive;
     line-height: .8;
-    font-size: 2.8em;
-    margin: 0 0 1em 0;
+    font-size: 1.6em;
+    margin: 0 0 .5em 0;
     text-shadow: $text-shadow-style;
     text-align: center !important;
     @media only screen and (max-width: 40em) {
