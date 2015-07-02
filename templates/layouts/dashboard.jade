@@ -19,11 +19,11 @@ html
                 span.hide-text Resources
                 i.icon-ecommerce_bag
             li
-              a(href="#", data-tooltip="My Account") 
+              a(href="/user/account", data-tooltip="My Account") 
                 span.hide-text My Account 
                 i.icon-basic_lock_open
             li
-              a(href="#", data-tooltip="Sign Out") 
+              a(href='/keystone/signout', data-tooltip="Sign Out") 
                 span.hide-text Sign Out
                 i.icon-basic_ban
                 //- i.icon-arrows_down_double
@@ -32,7 +32,7 @@ html
             
             +flash-messages(messages)
 
-            block module-list
+            block content
 
 
         script(src='/js/jquery/jquery-2.1.3.min.js')        

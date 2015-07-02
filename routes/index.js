@@ -46,6 +46,7 @@ exports = module.exports = function(app) {
 	app.all('/user/pay', routes.views.user.pay);
 	app.all('/user/pay_check', routes.views.user.pay_check);
 	app.all('/user/dashboard', routes.views.user.dashboard);
+	app.all('/user/account', routes.views.user.account);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
