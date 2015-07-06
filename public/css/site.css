@@ -747,7 +747,7 @@ html.remodal-is-locked {
   background-color: #313D4C;
   color: #ffffff;
   text-decoration: none;
-  padding: 0.5em 1.25em;
+  padding: 0.4em 1.35em;
   border-radius: 2px;
   box-shadow: 0px 3px #090E16;
   position: relative;
@@ -1204,12 +1204,13 @@ input[type="password"] {
 
 .single-form {
   background-color: white;
-  margin: 1em;
+  margin: 0;
   position: relative;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15)); }
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+  max-width: 480px; }
   .single-form:after {
     content: "";
     height: 14px;
@@ -1364,13 +1365,16 @@ input[type="password"] {
     display: none; }
 
 .user-content {
-  padding: 1.2em 7em; }
+  padding: 1.2em 2.2em 1.2em 7em; }
   @media only screen and (max-width: 420px) {
     .user-content {
-      padding: 100px 0.6em 0.6em 0.6em; } }
+      padding: 80px 0.6em 0.6em 0.6em; } }
 
 .page-title {
   font-family: "Learning Curve Pro";
   color: #71B3A7;
   font-size: 2.75em;
   margin-bottom: .25em; }
+  @media only screen and (max-width: 420px) {
+    .page-title {
+      text-align: center; } }
