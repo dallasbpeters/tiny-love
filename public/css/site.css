@@ -381,7 +381,7 @@ html {
   height: 100%; }
 
 body {
-  height: 100%;
+  min-height: 100%;
   font-family: "Josefin Sans", sans-serif;
   color: #313D4C;
   background-color: #F6F3F1;
@@ -743,11 +743,11 @@ html.remodal-is-locked {
 .button {
   display: inline-block;
   font-family: "Diehl Deco";
-  font-size: 1.2em;
+  font-size: 1.2rem;
   background-color: #313D4C;
   color: #ffffff;
   text-decoration: none;
-  padding: 0.3em 1.5em;
+  padding: 0.5em 1.25em;
   border-radius: 2px;
   box-shadow: 0px 3px #090E16;
   position: relative;
@@ -876,6 +876,14 @@ img {
   -ms-transform: scale(1.4) rotate(-3deg);
   -o-transform: scale(1.4) rotate(-3deg);
   transform: scale(1.4) rotate(-3deg); }
+  @media only screen and (max-width: 480px) {
+    .price {
+      -webkit-transform: scale(1.1) rotate(-3deg);
+      -moz-transform: scale(1.1) rotate(-3deg);
+      -ms-transform: scale(1.1) rotate(-3deg);
+      -o-transform: scale(1.1) rotate(-3deg);
+      transform: scale(1.1) rotate(-3deg);
+      margin-left: .2em; } }
 
 .flash-messages {
   position: fixed;
@@ -908,15 +916,13 @@ img {
 
 body.home {
   text-align: center; }
-  @media only screen and (max-width: 40em) {
-    body.home p {
-      text-align: justify; } }
 
 .remodal p, ol, ul {
   text-align: left; }
 
 .section {
-  padding: 4em 1em; }
+  padding: 4em 1em;
+  position: relative; }
   .section::after {
     clear: both;
     content: "";
@@ -941,17 +947,23 @@ body.home {
   background-size: cover;
   background-position: center center;
   padding: 12em 1em 4em 1em;
-  min-height: 768px; }
+  height: 80%; }
   @media only screen and (max-width: 480px) {
     .section--first {
       padding: 8em 1.5em 3em 1.5em; } }
   .section--first > div {
     max-width: 800px; }
 
+main.main {
+  min-height: 100%; }
+
 .introduction {
   color: white; }
-  .introduction .button {
-    margin: 2.5em 0 2.9em 0; }
+  .introduction .main-cta {
+    margin: 2.5em 0; }
+    @media only screen and (max-width: 480px) {
+      .introduction .main-cta {
+        margin: 1.5em 0; } }
 
 .introduction--logo-white {
   display: block;
@@ -976,21 +988,6 @@ body.home {
   .introduction__access li {
     display: inline-block;
     margin-left: 1em; }
-  .introduction__access a {
-    font-family: "Diehl Deco";
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out; }
-    .introduction__access a:hover {
-      color: #ee6556;
-      -webkit-transform: scale(1.05);
-      -moz-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-      -o-transform: scale(1.05);
-      transform: scale(1.05); }
 
 .introduction__headline {
   font-family: "Diehl Deco";
@@ -1011,17 +1008,25 @@ body.home {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 480px) {
     .introduction__subheadline {
-      font-size: 2.4em; } }
+      display: none; } }
 
 .scroll-instructions {
+  background: rgba(28, 32, 29, 0.6);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em 2em 0em 2em; }
+  @media only screen and (max-width: 480px) {
+    .scroll-instructions {
+      display: none; } }
+
+.scroll-instructions__text {
   line-height: .8;
   font-size: 1.6em;
   margin: 0 0 0.5em 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   text-align: center !important; }
-  @media only screen and (max-width: 40em) {
-    .scroll-instructions {
-      font-size: 2.3em; } }
 
 .how-it-works {
   background-image: url("../images/cherry-blossom.svg");
@@ -1228,17 +1233,21 @@ input[type="password"] {
   background-color: #313D4C;
   color: white;
   padding: 3em 1em; }
-  @media only screen and (max-width: 40em) {
+  @media only screen and (max-width: 480px) {
     .site-footer {
       padding: 2em 1em; }
       .site-footer .logo {
-        width: 80px; } }
+        width: 70px; } }
 
 .made-in {
   font-family: "Learning Curve Pro";
   font-size: 1.8em;
+  line-height: .8;
   margin: 0;
   text-align: center !important; }
+  @media only screen and (max-width: 480px) {
+    .made-in {
+      font-size: 1.5em; } }
 
 .user-navigation {
   background-color: white;

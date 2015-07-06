@@ -17,15 +17,16 @@ block content
                             li: a(href='/keystone') Open Admin
                         li: a(href='/keystone/signout') Sign Out
                     else
-                        li: a(href='/keystone/signin') Sign In
+                        li: a.button.button--teal(href='/keystone/signin') Sign In
 
                 h2.introduction__headline Imagine being there for #[em that] moment
                 h3.introduction__subheadline Prepare to change the world, with Tiny Love
                 if !user
 
-                    a(href='/user/signup').button.button--red Signup for the program!
-                    p.scroll-instructions Still curious? Keep scrolling.
-                    i.icon-arrows_down_double
+                    a(href='/user/signup').main-cta.button.button--red Signup for the program!
+                    .scroll-instructions
+                      p.scroll-instructions__text Still curious? Keep scrolling.
+                      i.icon-arrows_down_double
 
     .section.section--white
         .how-it-works
@@ -134,4 +135,4 @@ block content
               h2 Let’s get started!
               h3 You're just a few steps away from beginning your new career as a birth doula.
               a(href="/user/signup").button.button--red Sign me up!
-              small Still have questions? Check out our FAQ page or send us an email and we'll get right back with an answer.
+              //- small Still have questions? Send us an email and we'll get right back with an answer.

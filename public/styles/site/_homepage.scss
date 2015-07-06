@@ -1,8 +1,5 @@
 body.home {
     text-align: center;
-    @media only screen and (max-width: 40em) {
-        p {text-align: justify;}
-    }
 }
 
 .remodal p, ol, ul {
@@ -11,6 +8,7 @@ body.home {
 
 .section {
     padding: 4em 1em;
+    position: relative;
     @include clearfix;
     & > div {
         max-width: $section-max-width;
@@ -34,7 +32,7 @@ body.home {
     background-size: cover;
     background-position: center center;
     padding: 12em 1em 4em 1em;
-    min-height: 768px;
+    height: 80%;
     @media only screen and (max-width: 480px) {
         padding: 8em 1.5em 3em 1.5em;
     }
@@ -43,10 +41,17 @@ body.home {
     }
 }
 
+main.main {
+  min-height: 100%;
+}
+
 .introduction {
     color: white;
-    .button {
-        margin: 2.5em 0 2.9em 0;
+    .main-cta {
+        margin: 2.5em 0;
+        @media only screen and (max-width: 480px) {
+          margin: 1.5em 0;
+        }
     }
 }
 
@@ -74,17 +79,6 @@ body.home {
         display: inline-block;
         margin-left: 1em;
     }
-    a {
-        font-family: $display-font;
-        color: white;
-        text-decoration: none;
-        display: inline-block;
-        @include transition(all 200ms ease-in-out);
-        &:hover {
-            color: $red;
-            @include transform(scale(1.05));
-        }
-    }
 }
 
 .introduction__headline {
@@ -105,19 +99,28 @@ body.home {
   color: white;
   text-shadow: $text-shadow-style;
   @media only screen and (max-width: 480px) {
-    font-size: 2.4em;
+    display: none;
   }
 }
 
+
 .scroll-instructions {
+  background: rgba(28,32,29,0.60);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em 2em 0em 2em;
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
+}
+.scroll-instructions__text {
     line-height: .8;
     font-size: 1.6em;
     margin: 0 0 .5em 0;
     text-shadow: $text-shadow-style;
     text-align: center !important;
-    @media only screen and (max-width: 40em) {
-        font-size: 2.3em;
-    }
 }
 
 
@@ -167,7 +170,7 @@ body.home {
     bottom: 15px;
     right: -34px;
     background-color: $red;
-color: white;
+    color: white;
     text-transform: uppercase;
     font-size: .75em;
     letter-spacing: .08em;
