@@ -1,18 +1,22 @@
 @mixin torn-page {
     -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
     filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+    background-color: white;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    position: relative;
     &:after {
         content: "";
         height: 14px;
         width: 100%;
         position: absolute;
+        left: 0;
         top:100%;
         z-index: 5;
-        background-image: url('../images/cut-effect.svg');
+        background-image: url('/images/cut-effect.svg');
         background-repeat: repeat-x;
     }
 }
-
 
 @mixin opacity($opacity) {
   opacity: $opacity;

@@ -68,11 +68,8 @@ input[type="password"] {
 }
 
 .single-form {
-    background-color: white;
     margin: 0;
     position: relative;
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
     @include torn-page;
     max-width: 480px;
 }
