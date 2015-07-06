@@ -381,7 +381,7 @@ html {
   height: 100%; }
 
 body {
-  min-height: 100%;
+  height: 100%;
   font-family: "Josefin Sans", sans-serif;
   color: #313D4C;
   background-color: #F6F3F1;
@@ -947,15 +947,12 @@ body.home {
   background-size: cover;
   background-position: center center;
   padding: 12em 1em 4em 1em;
-  height: 80%; }
+  height: 100%; }
   @media only screen and (max-width: 480px) {
     .section--first {
       padding: 8em 1.5em 3em 1.5em; } }
   .section--first > div {
     max-width: 800px; }
-
-main.main {
-  min-height: 100%; }
 
 .introduction {
   color: white; }
@@ -1012,21 +1009,33 @@ main.main {
 
 .scroll-instructions {
   background: rgba(28, 32, 29, 0.6);
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 2em 2em 0em 2em; }
+  z-index: 5000;
+  padding: 2em 2em 1em 2em;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
   @media only screen and (max-width: 480px) {
     .scroll-instructions {
-      display: none; } }
+      padding: 1em; } }
+  .scroll-instructions i {
+    font-size: 2.3em; }
+  .scroll-instructions.scroll-instructions--hidden {
+    opacity: 0;
+    filter: alpha(opacity=0); }
 
 .scroll-instructions__text {
   line-height: .8;
-  font-size: 1.6em;
+  font-size: 1.3em;
   margin: 0 0 0.5em 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   text-align: center !important; }
+  @media only screen and (max-width: 480px) {
+    .scroll-instructions__text {
+      display: none; } }
 
 .how-it-works {
   background-image: url("../images/cherry-blossom.svg");

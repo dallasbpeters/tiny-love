@@ -32,17 +32,13 @@ body.home {
     background-size: cover;
     background-position: center center;
     padding: 12em 1em 4em 1em;
-    height: 80%;
+    height: 100%;
     @media only screen and (max-width: 480px) {
         padding: 8em 1.5em 3em 1.5em;
     }
     & > div {
       max-width: 800px;
     }
-}
-
-main.main {
-  min-height: 100%;
 }
 
 .introduction {
@@ -106,21 +102,32 @@ main.main {
 
 .scroll-instructions {
   background: rgba(28,32,29,0.60);
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 2em 2em 0em 2em;
+  z-index: 5000;
+  padding: 2em 2em 1em 2em;
+  @include transition(all 300ms ease-in-out);
   @media only screen and (max-width: 480px) {
-    display: none;
+    padding: 1em;
+  }
+  i {
+    font-size: 2.3em;
+  }
+  &.scroll-instructions--hidden {
+    @include opacity(0);
   }
 }
 .scroll-instructions__text {
     line-height: .8;
-    font-size: 1.6em;
+    font-size: 1.3em;
     margin: 0 0 .5em 0;
     text-shadow: $text-shadow-style;
     text-align: center !important;
+    @media only screen and (max-width: 480px) {
+      display: none;
+    }
 }
 
 
