@@ -1,0 +1,32 @@
+.module-list {
+  max-width: 700px;
+}
+.module-list__item {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba($deep-blue,.2);
+  border-radius: 2px;
+  padding: 1em;
+  position: relative;
+  @include clearfix;
+}
+.module-list__title {
+  margin: 0;
+  float: left;
+  font-size: 1.2em;
+}
+.module-list__button {
+  float: right;
+  width: 125px;
+  text-align: center;
+}
+.module-list__item--current {
+  .button {
+    @extend .button--red;
+  }
+}
+.module-list__item--disabled {
+  @include opacity(0.5);
+  .button {
+    display: none;
+  }
+}

@@ -2,10 +2,10 @@
     background-color: $deep-blue;
     color: white;
     padding: 3em 1em;
-    @media only screen and (max-width: 40em) {
+    @media only screen and (max-width: 480px) {
         padding: 2em 1em;
         .logo {
-            width: 80px;
+            width: 70px;
         }
     }
 }
@@ -13,6 +13,10 @@
 .made-in {
     font-family: $cursive;
     font-size: 1.8em;
+    line-height: .8;
     margin: 0;
     text-align: center !important;
+    @media only screen and (max-width: 480px) {
+      font-size: 1.5em;
+    }
 }

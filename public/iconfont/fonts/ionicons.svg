@@ -1,16 +1,16 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-6-25: Created with FontForge (http://fontforge.org)
+2015-6-30: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150401 at Thu Jun 25 15:17:55 2015
+Created by FontForge 20150401 at Tue Jun 30 21:28:09 2015
  By admin
 Copyright (c) 2015, admin
 </metadata>
 <defs>
-<font id="TinyLove-Linea" horiz-adv-x="299" >
+<font id="TinyLove-Linea" horiz-adv-x="512" >
   <font-face 
     font-family="TinyLove-Linea"
     font-weight="400"
@@ -22,15 +22,22 @@ Copyright (c) 2015, admin
     bbox="0 -64 512 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+F138-F145"
+    unicode-range="U+F138-F14D"
   />
     <missing-glyph />
-    <glyph glyph-name="ion-arrows_check" unicode="&#xf138;" 
+    <glyph glyph-name="ion-arrows_check" unicode="&#xf138;" horiz-adv-x="299" 
 d="M11 190l91 -91l186 186l11 -12l-192 -193h-11l-96 97z" />
-    <glyph glyph-name="ion-arrows_circle_check" unicode="&#xf13b;" horiz-adv-x="512" 
+    <glyph glyph-name="ion-arrows_circle_check" unicode="&#xf13b;" 
 d="M206 80h-12l-96 97l12 13l90 -91l186 186l12 -12zM256 -64c-68 0 -133 27 -181 75s-75 113 -75 181s27 133 75 181s113 75 181 75v0c68 0 133 -27 181 -75s75 -113 75 -181s-27 -133 -75 -181s-113 -75 -181 -75v0zM86 362c-45 -45 -70 -106 -70 -170s25 -125 70 -170
 s106 -70 170 -70v0v0c64 0 125 25 170 70s70 106 70 170s-25 125 -70 170s-106 70 -170 70v0c-64 0 -125 -25 -170 -70z" />
     <glyph glyph-name="ion-arrows_down_double" unicode="&#xf145;" horiz-adv-x="283" 
 d="M142 75l130 130l11 -12l-136 -137h-11l-136 137l11 13zM142 195l130 130l11 -12l-136 -137h-11l-136 137l11 13z" />
+    <glyph glyph-name="ion-basic_ban" unicode="&#xf146;" 
+d="M437 373c-100 100 -262 100 -362 0s-100 -262 0 -362s262 -100 362 0s100 262 0 362zM426 362c94 -94 94 -246 0 -340s-246 -94 -340 0s-94 246 0 340s246 94 340 0zM86 373l-11 -11l351 -351l11 11z" />
+    <glyph glyph-name="ion-basic_lock_open" unicode="&#xf14c;" horiz-adv-x="400" 
+d="M16 -48v224h368v-224h-368zM0 -64h400v256h-400v-256zM64 184h16v128c0 66 54 120 120 120s120 -54 120 -120v-24h16v24c0 75 -61 136 -136 136s-136 -61 -136 -136v-128zM176 72c0 13 11 24 24 24s24 -11 24 -24s-11 -24 -24 -24s-24 11 -24 24zM160 72
+c0 -22 18 -40 40 -40s40 18 40 40s-18 40 -40 40s-40 -18 -40 -40zM208 40h-16v-32h16v32z" />
+    <glyph glyph-name="ion-ecommerce_bag" unicode="&#xf14d;" horiz-adv-x="368" 
+d="M368 -64h-368v376h368v-376zM16 -48h336v344h-336v-344zM272 256h-16v104c0 40 -32 72 -72 72s-72 -32 -72 -72v-104h-16v104c0 49 39 88 88 88s88 -39 88 -88v-104z" />
   </font>
 </defs></svg>

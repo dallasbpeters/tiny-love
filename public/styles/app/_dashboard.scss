@@ -1,0 +1,62 @@
+.user-navigation {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba($deep-blue,.2);
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  @media only screen and (max-width: 420px) {
+    bottom: auto;
+    width: 100%;
+  }
+}
+
+.user-navigation__ul {
+  text-align: center;
+  @media only screen and (max-width: 420px) {
+    @include display(flex);
+    @include align-items(stretch);
+  }
+  a {
+    height: 4em;
+    width: 4em;
+    line-height: 4.2em;
+    display: block;
+    color: $deep-blue;
+    @include transition(all 250ms ease);
+    @media only screen and (max-width: 420px) {
+      width: 100%;
+      height: 60px;
+      line-height: 62px;
+    }
+    &:hover, &.active {
+      background-color: $deep-blue;
+      color: white;
+    }
+    [class^="icon-"] {
+      font-size: 1.5em;
+    }
+    &[data-tooltip]:before {
+      height: 4em;
+      padding: 0 1em;
+      line-height: 4.2em;
+      // hide tooltips on mobile
+      @media only screen and (max-width: 420px) {
+        display: none;
+      }
+    }
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    @include flex(1);
+  }
+}
+
+
+.user-navigation__logo-icon {
+  width: 45px;
+  max-width: none;
+  vertical-align: middle;
+}

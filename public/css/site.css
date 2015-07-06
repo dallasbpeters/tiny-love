@@ -429,6 +429,10 @@ p {
   line-height: 1.3;
   margin: 0 0 1.25rem 0; }
 
+.hide-text {
+  display: none;
+  visibility: hidden; }
+
 /*!
   Ionicons, v1.0.0
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -442,15 +446,18 @@ p {
 */
 @font-face {
   font-family: "TinyLove-Linea";
-  src: url("../iconfont/fonts/ionicons.eot?v=1.0.0");
-  src: url("../iconfont/fonts/ionicons.eot?v=1.0.0#iefix") format("embedded-opentype"), url("../iconfont/fonts/ionicons.ttf?v=1.0.0") format("truetype"), url("../iconfont/fonts/ionicons.woff?v=1.0.0") format("woff"), url("../iconfont/fonts/ionicons.svg?v=1.0.0#Ionicons") format("svg");
+  src: url("/iconfont/fonts/ionicons.eot?v=1.0.0");
+  src: url("/iconfont/fonts/ionicons.eot?v=1.0.0#iefix") format("embedded-opentype"), url("/iconfont/fonts/ionicons.ttf?v=1.0.0") format("truetype"), url("/iconfont/fonts/ionicons.woff?v=1.0.0") format("woff"), url("/iconfont/fonts/ionicons.svg?v=1.0.0#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 .ion, .tinylove-linea,
 .icon-arrows_check:before,
 .icon-arrows_circle_check:before,
-.icon-arrows_down_double:before {
+.icon-arrows_down_double:before,
+.icon-basic_ban:before,
+.icon-basic_lock_open:before,
+.icon-ecommerce_bag:before {
   display: inline-block;
   font-family: "TinyLove-Linea";
   speak: none;
@@ -471,6 +478,15 @@ p {
 
 .icon-arrows_down_double:before {
   content: ""; }
+
+.icon-basic_ban:before {
+  content: ""; }
+
+.icon-basic_lock_open:before {
+  content: ""; }
+
+.icon-ecommerce_bag:before {
+  content: ""; }
 
 /* Hide scroll bar */
 html.remodal-is-locked {
@@ -727,11 +743,11 @@ html.remodal-is-locked {
 .button {
   display: inline-block;
   font-family: "Diehl Deco";
-  font-size: 1.2em;
+  font-size: 1.2rem;
   background-color: #313D4C;
   color: #ffffff;
   text-decoration: none;
-  padding: 0.3em 1.5em;
+  padding: 0.5em 1.25em;
   border-radius: 2px;
   box-shadow: 0px 3px #090E16;
   position: relative;
@@ -754,10 +770,10 @@ html.remodal-is-locked {
     -o-transform: scale(1.05);
     transform: scale(1.05); }
 
-.button--red {
+.button--red, .module-list__item--current .button {
   background-color: #ee6556;
   box-shadow: 0px 3px #DC2B27; }
-  .button--red:hover {
+  .button--red:hover, .module-list__item--current .button:hover {
     background-color: #ea4331; }
 
 .button--green {
@@ -806,6 +822,49 @@ img {
   float: right;
   margin: 0 -1em 1em 1em; }
 
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer; }
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  pointer-events: none;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  transition: all 200ms ease; }
+
+[data-tooltip]:before {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  white-space: nowrap;
+  padding: 1em;
+  background-color: #313D4C;
+  box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center; }
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0); }
+
 .price {
   color: #313D4C;
   position: relative;
@@ -817,6 +876,14 @@ img {
   -ms-transform: scale(1.4) rotate(-3deg);
   -o-transform: scale(1.4) rotate(-3deg);
   transform: scale(1.4) rotate(-3deg); }
+  @media only screen and (max-width: 480px) {
+    .price {
+      -webkit-transform: scale(1.1) rotate(-3deg);
+      -moz-transform: scale(1.1) rotate(-3deg);
+      -ms-transform: scale(1.1) rotate(-3deg);
+      -o-transform: scale(1.1) rotate(-3deg);
+      transform: scale(1.1) rotate(-3deg);
+      margin-left: .2em; } }
 
 .flash-messages {
   position: fixed;
@@ -849,15 +916,13 @@ img {
 
 body.home {
   text-align: center; }
-  @media only screen and (max-width: 40em) {
-    body.home p {
-      text-align: justify; } }
 
 .remodal p, ol, ul {
   text-align: left; }
 
 .section {
-  padding: 4em 1em; }
+  padding: 4em 1em;
+  position: relative; }
   .section::after {
     clear: both;
     content: "";
@@ -877,20 +942,25 @@ body.home {
     color: white; }
 
 .section--first {
-  background-image: url("../../images/home-flower.jpg");
+  background-image: url("../../images/home-flower-darker.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: 80%;
-  padding: 12em 1em 4em 1em; }
+  padding: 12em 1em 4em 1em;
+  height: 100%; }
   @media only screen and (max-width: 480px) {
     .section--first {
       padding: 8em 1.5em 3em 1.5em; } }
+  .section--first > div {
+    max-width: 800px; }
 
 .introduction {
   color: white; }
-  .introduction .button {
-    margin-bottom: 1.5rem; }
+  .introduction .main-cta {
+    margin: 2.5em 0; }
+    @media only screen and (max-width: 480px) {
+      .introduction .main-cta {
+        margin: 1.5em 0; } }
 
 .introduction--logo-white {
   display: block;
@@ -915,39 +985,57 @@ body.home {
   .introduction__access li {
     display: inline-block;
     margin-left: 1em; }
-  .introduction__access a {
-    font-family: "Diehl Deco";
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out; }
-    .introduction__access a:hover {
-      color: #ee6556;
-      -webkit-transform: scale(1.05);
-      -moz-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-      -o-transform: scale(1.05);
-      transform: scale(1.05); }
 
 .introduction__headline {
-  font-size: 2.3em;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
+  font-family: "Diehl Deco";
+  font-size: 2.6em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin-bottom: .4em; }
   @media only screen and (max-width: 480px) {
     .introduction__headline {
       font-size: 2em; } }
 
-.scroll-instructions {
+.introduction__subheadline {
   font-family: "Learning Curve Pro";
+  text-align: center;
   line-height: .8;
-  font-size: 2.8em;
-  margin: 0 0 1em 0;
+  font-size: 3.3em;
+  margin-bottom: 0;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
+  @media only screen and (max-width: 480px) {
+    .introduction__subheadline {
+      display: none; } }
+
+.scroll-instructions {
+  background: rgba(28, 32, 29, 0.6);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+  padding: 2em 2em 1em 2em;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+  @media only screen and (max-width: 480px) {
+    .scroll-instructions {
+      padding: 1em; } }
+  .scroll-instructions i {
+    font-size: 2.3em; }
+  .scroll-instructions.scroll-instructions--hidden {
+    opacity: 0;
+    filter: alpha(opacity=0); }
+
+.scroll-instructions__text {
+  line-height: .8;
+  font-size: 1.3em;
+  margin: 0 0 0.5em 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   text-align: center !important; }
-  @media only screen and (max-width: 40em) {
-    .scroll-instructions {
-      font-size: 2.3em; } }
+  @media only screen and (max-width: 480px) {
+    .scroll-instructions__text {
+      display: none; } }
 
 .how-it-works {
   background-image: url("../images/cherry-blossom.svg");
@@ -1154,14 +1242,135 @@ input[type="password"] {
   background-color: #313D4C;
   color: white;
   padding: 3em 1em; }
-  @media only screen and (max-width: 40em) {
+  @media only screen and (max-width: 480px) {
     .site-footer {
       padding: 2em 1em; }
       .site-footer .logo {
-        width: 80px; } }
+        width: 70px; } }
 
 .made-in {
   font-family: "Learning Curve Pro";
   font-size: 1.8em;
+  line-height: .8;
   margin: 0;
   text-align: center !important; }
+  @media only screen and (max-width: 480px) {
+    .made-in {
+      font-size: 1.5em; } }
+
+.user-navigation {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2);
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+  @media only screen and (max-width: 420px) {
+    .user-navigation {
+      bottom: auto;
+      width: 100%; } }
+
+.user-navigation__ul {
+  text-align: center; }
+  @media only screen and (max-width: 420px) {
+    .user-navigation__ul {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: stretch;
+      -moz-box-align: stretch;
+      box-align: stretch;
+      -webkit-align-items: stretch;
+      -moz-align-items: stretch;
+      -ms-align-items: stretch;
+      -o-align-items: stretch;
+      align-items: stretch;
+      -ms-flex-align: stretch; } }
+  .user-navigation__ul a {
+    height: 4em;
+    width: 4em;
+    line-height: 4.2em;
+    display: block;
+    color: #313D4C;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    transition: all 250ms ease; }
+    @media only screen and (max-width: 420px) {
+      .user-navigation__ul a {
+        width: 100%;
+        height: 60px;
+        line-height: 62px; } }
+    .user-navigation__ul a:hover, .user-navigation__ul a.active {
+      background-color: #313D4C;
+      color: white; }
+    .user-navigation__ul a [class^="icon-"] {
+      font-size: 1.5em; }
+    .user-navigation__ul a[data-tooltip]:before {
+      height: 4em;
+      padding: 0 1em;
+      line-height: 4.2em; }
+      @media only screen and (max-width: 420px) {
+        .user-navigation__ul a[data-tooltip]:before {
+          display: none; } }
+  .user-navigation__ul li {
+    margin: 0;
+    padding: 0;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+
+.user-navigation__logo-icon {
+  width: 45px;
+  max-width: none;
+  vertical-align: middle; }
+
+.module-list {
+  max-width: 700px; }
+
+.module-list__item {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2);
+  border-radius: 2px;
+  padding: 1em;
+  position: relative; }
+  .module-list__item::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.module-list__title {
+  margin: 0;
+  float: left;
+  font-size: 1.2em; }
+
+.module-list__button {
+  float: right;
+  width: 125px;
+  text-align: center; }
+
+.module-list__item--disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
+  .module-list__item--disabled .button {
+    display: none; }
+
+.user-content {
+  padding: 1.2em 7em; }
+  @media only screen and (max-width: 420px) {
+    .user-content {
+      padding: 100px 0.6em 0.6em 0.6em; } }
+
+.page-title {
+  font-family: "Learning Curve Pro";
+  color: #71B3A7;
+  font-size: 2.75em;
+  margin-bottom: .25em; }

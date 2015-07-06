@@ -12,7 +12,7 @@ User.add({
 	name: { type: Types.Name, required: true, index: true },
 	email: { type: Types.Email, initial: true, required: true, index: true },
 	password: { type: Types.Password, initial: true, required: true },
-	payed: { type: Types.Boolean, initial: false, required: true }
+	payed: { type: Types.Boolean, initial: false, required: false }
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Is Admin', index: true }
 });

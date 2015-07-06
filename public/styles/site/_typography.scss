@@ -5,4 +5,8 @@
     margin-left: .5em;
     display: inline-block;
     @include transform(scale(1.4) rotate(-3deg));
+    @media only screen and (max-width: 480px) {
+      @include transform(scale(1.1) rotate(-3deg));
+      margin-left: .2em;
+    }
 }

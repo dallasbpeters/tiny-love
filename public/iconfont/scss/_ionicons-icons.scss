@@ -4,10 +4,16 @@
 .tinylove-linea,
 .#{$ionicons-prefix}arrows_check:before,
 .#{$ionicons-prefix}arrows_circle_check:before,
-.#{$ionicons-prefix}arrows_down_double:before
+.#{$ionicons-prefix}arrows_down_double:before,
+.#{$ionicons-prefix}basic_ban:before,
+.#{$ionicons-prefix}basic_lock_open:before,
+.#{$ionicons-prefix}ecommerce_bag:before
 {
   @extend .ion;
 }
 .#{$ionicons-prefix}arrows_check:before { content: $ionicon-var-arrows_check; }
 .#{$ionicons-prefix}arrows_circle_check:before { content: $ionicon-var-arrows_circle_check; }
 .#{$ionicons-prefix}arrows_down_double:before { content: $ionicon-var-arrows_down_double; }
+.#{$ionicons-prefix}basic_ban:before { content: $ionicon-var-basic_ban; }
+.#{$ionicons-prefix}basic_lock_open:before { content: $ionicon-var-basic_lock_open; }
+.#{$ionicons-prefix}ecommerce_bag:before { content: $ionicon-var-ecommerce_bag; }
