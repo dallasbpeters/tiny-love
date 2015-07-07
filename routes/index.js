@@ -49,7 +49,7 @@ exports = module.exports = function(app) {
 	app.all('/user/account', routes.views.user.account);
 	app.all('/user/resources', routes.views.user.resources);
 	// Mark, I'm just temp'ing these in so I can code up a view
-	app.all('/user/overview', routes.views.user.overview);
+	app.all('/user/module', routes.views.user.module);
 	app.all('/user/lesson', routes.views.user.lesson);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
