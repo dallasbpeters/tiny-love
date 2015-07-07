@@ -16,7 +16,7 @@
 }
 .module-list__button {
   float: right;
-  width: 125px;
+  min-width: 100px;
   text-align: center;
 }
 .module-list__item--current {
