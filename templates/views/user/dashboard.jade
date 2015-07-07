@@ -1,0 +1,20 @@
+extends ../../layouts/dashboard
+
+block content
+		h1.page-title Dashboard
+		
+		ul.module-list
+			if modules.length
+				each module in modules
+					li.module-list__item.module-list__item--current
+						h2.module-list__title= module.name
+						a.module-list__button.button.button--small(href="#") Review
+			else
+				h2 Whoops, you need to make some more Modules
+		
+		//- Button text = "Review" or "Continue" depending on completed state.
+		
+		//- Possible states
+		//- li.module-list__item.module-list__item--completed
+		//- li.module-list__item.module-list__item--current
+		//- li.module-list__item.module-list__item--disabled
