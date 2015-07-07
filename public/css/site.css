@@ -985,6 +985,9 @@ body.home {
   .introduction__access li {
     display: inline-block;
     margin-left: 1em; }
+  .introduction__access a {
+    color: white;
+    text-decoration: none; }
 
 .introduction__headline {
   font-family: "Diehl Deco";
