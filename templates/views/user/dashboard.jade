@@ -6,7 +6,7 @@ block content
 		ul.module-list
 			if modules.length
 				each module in modules
-					li.module-list__item.module-list__item--current
+					li(class='module-list__item.module-list__item--' + module.status)
 						h2.module-list__title= module.name
 						a.module-list__button.button.button--small(href='/' + module.key) Review
 			else
