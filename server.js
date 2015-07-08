@@ -20,6 +20,8 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'jade',
 
+	'wysiwyg additional buttons': 'formatselect',
+
 	'emails': 'templates/emails',
 
 	'auto update': true,
