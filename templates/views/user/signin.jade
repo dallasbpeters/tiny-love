@@ -1,31 +1,31 @@
 extends ../../layouts/access-form
 
 block content
-	h1.sr-only Sign In
+	if user
+		.white-box
+			h3 Hi #{user.name.first},
+			p You're already signed in.
+			.button-row
+				if user.isAdmin
+					a.button.button--small(href='/keystone') Admin
+				a.button.button--small.button--red(href='/keystone/signout') Sign out
+				a.button.button--small.button--green(href='/user/dashboard') Dashboard
 
-		.auth-box-col
-			if user
-				p.lead Hi #{user.name.first},
-				p.lead You're already signed in.
-				.toolbar
-					if user.isAdmin
-						a(href='/keystone').btn.btn-primary Open Keystone
-					a(href='/keystone/signout').btn.btn-cancel Sign out
+	else
+		.single-form.get-started
+			form.single-form__form(method="post", novalidate)
+				input(type='hidden', name=csrf_token_key, value=csrf_token_value)
+				.form-group
+					label(for='email') Email
+					input(type='email', name='email', id='email', value=submitted.email).form-control
+				.form-group
+					label(for='password') Password
+					input(type='password', name='password', id='password').form-control
 
-			else
-				form(method="post", novalidate).auth-form
-					input(type='hidden', name=csrf_token_key, value=csrf_token_value)
-					.form-group
-						label(for='email') Email
-						input(type='email', name='email', id='email', value=submitted.email).form-control
-					.form-group
-						label(for='password') Password
-						input(type='password', name='password', id='password').form-control
+				button(type='submit').button.button--green Sign In
 
-					button(type='submit').btn.btn-primary Sign In
-
-				//- TODO generic forgotten password functionality
-				//- button(type='button').btn.btn-link Forgot Password?
+			//- TODO generic forgotten password functionality
+			//- button(type='button').btn.btn-link Forgot Password?
 
 block js
 	//- Only focus the field after the shake animation is complete

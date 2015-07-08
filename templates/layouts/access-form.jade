@@ -13,8 +13,9 @@ html
         block head
 
     body.access-form
-
-        a.return-home(href='/') Take me back to the homepage.
+        
+        if !user
+            a.return-home(href='/') Take me back to the homepage.
 
         //- BODY
         main.main(role="main")

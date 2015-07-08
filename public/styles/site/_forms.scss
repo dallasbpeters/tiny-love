@@ -11,8 +11,8 @@ input[type="password"] {
     font-size: 1.2em;
     border-radius: 2px;
     &:focus {
-        box-shadow: 0 0 10px rgba($red, .5);
-        border: 1px solid white;
+        box-shadow: 0 0 10px rgba($teal, .5);
+        border: 1px solid rgba($teal, .5);
         outline: none;
         @include transform(scale(1.03));
     }
@@ -44,12 +44,12 @@ input[type="password"] {
     font-family: $display-font;
     text-decoration: none;
     color: $deep-blue;
-    position: absolute;
-    top: 0;
-    left: 0;
     padding: 1em;
     @include transition(all 250ms ease);
     display: block;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
     &:before {
         display: inline-block;
         vertical-align: middle;
@@ -62,9 +62,8 @@ input[type="password"] {
 }
 
 .access-form .main {
-    max-width: 450px;
-    margin: 0 auto;
-    padding-top: 5em;
+    max-width: 500px;
+    margin: 1em auto 5em;
 }
 
 .single-form {
@@ -84,7 +83,7 @@ input[type="password"] {
     background-size: cover;
     color: white;
     text-shadow: $text-shadow-style;
-    padding: 2.2em 1em;
+    padding: 3em 1em;
     @include filter(grayscale(30%));
 }
 .single-form__form {
