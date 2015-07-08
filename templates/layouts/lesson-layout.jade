@@ -20,10 +20,16 @@ html
             block supplemental
             
         footer.progress
+        
+            ul.lessons
+                each lesson in lessons
+                    li=lesson.name         
             
             //- This will need some dynamic action for when it's the last lesson.
-            a.button.button--red(href="#") Next Lesson
-
+            if nextLesson
+                a.button.button--red(href='/' + module.key + '/' + nextLesson.key) Next Lesson
+            else
+                a.button.button--red(href='/user/dashboard') Dashboard
 
         script(src='/js/jquery/jquery-2.1.3.min.js')
 
