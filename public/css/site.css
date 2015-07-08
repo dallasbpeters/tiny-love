@@ -387,25 +387,11 @@ body {
   background-color: #F6F3F1;
   -webkit-font-smoothing: antialiased; }
 
-ul, ol {
-  margin: 0;
-  padding: 0;
-  font-size: 1.2em;
-  line-height: 1.3; }
-  ul li, ol li {
-    margin-bottom: .5em;
-    list-style: none; }
-  @media only screen and (min-width: 600px) {
-    ul.two-column, ol.two-column {
-      -webkit-columns: 2;
-      -moz-columns: 2;
-      columns: 2;
-      -webkit-column-gap: 3em;
-      -moz-column-gap: 3em;
-      column-gap: 3em;
-      -webkit-column-rule: 1px solid #D7D9DC;
-      -moz-column-rule: 1px solid #D7D9DC;
-      column-rule: 1px solid #D7D9DC; } }
+::-moz-selection {
+  background-color: rgba(238, 101, 86, 0.5); }
+
+::selection {
+  background-color: rgba(238, 101, 86, 0.5); }
 
 .hide-text {
   display: none;
@@ -865,9 +851,34 @@ h3 {
   color: #71B3A7; }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.3rem;
   line-height: 1.3;
   margin: 0 0 1.25rem 0; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+  line-height: 1.3; }
+  ul li, ol li {
+    margin-bottom: .5em;
+    list-style: none; }
+  @media only screen and (min-width: 600px) {
+    ul.two-column, ol.two-column {
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      columns: 2;
+      -webkit-column-gap: 3em;
+      -moz-column-gap: 3em;
+      column-gap: 3em;
+      -webkit-column-rule: 1px solid #D7D9DC;
+      -moz-column-rule: 1px solid #D7D9DC;
+      column-rule: 1px solid #D7D9DC; } }
+
+.lesson-body ol {
+  margin-left: 2em; }
+  .lesson-body ol li {
+    list-style-type: decimal; }
 
 .price {
   color: #313D4C;
@@ -1391,11 +1402,25 @@ body.lesson {
   background-color: white; }
 
 .lesson-content {
-  padding: 1.2em 2.2em 1.2em 7em; }
+  padding: 1.6em 2.2em 1.2em 7em; }
+  .lesson-content h1 {
+    font-family: "Learning Curve Pro";
+    font-size: 2.2em;
+    line-height: .7;
+    color: #71B3A7; }
+  .lesson-content h2 {
+    font-family: "Diehl Deco";
+    color: #313D4C;
+    font-size: 1.875em;
+    margin-bottom: 1em; }
 
 .lesson-body {
-  max-width: 700px;
+  max-width: 650px;
   margin-bottom: 100px; }
+  .lesson-body h1, .lesson-body h2, .lesson-body h3, .lesson-body h4, .lesson-body h5, .lesson-body h6 {
+    font-family: "Diehl Deco";
+    color: #313D4C;
+    line-height: 1.3; }
 
 .progress {
   background-color: #F6F3F1;
@@ -1404,7 +1429,63 @@ body.lesson {
   left: 0;
   width: 100%;
   text-align: right;
-  padding: 1em; }
+  padding: 1em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.progress__list {
+  -webkit-box-flex: 5;
+  -moz-box-flex: 5;
+  box-flex: 5;
+  -webkit-flex: 5;
+  -moz-flex: 5;
+  -ms-flex: 5;
+  flex: 5; }
+
+.progress__button {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center; }
+
+.progress__list-item {
+  display: inline-block;
+  margin: 0;
+  padding-top: 1em; }
+  .progress__list-item [data-tooltip]:before {
+    padding: 0.5em 1em;
+    -webkit-transform: translateX(0) translateY(-100%);
+    -moz-transform: translateX(0) translateY(-100%);
+    -ms-transform: translateX(0) translateY(-100%);
+    -o-transform: translateX(0) translateY(-100%);
+    transform: translateX(0) translateY(-100%); }
+    .progress__list-item [data-tooltip]:before:hover {
+      -webkit-transform: translateX(0) translateY(0);
+      -moz-transform: translateX(0) translateY(0);
+      -ms-transform: translateX(0) translateY(0);
+      -o-transform: translateX(0) translateY(0);
+      transform: translateX(0) translateY(0); }
+
+.progress__marker {
+  height: 14px;
+  width: 14px;
+  background-color: transparent;
+  border: solid 1px #313D4C;
+  display: block;
+  border-radius: 500px; }
+
+.progress__marker--current {
+  background-color: #71B3A7;
+  border-color: #71B3A7; }
 
 nav.overview {
   position: absolute;
@@ -1480,7 +1561,7 @@ nav.overview {
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   position: relative;
-  padding: 3.25em 2.5em 2.5em 2.5em;
+  padding: 3em 2.5em 2.5em 2.5em;
   max-width: 750px;
   margin-bottom: 100px; }
   .main-content:after {
@@ -1493,3 +1574,14 @@ nav.overview {
     z-index: 5;
     background-image: url("/images/cut-effect.svg");
     background-repeat: repeat-x; }
+  .main-content h1 {
+    text-align: center; }
+  .main-content a {
+    color: #313D4C;
+    text-decoration: none;
+    border-bottom: dotted 1px #D7D9DC; }
+    .main-content a:hover {
+      color: #ee6556; }
+    .main-content a.current {
+      border-bottom: solid 3px #ee6556;
+      box-shadow: inset 0 -6px 0 #ee6556; }

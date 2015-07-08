@@ -3,12 +3,29 @@ body.lesson {
 }
 
 .lesson-content {
-    padding: 1.2em 2.2em 1.2em 7em;
+    padding: 1.6em 2.2em 1.2em 7em;
+    h1 {
+        font-family: $cursive;
+        font-size: 2.2em;
+        line-height: .7;
+        color: $teal;
+    }
+    h2 {
+        font-family: $display-font;
+        color: $deep-blue;
+        font-size: 1.875em;
+        margin-bottom: 1em;
+    }
 }
 
 .lesson-body {
-    max-width: 700px;
+    max-width: 650px;
     margin-bottom: 100px;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $display-font;
+        color: $deep-blue;
+        line-height: 1.3;
+    }
 }
 
 // Progress footer
@@ -20,6 +37,38 @@ body.lesson {
     width: 100%;
     text-align: right;
     padding: 1em;
+    @include display(flex);
+}
+.progress__list {
+    @include flex(5);
+}
+.progress__button {
+    @include flex(1);
+    text-align: center;
+}
+.progress__list-item {
+    display: inline-block;
+    margin: 0;
+    padding-top: 1em;
+    [data-tooltip]:before {
+        padding: .5em 1em;
+        @include transform(translateX(0)translateY(-100%));
+        &:hover {
+            @include transform(translateX(0)translateY(0));
+        }
+    }
+}
+.progress__marker {
+    height: 14px;
+    width: 14px;
+    background-color: transparent;
+    border: solid 1px $deep-blue;
+    display: block;
+    border-radius: 500px;
+}
+.progress__marker--current {
+    background-color: $teal;
+    border-color: $teal;
 }
 
 nav.overview {
