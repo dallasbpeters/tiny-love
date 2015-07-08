@@ -11,7 +11,8 @@ Lesson.add({
 	module: { type: Types.Relationship, ref: 'Module' },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	content: { type: Types.Html, wysiwyg: true, height: 400 }
+	content: { type: Types.Html, wysiwyg: true, height: 400 },
+	supplemental: { type: Types.Html, wysiwyg: true, height: 200 }
 });
 
 Lesson.register();
