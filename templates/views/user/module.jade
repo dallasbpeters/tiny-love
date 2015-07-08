@@ -8,16 +8,11 @@ block content
 			
 			//- Start putting the module overview here.
 			//- h1= module.name
-			h1 Module Name
-			
-			ul.lessons-list
-				
-				li: a(href='#') Lesson Name
-				li: a(href='#') Lesson Name
-				li: a(href='#') Lesson Name
-				li: a(href='#') Lesson Name
-				li: a(href='#') Lesson Name
-				li: a(href='#') Lesson Name
-				li: a(href='#') Lesson Name
+			h1= module.name
+            
+			if lessons.length
+				ul.lessons-list
+					each lesson in lessons
+						li: a(href='/' + module.key + '/' + lesson.key)= lesson.name
 			
 			//- <ul> that lists out all the lessons in this module
