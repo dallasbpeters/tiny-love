@@ -432,6 +432,7 @@ ul, ol {
 .ion, .tinylove-linea,
 .icon-arrows_check:before,
 .icon-arrows_circle_check:before,
+.icon-arrows_circle_right:before,
 .icon-arrows_down_double:before,
 .icon-basic_ban:before,
 .icon-basic_lock_open:before,
@@ -453,6 +454,9 @@ ul, ol {
 
 .icon-arrows_circle_check:before {
   content: ""; }
+
+.icon-arrows_circle_right:before {
+  content: ""; }
 
 .icon-arrows_down_double:before {
   content: ""; }
@@ -1382,6 +1386,52 @@ input[type="password"] {
   @media only screen and (max-width: 420px) {
     .page-title {
       text-align: center; } }
+
+body.lesson {
+  background-color: white; }
+
+.lesson-content {
+  padding: 1.2em 2.2em 1.2em 7em; }
+
+.lesson-body {
+  max-width: 700px;
+  margin-bottom: 100px; }
+
+.progress {
+  background-color: #F6F3F1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: right;
+  padding: 1em; }
+
+nav.overview {
+  position: absolute;
+  top: 0;
+  left: 0; }
+  nav.overview [class^="icon-"] {
+    font-size: 2em; }
+  nav.overview a {
+    height: 4em;
+    width: 4em;
+    line-height: 4.2em;
+    display: block;
+    color: #313D4C;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    transition: all 250ms ease; }
+    nav.overview a:hover, nav.overview a.active {
+      background-color: #313D4C;
+      color: white; }
+    nav.overview a[data-tooltip]:before {
+      height: 4em;
+      padding: 0 1em;
+      line-height: 4.2em; }
+      @media only screen and (max-width: 420px) {
+        nav.overview a[data-tooltip]:before {
+          display: none; } }
 
 .white-box {
   padding: 3em;

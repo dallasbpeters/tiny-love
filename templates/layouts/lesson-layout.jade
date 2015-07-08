@@ -1,0 +1,33 @@
+include ../mixins/html-header
+
+doctype html
+html
+    
+    +html-header
+
+    body.lesson
+    
+        nav.overview
+            a(href="#", data-tooltip="Overview")
+                i.icon-arrows_circle_right
+      
+        main.lesson-content(role="main")
+
+            block lesson
+        
+        aside.supplemental
+            
+            block supplemental
+            
+        footer.progress
+            
+            //- This will need some dynamic action for when it's the last lesson.
+            a.button.button--red(href="#") Next Lesson
+
+
+        script(src='/js/jquery/jquery-2.1.3.min.js')
+
+        //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
+        //- which generate links to edit content for users who can access Keystone
+        if user && user.canAccessKeystone
+            script(src='/keystone/js/content/editor.js')
