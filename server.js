@@ -20,7 +20,8 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'jade',
 
-	'wysiwyg additional buttons': 'formatselect',
+	'wysiwyg additional buttons': 'formatselect, media, uploadimage',
+	'wysiwyg additional plugins': 'media uploadimage',
 
 	'emails': 'templates/emails',
 

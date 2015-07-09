@@ -4,15 +4,14 @@
   max-width: 750px;
   margin-bottom: 100px;
 
-    h1 {
-        text-align: center;
-    }
     a {
       color: $deep-blue;
       text-decoration: none;
       border-bottom: dotted 1px $grey;
+      @include transition(all 250ms ease-in-out);
       &:hover {
           color: $red;
+          border-color: $red;
       }
       &.current {
           border-bottom: solid 3px $red;

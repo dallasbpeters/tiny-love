@@ -1599,14 +1599,16 @@ nav.overview {
     z-index: 5;
     background-image: url("/images/cut-effect.svg");
     background-repeat: repeat-x; }
-  .main-content h1 {
-    text-align: center; }
   .main-content a {
     color: #313D4C;
     text-decoration: none;
-    border-bottom: dotted 1px #D7D9DC; }
+    border-bottom: dotted 1px #D7D9DC;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out; }
     .main-content a:hover {
-      color: #ee6556; }
+      color: #ee6556;
+      border-color: #ee6556; }
     .main-content a.current {
       border-bottom: solid 3px #ee6556;
       box-shadow: inset 0 -6px 0 #ee6556; }
