@@ -738,10 +738,10 @@ html.remodal-is-locked {
     -o-transform: scale(1.05);
     transform: scale(1.05); }
 
-.button--red, .module-list__item--current .button {
+.button--red {
   background-color: #ee6556;
   box-shadow: 0px 3px #DC2B27; }
-  .button--red:hover, .module-list__item--current .button:hover {
+  .button--red:hover {
     background-color: #ea4331; }
 
 .button--green {
@@ -1356,32 +1356,56 @@ input[type="password"] {
 .module-list {
   max-width: 700px; }
 
-.module-list__item {
+.module-list__title {
+  margin: 0;
+  font-size: 1.2em; }
+
+.module-list__link {
   background-color: white;
   box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2);
   border-radius: 2px;
   padding: 1em;
-  position: relative; }
-  .module-list__item::after {
-    clear: both;
-    content: "";
-    display: table; }
+  color: #313D4C;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out; }
+  .module-list__link:not(.module-list__link--disabled):hover {
+    -webkit-transform: scale(1.025);
+    -moz-transform: scale(1.025);
+    -ms-transform: scale(1.025);
+    -o-transform: scale(1.025);
+    transform: scale(1.025);
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2), 0 10px 13px rgba(49, 61, 76, 0.1); }
 
-.module-list__title {
-  margin: 0;
-  float: left;
-  font-size: 1.2em; }
+.module-list__link--completed:after {
+  content: "Completed";
+  font-family: "Learning Curve Pro";
+  color: #7288a4;
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  transform: rotate(8deg);
+  font-size: 1.7em; }
 
-.module-list__button {
-  float: right;
-  min-width: 100px;
-  text-align: center; }
+.module-list__link--current {
+  color: #ee6556; }
 
-.module-list__item--disabled {
+.module-list__link--disabled {
   opacity: 0.5;
-  filter: alpha(opacity=50); }
-  .module-list__item--disabled .button {
-    display: none; }
+  filter: alpha(opacity=50);
+  cursor: not-allowed; }
 
 .user-content {
   padding: 1.2em 2.2em 1.2em 7em; }

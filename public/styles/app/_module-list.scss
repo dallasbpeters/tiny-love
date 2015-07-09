@@ -1,32 +1,44 @@
 .module-list {
   max-width: 700px;
 }
-.module-list__item {
-  background-color: white;
-  box-shadow: 0 1px 3px rgba($deep-blue,.2);
-  border-radius: 2px;
-  padding: 1em;
-  position: relative;
-  @include clearfix;
-}
 .module-list__title {
   margin: 0;
-  float: left;
   font-size: 1.2em;
 }
-.module-list__button {
-  float: right;
-  min-width: 100px;
-  text-align: center;
+.module-list__link {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba($deep-blue,.2);
+    border-radius: 2px;
+    padding: 1em;
+    color: $deep-blue;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    @include transition(all 250ms ease-in-out);
+    &:not(.module-list__link--disabled):hover {
+        @include transform(scale(1.025));
+        @include transform-origin(center center);
+        box-shadow: 0 1px 3px rgba($deep-blue,.2), 0 10px 13px rgba($deep-blue,.1);
+    }
 }
-.module-list__item--current {
-  .button {
-    @extend .button--red;
-  }
+
+// States of modules
+.module-list__link--completed {
+        &:after {
+            content: "Completed";
+            font-family: $cursive;
+            color: lighten($deep-blue, 30%);
+            position: absolute;
+            top: -6px;
+            right: -4px;
+            @include transform(rotate(8deg));
+            font-size: 1.7em;
+        }
 }
-.module-list__item--disabled {
+.module-list__link--current {
+        color: $red;
+}
+.module-list__link--disabled {
   @include opacity(0.5);
-  .button {
-    display: none;
-  }
+  cursor:not-allowed;
 }
