@@ -1,0 +1,42 @@
+include ../mixins/html-header
+
+doctype html
+html
+    
+    +html-header
+
+    body.lesson
+    
+        nav.overview
+            a(href='/' + module.key, data-tooltip="Overview")
+                i.icon-arrows_circle_right
+      
+        main.lesson-content(role="main")
+
+            block lesson
+        
+        aside.supplemental
+            
+            block supplemental
+            
+        footer.progress
+        
+            ul.progress__list
+                each lesson in lessons
+                    li.progress__list-item
+                        a(href='/' + module.key + '/' + lesson.key, data-tooltip=lesson.name)
+                            span.hide-text= lesson.name
+                            span.progress__marker
+            
+            //- This will need some dynamic action for when it's the last lesson.
+            if nextLesson
+                a.progress__button.button.button--red(href='/' + module.key + '/' + nextLesson.key) Next Lesson
+            else
+                a.progress__button.button.button--green(href='/user/dashboard') Complete
+
+        script(src='/js/jquery/jquery-2.1.3.min.js')
+
+        //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
+        //- which generate links to edit content for users who can access Keystone
+        if user && user.canAccessKeystone
+            script(src='/keystone/js/content/editor.js')

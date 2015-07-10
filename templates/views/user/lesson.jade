@@ -1,0 +1,13 @@
+extends ../../layouts/lesson-layout
+
+block lesson
+
+	h1= module.name
+
+	h2.page-title= lesson.name
+
+	.lesson-body
+		!= lesson.content
+
+
+block supplemental

@@ -20,6 +20,9 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'jade',
 
+	'wysiwyg additional buttons': 'formatselect, media, uploadimage',
+	'wysiwyg additional plugins': 'media uploadimage',
+
 	'emails': 'templates/emails',
 
 	'auto update': true,
@@ -46,8 +49,10 @@ keystone.set('locals', {
 });
 
 // Load your project's Routes
-
 keystone.set('routes', require('./routes'));
+
+// Custom signin URL
+keystone.set('signin url', '/user/signin');
 
 // Setup common locals for your emails. The following are required by Keystone's
 // default email templates, you may remove them if you're using your own.

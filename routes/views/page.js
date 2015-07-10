@@ -22,11 +22,15 @@ exports = module.exports = function(req, res) {
 
 		q.exec(function(err, result) {
 			locals.data.page = result;
+
+            // Render the view
+            if (locals.data.page && locals.data.page.type === 'dashboard') {
+                view.render('user/page');
+            }
+
 			next(err);
 		});
 	});
 
-	// Render the view
-	view.render('page');
-
+    view.render('page');
 };

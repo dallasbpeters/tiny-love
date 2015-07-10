@@ -12,48 +12,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-
-ul, ol {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2em;
-    line-height: 1.3;
-    li {
-        margin-bottom: .5em;
-        list-style: none;
-    }
-    &.two-column {
-        @media only screen and (min-width: 600px) {
-            @include columns(2);
-            @include column-gap(3em);
-            @include column-rule(1px solid $grey);
-        }
-    }
-}
-
-
-// Headings
-h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 1.75rem 0;
-    line-height: 1.3;
-    font-weight: 400;
-}
-h1, h2 {
-    font-family: $display-font;
-}
-h2 {
-    font-size: 1.875em;
-}
-h3 {
-    font-family: $cursive;
-    font-size: 2.6em;
-    line-height: .7;
-    color: $teal;
-}
-
-// Paragraphs
-p {
-    font-size: 1.2em;
-    line-height: 1.3;
-    margin: 0 0 1.25rem 0;
+@include selection {
+  background-color: rgba($red,.5);
 }

@@ -1,5 +1,5 @@
 {
-  "build_hash": "efea8dfdd074f8d81d67c9815859e0c6",
+  "build_hash": "26c83e345dd57692c037abe4e7b326ae",
   "prefix": "icon-",
   "version": "1.0.0",
   "name": "TinyLove-Linea",
@@ -631,6 +631,10 @@
     {
       "code": "0xf13b",
       "name": "arrows_circle_check"
+    },
+    {
+      "code": "0xf14e",
+      "name": "arrows_circle_right"
     },
     {
       "code": "0xf145",

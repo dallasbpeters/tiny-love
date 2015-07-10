@@ -1,6 +1,21 @@
-extends ../../layouts/dashboard
+extends ../../layouts/dashboard-layout
 
 block content
 		h1.page-title My Account
 		
-		p do account type stuff
+		//- Dummy form content. Replace with real form.
+		
+		.single-form.my-account
+		
+			form.single-form__form(method='post')
+				
+				.form-group
+					label Current Password
+					input(type='text', name='currentpass').form-control
+					
+				.form-group
+					label New Password
+					input(type='text', name='newpass').form-control
+					
+				.form-actions
+					button(type='submit').button.button--green Save
