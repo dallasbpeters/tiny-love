@@ -1427,7 +1427,7 @@ body.lesson {
   background-color: white; }
 
 .lesson-content {
-  padding: 1.6em 2.2em 1.2em 7em; }
+  padding: 3.6em 2.2em 1.2em 7em; }
   .lesson-content h1 {
     font-family: "Learning Curve Pro";
     font-size: 2.2em;
@@ -1446,6 +1446,32 @@ body.lesson {
     font-family: "Diehl Deco";
     color: #313D4C;
     line-height: 1.3; }
+  .lesson-body h2 {
+    font-size: 2.2em; }
+  .lesson-body h3 {
+    font-size: 2em; }
+  .lesson-body ul, .lesson-body ol {
+    margin-bottom: 1.75rem; }
+  .lesson-body ul li {
+    list-style-type: disc; }
+  .lesson-body img {
+    box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2);
+    border-radius: 2px;
+    -webkit-transform: rotate(-0.4deg);
+    -moz-transform: rotate(-0.4deg);
+    -ms-transform: rotate(-0.4deg);
+    -o-transform: rotate(-0.4deg);
+    transform: rotate(-0.4deg); }
+  .lesson-body a {
+    color: #313D4C;
+    border-bottom: solid 2px #ee6556;
+    box-shadow: inset 0 -5px 0 #ee6556;
+    text-decoration: none;
+    -webkit-transition: all 250ms ease-in;
+    -moz-transition: all 250ms ease-in;
+    transition: all 250ms ease-in; }
+    .lesson-body a:hover {
+      background-color: rgba(238, 101, 86, 0.3); }
 
 .progress {
   background-color: #F6F3F1;
