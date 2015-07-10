@@ -15,4 +15,5 @@ Lesson.add({
 	supplemental: { type: Types.Html, wysiwyg: true, height: 200 }
 });
 
+Lesson.defaultColumns = 'module, state';
 Lesson.register();
