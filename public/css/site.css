@@ -1377,7 +1377,7 @@ input[type="password"] {
 
 .module-list__title {
   margin: 0;
-  font-size: 1em; }
+  font-size: 1.2em; }
 
 .module-list__link {
   background-color: white;
@@ -1475,13 +1475,13 @@ body.lesson {
     color: #313D4C;
     line-height: 1.3; }
   .lesson-body h1 {
-    font-size: 1.8em; }
+    font-size: 1.7em; }
   .lesson-body h2 {
-    font-size: 1.6em; }
+    font-size: 1.5em; }
   .lesson-body h3 {
-    font-size: 1.4em; }
+    font-size: 1.3em; }
   .lesson-body h4 {
-    font-size: 1.2em; }
+    font-size: 1.1em; }
   .lesson-body ul, .lesson-body ol {
     margin-bottom: 1.25rem;
     padding-left: 1em; }
