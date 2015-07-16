@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2015-7-7: Created with FontForge (http://fontforge.org)
+2015-7-15: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150401 at Tue Jul  7 20:17:40 2015
+Created by FontForge 20150401 at Wed Jul 15 11:30:09 2015
  By admin
 Copyright (c) 2015, admin
 </metadata>
@@ -22,7 +22,7 @@ Copyright (c) 2015, admin
     bbox="0 -64 512 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+F138-F14E"
+    unicode-range="U+F138-F154"
   />
     <missing-glyph />
     <glyph glyph-name="ion-arrows_check" unicode="&#xf138;" horiz-adv-x="299" 
@@ -35,6 +35,14 @@ d="M302 62l-13 -12l-137 136v12l137 136l13 -12l-131 -130zM256 -64c-68 0 -133 27 -
 s25 -125 70 -170s106 -70 170 -70v0v0c64 0 125 25 170 70s70 106 70 170s-25 125 -70 170s-106 70 -170 70v0c-64 0 -125 -25 -170 -70z" />
     <glyph glyph-name="ion-arrows_down_double" unicode="&#xf145;" horiz-adv-x="283" 
 d="M142 75l130 130l11 -12l-136 -137h-11l-136 137l11 13zM142 195l130 130l11 -12l-136 -137h-11l-136 137l11 13z" />
+    <glyph glyph-name="ion-arrows_hamburger" unicode="&#xf153;" horiz-adv-x="320" 
+d="M0 272v16h320v-16h-320zM0 176v16h320v-16h-320zM0 80v16h320v-16h-320z" />
+    <glyph glyph-name="ion-arrows_left_double-32" unicode="&#xf151;" horiz-adv-x="269" 
+d="M149 323l-130 -130l130 -131l-12 -11l-137 136v11l137 136zM257 334l12 -11l-130 -130l130 -131l-12 -11l-137 136v11z" />
+    <glyph glyph-name="ion-arrows_list" unicode="&#xf154;" 
+d="M0 272v16h48v-16h-48zM128 272v16h384v-16h-384zM0 176v16h48v-16h-48zM128 176v16h384v-16h-384zM0 80v16h48v-16h-48zM128 80v16h384v-16h-384z" />
+    <glyph glyph-name="ion-arrows_right_double-31" unicode="&#xf152;" horiz-adv-x="270" 
+d="M120 322l12 12l138 -136v-12l-138 -136l-12 12l130 130zM150 198v-12l-138 -136l-12 12l130 130l-130 130l12 12z" />
     <glyph glyph-name="ion-basic_ban" unicode="&#xf146;" 
 d="M437 373c-100 100 -262 100 -362 0s-100 -262 0 -362s262 -100 362 0s100 262 0 362zM426 362c94 -94 94 -246 0 -340s-246 -94 -340 0s-94 246 0 340s246 94 340 0zM86 373l-11 -11l351 -351l11 11z" />
     <glyph glyph-name="ion-basic_lock_open" unicode="&#xf14c;" horiz-adv-x="400" 
