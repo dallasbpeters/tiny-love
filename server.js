@@ -20,8 +20,11 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'jade',
 
-	'wysiwyg additional buttons': 'formatselect, media, uploadimage',
-	'wysiwyg additional plugins': 'media uploadimage',
+	'wysiwyg cloudinary images' : true,
+	// TODO: rethink how to pull in the styles for the WYSIWYG for more accurate authoring
+	// 'wysiwyg importcss' : "/css/site.css",
+	'wysiwyg additional buttons': 'blockquote, formatselect, media',
+	'wysiwyg additional plugins': 'media',
 
 	'emails': 'templates/emails',
 
