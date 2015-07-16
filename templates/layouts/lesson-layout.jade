@@ -37,6 +37,13 @@ html
                 a.progress__button.button.button--green(href='/user/dashboard') Complete
 
         script(src='/js/jquery/jquery-2.1.3.min.js')
+        script(src='/js/jquery.fitvids.js')
+        script.
+          $(document).ready(function(){
+              // Target your .container, .wrapper, .post, etc.
+              $(".lesson-body").fitVids();
+          });
+
 
         //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
         //- which generate links to edit content for users who can access Keystone
