@@ -19,8 +19,9 @@
   left: 100%;
   white-space: nowrap;
   padding: 1em;
+  font-size: 1.2rem;
   background-color: $deep-blue;
-  box-shadow: 0 1px 3px rgba($deep-blue,.2);
+  box-shadow: 0 1px 3px rgba($deep-blue,.3);
   color: #fff;
   content: attr(data-tooltip);
   text-align: center;

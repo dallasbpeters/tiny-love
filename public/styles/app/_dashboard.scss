@@ -19,9 +19,9 @@
     @include align-items(stretch);
   }
   a {
-    height: 4em;
-    width: 4em;
-    line-height: 4.2em;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5.2rem;
     display: block;
     color: $deep-blue;
     @include transition(all 250ms ease);
@@ -38,9 +38,9 @@
       font-size: 1.5em;
     }
     &[data-tooltip]:before {
-      height: 4em;
-      padding: 0 1em;
-      line-height: 4.2em;
+      height: 5rem;
+      padding: 0 1rem;
+      line-height: 5.2rem;
       // hide tooltips on mobile
       @media only screen and (max-width: 420px) {
         display: none;

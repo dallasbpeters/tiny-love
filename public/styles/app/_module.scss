@@ -7,11 +7,11 @@
     a {
       color: $deep-blue;
       text-decoration: none;
-      border-bottom: dotted 1px $grey;
+      border-bottom: solid 1px white;
       @include transition(all 250ms ease-in-out);
       &:hover {
           color: $red;
-          border-color: $red;
+          border-bottom: dotted 1px $red;
       }
       &.current {
           border-bottom: solid 3px $red;
@@ -20,3 +20,9 @@
     }
 
 } // .main-content
+
+
+.lessons-list {
+    border-left: solid 1px $tan;
+    padding-left: 1em;
+}

@@ -420,6 +420,10 @@ body {
 .icon-arrows_circle_check:before,
 .icon-arrows_circle_right:before,
 .icon-arrows_down_double:before,
+.icon-arrows_hamburger:before,
+.icon-arrows_left_double-32:before,
+.icon-arrows_list:before,
+.icon-arrows_right_double-31:before,
 .icon-basic_ban:before,
 .icon-basic_lock_open:before,
 .icon-ecommerce_bag:before {
@@ -446,6 +450,18 @@ body {
 
 .icon-arrows_down_double:before {
   content: ""; }
+
+.icon-arrows_hamburger:before {
+  content: ""; }
+
+.icon-arrows_left_double-32:before {
+  content: ""; }
+
+.icon-arrows_list:before {
+  content: ""; }
+
+.icon-arrows_right_double-31:before {
+  content: ""; }
 
 .icon-basic_ban:before {
   content: ""; }
@@ -816,8 +832,9 @@ img {
   left: 100%;
   white-space: nowrap;
   padding: 1em;
+  font-size: 1.2rem;
   background-color: #313D4C;
-  box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2);
+  box-shadow: 0 1px 3px rgba(49, 61, 76, 0.3);
   color: #fff;
   content: attr(data-tooltip);
   text-align: center; }
@@ -851,15 +868,17 @@ h3 {
   color: #71B3A7; }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.1em;
   line-height: 1.3;
   margin: 0 0 1.25rem 0; }
 
 ul, ol {
   margin: 0;
   padding: 0;
-  font-size: 1.3rem;
+  font-size: 1.1em;
   line-height: 1.3; }
+  ul ul, ul ol, ol ul, ol ol {
+    font-size: 1em; }
   ul li, ol li {
     margin-bottom: .5em;
     list-style: none; }
@@ -1312,9 +1331,9 @@ input[type="password"] {
       align-items: stretch;
       -ms-flex-align: stretch; } }
   .user-navigation__ul a {
-    height: 4em;
-    width: 4em;
-    line-height: 4.2em;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5.2rem;
     display: block;
     color: #313D4C;
     -webkit-transition: all 250ms ease;
@@ -1331,9 +1350,9 @@ input[type="password"] {
     .user-navigation__ul a [class^="icon-"] {
       font-size: 1.5em; }
     .user-navigation__ul a[data-tooltip]:before {
-      height: 4em;
-      padding: 0 1em;
-      line-height: 4.2em; }
+      height: 5rem;
+      padding: 0 1rem;
+      line-height: 5.2rem; }
       @media only screen and (max-width: 420px) {
         .user-navigation__ul a[data-tooltip]:before {
           display: none; } }
@@ -1358,13 +1377,13 @@ input[type="password"] {
 
 .module-list__title {
   margin: 0;
-  font-size: 1.2em; }
+  font-size: 1em; }
 
 .module-list__link {
   background-color: white;
   box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2);
   border-radius: 2px;
-  padding: 1em;
+  padding: 1.4em;
   color: #313D4C;
   display: block;
   text-decoration: none;
@@ -1386,18 +1405,18 @@ input[type="password"] {
     box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2), 0 10px 13px rgba(49, 61, 76, 0.1); }
 
 .module-list__link--completed:after {
-  content: "Completed";
+  content: "Complete";
   font-family: "Learning Curve Pro";
-  color: #7288a4;
+  color: #8AC58C;
   position: absolute;
-  top: -6px;
-  right: -4px;
-  -webkit-transform: rotate(8deg);
-  -moz-transform: rotate(8deg);
-  -ms-transform: rotate(8deg);
-  -o-transform: rotate(8deg);
-  transform: rotate(8deg);
-  font-size: 1.7em; }
+  top: 4px;
+  right: 10px;
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  transform: rotate(4deg);
+  font-size: 1.3em; }
 
 .module-list__link--current {
   color: #ee6556; }
@@ -1424,34 +1443,48 @@ input[type="password"] {
       text-align: center; } }
 
 body.lesson {
-  background-color: white; }
+  background-color: white;
+  padding-top: 3.6em; }
 
 .lesson-content {
-  padding: 3.6em 2.2em 1.2em 7em; }
-  .lesson-content h1 {
+  padding: 0 3em 1.2em 7em;
+  margin-bottom: 80px; }
+  .lesson-content::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media only screen and (max-width: 768px) {
+    .lesson-content {
+      float: none;
+      padding: 80px 20px 20px 20px; } }
+  .lesson-content .module-name {
     font-family: "Learning Curve Pro";
     font-size: 2.2em;
     line-height: .7;
     color: #71B3A7; }
-  .lesson-content h2 {
-    font-family: "Diehl Deco";
-    color: #313D4C;
-    font-size: 1.875em;
-    margin-bottom: 1em; }
 
 .lesson-body {
-  max-width: 650px;
-  margin-bottom: 100px; }
+  float: left;
+  width: 60%; }
+  @media only screen and (max-width: 768px) {
+    .lesson-body {
+      float: none;
+      width: 100%; } }
   .lesson-body h1, .lesson-body h2, .lesson-body h3, .lesson-body h4, .lesson-body h5, .lesson-body h6 {
     font-family: "Diehl Deco";
     color: #313D4C;
     line-height: 1.3; }
+  .lesson-body h1 {
+    font-size: 1.8em; }
   .lesson-body h2 {
-    font-size: 2.2em; }
+    font-size: 1.6em; }
   .lesson-body h3 {
-    font-size: 2em; }
+    font-size: 1.4em; }
+  .lesson-body h4 {
+    font-size: 1.2em; }
   .lesson-body ul, .lesson-body ol {
-    margin-bottom: 1.75rem; }
+    margin-bottom: 1.25rem;
+    padding-left: 1em; }
   .lesson-body ul li {
     list-style-type: disc; }
   .lesson-body img {
@@ -1463,9 +1496,8 @@ body.lesson {
     -o-transform: rotate(-0.4deg);
     transform: rotate(-0.4deg); }
   .lesson-body a {
-    color: #313D4C;
-    border-bottom: solid 2px #ee6556;
-    box-shadow: inset 0 -5px 0 #ee6556;
+    color: black;
+    border-bottom: dotted 1px #ee6556;
     text-decoration: none;
     -webkit-transition: all 250ms ease-in;
     -moz-transition: all 250ms ease-in;
@@ -1473,13 +1505,63 @@ body.lesson {
     .lesson-body a:hover {
       background-color: rgba(238, 101, 86, 0.3); }
 
-.progress {
+.supplemental {
+  float: left;
+  width: 30%;
+  margin: 2em;
+  padding: 0 1em;
+  border-left: solid 4px #F6F3F1; }
+  @media only screen and (max-width: 768px) {
+    .supplemental {
+      float: none;
+      width: 100%;
+      padding: 1em;
+      border: none;
+      margin: 0; } }
+
+.supplemental__title {
+  font-size: 1.3em;
+  position: relative; }
+  .supplemental__title:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 90px;
+    height: 60px;
+    background-image: url("/images/cherry-blossom.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg); }
+
+.supplemental__content {
+  font-size: .9em; }
+  .supplemental__content *:last-child {
+    margin-bottom: 0; }
+  .supplemental__content img {
+    box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2);
+    border-radius: 2px;
+    -webkit-transform: rotate(-0.4deg);
+    -moz-transform: rotate(-0.4deg);
+    -ms-transform: rotate(-0.4deg);
+    -o-transform: rotate(-0.4deg);
+    transform: rotate(-0.4deg); }
+  .supplemental__content a {
+    color: black;
+    border-bottom: dotted 1px #ee6556;
+    text-decoration: none; }
+
+.lesson-footer {
   background-color: #F6F3F1;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  text-align: right;
   padding: 1em;
   display: -webkit-box;
   display: -moz-box;
@@ -1487,16 +1569,37 @@ body.lesson {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center; }
+
+.progress {
+  -webkit-box-flex: 6;
+  -moz-box-flex: 6;
+  box-flex: 6;
+  -webkit-flex: 6;
+  -moz-flex: 6;
+  -ms-flex: 6;
+  flex: 6;
+  margin-right: 1em; }
+  @media only screen and (max-width: 768px) {
+    .progress {
+      display: none; } }
+
+.progress__module-name {
+  font-size: 1em;
+  margin: 0 0 0.5em 0; }
 
 .progress__list {
-  -webkit-box-flex: 5;
-  -moz-box-flex: 5;
-  box-flex: 5;
-  -webkit-flex: 5;
-  -moz-flex: 5;
-  -ms-flex: 5;
-  flex: 5; }
+  text-align: center;
+  padding-top: .4em; }
 
 .progress__button {
   -webkit-box-flex: 1;
@@ -1506,33 +1609,48 @@ body.lesson {
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  text-align: center; }
+  text-align: center;
+  font-size: 1em; }
 
 .progress__list-item {
   display: inline-block;
-  margin: 0;
-  padding-top: 1em; }
+  margin: .4em;
+  position: relative; }
   .progress__list-item [data-tooltip]:before {
     padding: 0.5em 1em;
-    -webkit-transform: translateX(0) translateY(-100%);
-    -moz-transform: translateX(0) translateY(-100%);
-    -ms-transform: translateX(0) translateY(-100%);
-    -o-transform: translateX(0) translateY(-100%);
-    transform: translateX(0) translateY(-100%); }
+    top: -5px;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%); }
     .progress__list-item [data-tooltip]:before:hover {
-      -webkit-transform: translateX(0) translateY(0);
-      -moz-transform: translateX(0) translateY(0);
-      -ms-transform: translateX(0) translateY(0);
-      -o-transform: translateX(0) translateY(0);
-      transform: translateX(0) translateY(0); }
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0); }
+  .progress__list-item:after {
+    width: 240%;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    z-index: -1;
+    content: "";
+    border-bottom: solid 1px #C7BEB8; }
+  .progress__list-item:last-child:after {
+    display: none; }
 
 .progress__marker {
   height: 14px;
   width: 14px;
-  background-color: transparent;
-  border: solid 1px #313D4C;
+  background-color: white;
+  border: solid 1px #C7BEB8;
   display: block;
   border-radius: 500px; }
+  .progress__marker:hover {
+    border-color: #313D4C;
+    background-color: #313D4C; }
 
 .progress__marker--current {
   background-color: #71B3A7;
@@ -1540,14 +1658,14 @@ body.lesson {
 
 nav.overview {
   position: absolute;
-  top: 0;
+  top: 1.7rem;
   left: 0; }
   nav.overview [class^="icon-"] {
     font-size: 2em; }
   nav.overview a {
-    height: 4em;
-    width: 4em;
-    line-height: 4.2em;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5.2rem;
     display: block;
     color: #313D4C;
     text-align: center;
@@ -1558,9 +1676,9 @@ nav.overview {
       background-color: #313D4C;
       color: white; }
     nav.overview a[data-tooltip]:before {
-      height: 4em;
-      padding: 0 1em;
-      line-height: 4.2em; }
+      height: 5rem;
+      padding: 0 1rem;
+      line-height: 5.2rem; }
       @media only screen and (max-width: 420px) {
         nav.overview a[data-tooltip]:before {
           display: none; } }
@@ -1628,13 +1746,17 @@ nav.overview {
   .main-content a {
     color: #313D4C;
     text-decoration: none;
-    border-bottom: dotted 1px #D7D9DC;
+    border-bottom: solid 1px white;
     -webkit-transition: all 250ms ease-in-out;
     -moz-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out; }
     .main-content a:hover {
       color: #ee6556;
-      border-color: #ee6556; }
+      border-bottom: dotted 1px #ee6556; }
     .main-content a.current {
       border-bottom: solid 3px #ee6556;
       box-shadow: inset 0 -6px 0 #ee6556; }
+
+.lessons-list {
+  border-left: solid 1px #F6F3F1;
+  padding-left: 1em; }
