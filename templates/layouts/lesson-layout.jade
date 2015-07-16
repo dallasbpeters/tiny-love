@@ -9,25 +9,27 @@ html
     
         nav.overview
             a(href='/' + module.key, data-tooltip="Overview")
-                i.icon-arrows_circle_right
+                i.icon-arrows_list
       
         main.lesson-content(role="main")
 
             block lesson
         
-        aside.supplemental
+            //- TODO: this needs to be conditional based on existing content or not
+            aside.supplemental
             
-            block supplemental
+                block supplemental
             
-        footer.progress
-        
-            ul.progress__list
-                each lesson in lessons
-                    li.progress__list-item
-                        a(href='/' + module.key + '/' + lesson.key, data-tooltip=lesson.name)
-                            span.hide-text= lesson.name
-                            span.progress__marker
-            
+        footer.lesson-footer
+            .progress
+                //- h2.progress__module-name= module.name
+                ul.progress__list
+                    each lesson in lessons
+                        li.progress__list-item
+                            a(href='/' + module.key + '/' + lesson.key, data-tooltip=lesson.name)
+                                span.hide-text= lesson.name
+                                span.progress__marker
+                
             //- This will need some dynamic action for when it's the last lesson.
             if nextLesson
                 a.progress__button.button.button--red(href='/' + module.key + '/' + nextLesson.key) Next Lesson
