@@ -18,7 +18,7 @@ exports = module.exports = function(req, res) {
 	for (var key in req.body) {
 		if (req.body.hasOwnProperty(key)) {
 			var value = querystring.escape(req.body[key]);
-			postreq = postreq + "&" + key + "=" + value;
+			postreq = postreq + '&' + key + '=' + value;
 		}
 	}
 

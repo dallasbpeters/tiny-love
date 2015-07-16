@@ -1,5 +1,5 @@
 {
-  "build_hash": "efea8dfdd074f8d81d67c9815859e0c6",
+  "build_hash": "079ab3cf1a4bb79fa8a22404d1e1db59",
   "prefix": "icon-",
   "version": "1.0.0",
   "name": "TinyLove-Linea",
@@ -19,6 +19,22 @@
     {
       "code": "0xf145",
       "name": "arrows_down_double"
+    },
+    {
+      "code": "0xf153",
+      "name": "arrows_hamburger"
+    },
+    {
+      "code": "0xf151",
+      "name": "arrows_left_double-32"
+    },
+    {
+      "code": "0xf154",
+      "name": "arrows_list"
+    },
+    {
+      "code": "0xf152",
+      "name": "arrows_right_double-31"
     },
     {
       "code": "0xf146",

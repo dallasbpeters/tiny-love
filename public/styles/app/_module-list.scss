@@ -3,13 +3,13 @@
 }
 .module-list__title {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .module-list__link {
     background-color: white;
     box-shadow: 0 1px 3px rgba($deep-blue,.2);
     border-radius: 2px;
-    padding: 1em;
+    padding: 1.4em;
     color: $deep-blue;
     display: block;
     text-decoration: none;
@@ -25,14 +25,14 @@
 // States of modules
 .module-list__link--completed {
         &:after {
-            content: "Completed";
+            content: "Complete";
             font-family: $cursive;
-            color: lighten($deep-blue, 30%);
+            color: $green;
             position: absolute;
-            top: -6px;
-            right: -4px;
-            @include transform(rotate(8deg));
-            font-size: 1.7em;
+            top: 4px;
+            right: 10px;
+            @include transform(rotate(4deg));
+            font-size: 1.3em;
         }
 }
 .module-list__link--current {

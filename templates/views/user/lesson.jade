@@ -2,12 +2,15 @@ extends ../../layouts/lesson-layout
 
 block lesson
 
-	h1= module.name
-
-	h2.page-title= lesson.name
-
 	.lesson-body
+		
+		h1.module-name= lesson.name
+		
 		!= lesson.content
 
 
 block supplemental
+	h2.supplemental__title In This Lesson
+	
+	.supplemental__content
+		!= lesson.supplemental
