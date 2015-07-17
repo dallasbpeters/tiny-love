@@ -55,6 +55,8 @@ exports = module.exports = function(req, res) {
 
 					res.redirect('/user/pay');
 
+                    console.log('YOU NEED TO CHANGE THE FROM EMAIL');
+
                     // send out the new signup email.
                     new keystone.Email('signup').send({
                         to: req.body.email,
