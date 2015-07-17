@@ -6,9 +6,9 @@ block content
 		
 		.main-content
 			
-			h1= module.name
+			h1(data-ks-editable=editable(user, { list: 'Module', id: module.id }))= module.name
             
 			if lessons.length
 				ul.lessons-list
 					each lesson in lessons
-						li(class=lesson.status): a(href='/' + module.key + '/' + lesson.key)= lesson.name
+						li(data-ks-editable=editable(user, { list: 'Lesson', id: lesson.id }) class=lesson.status): a(href='/' + module.key + '/' + lesson.key)= lesson.name

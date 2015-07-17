@@ -6,7 +6,7 @@ block content
     ul.module-list
         if modules.length
             each module in modules
-                li.module-list__item
+                li.module-list__item(data-ks-editable=editable(user, { list: 'Module', id: module.id }))
                     if module.status !== 'disabled'
                         a(class='module-list__link module-list__link--' + module.status, href='/' + module.key)
                             h2.module-list__title= module.name
