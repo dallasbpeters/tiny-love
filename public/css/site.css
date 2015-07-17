@@ -1248,12 +1248,12 @@ input[type="password"] {
     -o-transform: scale(1.03);
     transform: scale(1.03); }
 
-.access-form .main {
+.access-form .main, .pay-form .main {
   max-width: 500px;
-  margin: 1em auto 5em; }
+  margin: 2em auto 5em; }
 
 .single-form {
-  margin: 0;
+  margin: .5em;
   position: relative;
   -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
@@ -1261,7 +1261,8 @@ input[type="password"] {
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   position: relative;
-  max-width: 480px; }
+  max-width: 480px;
+  text-align: center; }
   .single-form:after {
     content: "";
     height: 14px;
@@ -1274,7 +1275,6 @@ input[type="password"] {
     background-repeat: repeat-x; }
 
 .single-form__title {
-  text-align: center;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   margin: 0;
@@ -1287,9 +1287,21 @@ input[type="password"] {
   padding: 3em 1em;
   -webkit-filter: grayscale(30%);
   filter: grayscale(30%); }
+  .single-form__title.single-form__title--pay {
+    background-image: url("../images/bg-pay@2x.jpg");
+    background-position: center 70%;
+    background-color: transparent;
+    padding: 2em 1em;
+    font-size: 2.5em; }
 
 .single-form__form {
   padding: 2.2em; }
+
+.buy-button {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  display: block; }
 
 .site-footer {
   background-color: #313D4C;
