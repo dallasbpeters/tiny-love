@@ -11,6 +11,7 @@ block content
                         a(class='module-list__link module-list__link--' + module.status, href='/' + module.key)
                             h2.module-list__title= module.name
                     else
-                        h2.module-list__title= module.name
+                        .module-list__link.module-list__link--disabled
+                            h2.module-list__title= module.name
         else
             h2 Whoops, you need to make some more Modules
