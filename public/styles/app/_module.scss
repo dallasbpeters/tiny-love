@@ -1,9 +1,16 @@
+// this should probably go in a layout file, but moving on for now :)
+
 .main-content {
   @include torn-page;
   padding: 3em 2.5em 2.5em 2.5em;
   max-width: 750px;
   margin-bottom: 100px;
-
+  &.main-content--full {
+      max-width: none;
+  }
+  &.main-content--two-col {
+      @include columns(2);
+  }
     a {
       color: $deep-blue;
       text-decoration: none;
