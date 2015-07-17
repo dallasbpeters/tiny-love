@@ -8,6 +8,20 @@ exports = module.exports = function(req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'module';
+	locals.module = {
+		id: 0
+	};
+	locals.lessons = [];
+
+	view.on('init', function(next) {
+
+		if (!req.user || !req.user._id) {
+			res.redirect('/');
+		}
+		else {
+			next();
+		}
+	});
 
 	view.on('init', function(next) {
 
@@ -22,6 +36,11 @@ exports = module.exports = function(req, res) {
 
         // Load the modules by sortOrder
     	keystone.list('Module').model.findOne({ key: req.params.module }).exec(function(err, result) {
+
+			console.log(err, result);
+			if (err || result === null) {
+				return res.redirect('/user/dashboard');
+			}
             locals.module = result;
 
             next(err);
