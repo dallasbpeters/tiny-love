@@ -1,12 +1,13 @@
 .ks-editable-btn {
     border-radius: 0;
-    border: none;
+    border: none !important;
     background-color: $grey;
     color: white;
+    text-decoration: none !important;
     @include transition(all 250ms ease);
     &:hover {
-        background-color: $red;
+        background-color: $red !important;
         border: none;
-        color: white;
+        color: white !important;
     }
 }
