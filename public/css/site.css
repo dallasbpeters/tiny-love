@@ -399,16 +399,17 @@ body {
 
 .ks-editable-btn {
   border-radius: 0;
-  border: none;
+  border: none !important;
   background-color: #D7D9DC;
   color: white;
+  text-decoration: none !important;
   -webkit-transition: all 250ms ease;
   -moz-transition: all 250ms ease;
   transition: all 250ms ease; }
   .ks-editable-btn:hover {
-    background-color: #ee6556;
+    background-color: #ee6556 !important;
     border: none;
-    color: white; }
+    color: white !important; }
 
 /*!
   Ionicons, v1.0.0

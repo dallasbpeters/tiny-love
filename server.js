@@ -61,16 +61,16 @@ keystone.set('signin url', '/user/signin');
 // default email templates, you may remove them if you're using your own.
 
 keystone.set('email locals', {
-	logo_src: '/images/logo-email.gif',
-	logo_width: 194,
-	logo_height: 76,
+	logo_src: '/images/logo.png',
+	logo_width: 71,
+	logo_height: 49,
 	theme: {
-		email_bg: '#f9f9f9',
-		link_color: '#2697de',
+		email_bg: '#F6F3F1',
+		link_color: '#ee6556',
 		buttons: {
 			color: '#fff',
-			background_color: '#2697de',
-			border_color: '#1a7cb7'
+			background_color: '#ee6556',
+			border_color: '#ee6556'
 		}
 	}
 });
