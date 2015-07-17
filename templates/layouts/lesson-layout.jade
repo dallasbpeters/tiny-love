@@ -15,10 +15,10 @@ html
 
             block lesson
         
-            //- TODO: this needs to be conditional based on existing content or not
-            aside.supplemental
-            
-                block supplemental
+            if supplemental
+                aside.supplemental
+                
+                    block supplemental
             
         footer.lesson-footer
             .progress
