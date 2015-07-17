@@ -7,7 +7,11 @@ exports = module.exports = function(req, res) {
 
     var view = new keystone.View(req, res);
     var locals = res.locals;
+
     locals.submitted = req.body;
+    if (!locals.submitted.email && req.cookies.email) {
+        locals.submitted.email = req.cookies.email;
+    }
     locals.from = req.query.from;
     locals.csrf_token_key = keystone.security.csrf.TOKEN_KEY;
     locals.csrf_token_value = keystone.security.csrf.getToken(req, res);
@@ -28,6 +32,9 @@ exports = module.exports = function(req, res) {
 		}
 
 		var onSuccess = function (user) {
+
+            // store the email for later signins
+            res.cookie('email', req.body.email, {maxAge: 900000});
 
 			if (req.query.from && req.query.from.match(/^(?!http|\/\/|javascript).+/)) {
 				res.redirect(req.query.from);

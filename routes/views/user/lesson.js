@@ -15,25 +15,35 @@ exports = module.exports = function(req, res) {
     	keystone.list('Module').model.findOne({ key: req.params.module }).exec(function(err, result) {
             locals.module = result;
 
-			// Load the modules by sortOrder
-        	keystone.list('Lesson').model.find({ module: locals.module.id }).sort('sortOrder').exec(function(err, results) {
-                locals.lessons = results;
+			next(err);
+        });
+    });
 
-				for (var i = 0; i < locals.lessons.length; ++i) {
-					if (locals.lessons[i].key === req.params.lesson) {
-						if (locals.lessons.length > i + 1) {
-							locals.nextLesson = locals.lessons[i+1];
-						}
-						else {
-							locals.nextLesson = null;
-						}
+	view.on('init', function(next) {
 
-						break;
+		if (!locals.module || !locals.module.id) {
+			res.redirect('/user/dashboard');
+			return;
+		}
+
+        // Load the modules by sortOrder
+    	keystone.list('Lesson').model.find({ module: locals.module.id }).sort('sortOrder').exec(function(err, results) {
+            locals.lessons = results;
+
+			for (var i = 0; i < locals.lessons.length; ++i) {
+				if (locals.lessons[i].key === req.params.lesson) {
+					if (locals.lessons.length > i + 1) {
+						locals.nextLesson = locals.lessons[i+1];
 					}
-				}
+					else {
+						locals.nextLesson = null;
+					}
 
-                next(err);
-            });
+					break;
+				}
+			}
+
+            next(err);
         });
     });
 
