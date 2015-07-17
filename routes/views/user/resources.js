@@ -9,6 +9,20 @@ exports = module.exports = function(req, res) {
 	// item in the header navigation.
 	locals.section = 'resources';
 
+    view.on('init', function(next) {
+
+		var q = keystone.list('Page').model.findOne({
+			state: 'published',
+			title: 'Resources'
+		});
+
+		q.exec(function(err, result) {
+			locals.page = result;
+
+			next(err);
+		});
+	});
+
 	// Render the view
 	view.render('user/resources');
 

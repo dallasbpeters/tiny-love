@@ -9,7 +9,7 @@ block content
 			else
 				header
 					h1= data.page.title
-				.page
+				.page(data-ks-editable=editable(user, { list: 'Page', id: data.page.id }))
 					if data.page.image.exists
 						.image-wrap: img(src=data.page._.image.fit(750,450)).img-responsive
 					!= data.page.content
