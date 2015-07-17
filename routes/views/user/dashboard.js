@@ -11,6 +11,11 @@ exports = module.exports = function(req, res) {
 	// item in the header navigation.
 	locals.section = 'dashboard';
 
+	if (!req.user) {
+		res.redirect('/user/signin');
+		return;
+	}
+
     view.on('init', function(next) {
 
         keystone.list('User').model.findOne({_id: req.user._id}).exec(function(err, result) {
