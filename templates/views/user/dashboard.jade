@@ -1,20 +1,16 @@
 extends ../../layouts/dashboard-layout
 
 block content
-		h1.page-title Dashboard
-		
-		ul.module-list
-			if modules.length
-				each module in modules
-					li.module-list__item
-						a(class='module-list__link module-list__link--' + module.status, href='/' + module.key)
-							h2.module-list__title= module.name
-			else
-				h2 Whoops, you need to make some more Modules
-		
-		//- Button text = "Review" or "Continue" depending on completed state.
-		
-		//- Possible states
-		//- li.module-list__item.module-list__item--completed
-		//- li.module-list__item.module-list__item--current
-		//- li.module-list__item.module-list__item--disabled
+    h1.page-title Dashboard
+
+    ul.module-list
+        if modules.length
+            each module in modules
+                li.module-list__item
+                    if module.status !== 'disabled'
+                        a(class='module-list__link module-list__link--' + module.status, href='/' + module.key)
+                            h2.module-list__title= module.name
+                    else
+                        h2.module-list__title= module.name
+        else
+            h2 Whoops, you need to make some more Modules
