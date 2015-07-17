@@ -6,11 +6,9 @@ block content
 		
 		.main-content
 			
-			//- Start putting the module overview here.
-			//- h1= module.name
 			h1= module.name
             
 			if lessons.length
 				ul.lessons-list
 					each lesson in lessons
-						li: a(href='/' + module.key + '/' + lesson.key)= lesson.name
+						li(class=lesson.status): a(href='/' + module.key + '/' + lesson.key)= lesson.name
