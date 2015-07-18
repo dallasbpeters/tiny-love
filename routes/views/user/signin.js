@@ -6,6 +6,8 @@ exports = module.exports = function(req, res) {
     var view = new keystone.View(req, res);
     var locals = res.locals;
 
+    locals.title = 'Sign in';
+
     locals.submitted = req.body;
     if (!locals.submitted.email && req.cookies.email) {
         locals.submitted.email = req.cookies.email;

@@ -9,6 +9,8 @@ exports = module.exports = function(req, res) {
 	// item in the header navigation.
 	locals.section = 'lesson';
 
+	locals.title = 'Lesson';
+
     view.on('init', function(next) {
 
         // Load the modules by sortOrder
@@ -51,6 +53,7 @@ exports = module.exports = function(req, res) {
 
 		keystone.list('Lesson').model.findOne({ key: req.params.lesson }).exec(function(err, result) {
 			locals.lesson = result;
+			locals.title = result.name;
 			next(err);
 		});
     });

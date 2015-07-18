@@ -7,6 +7,8 @@ exports = module.exports = function(req, res) {
 		locals = res.locals,
         currentUser;
 
+	locals.title = 'Dashboard';
+
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'dashboard';
