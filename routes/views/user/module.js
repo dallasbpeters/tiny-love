@@ -39,7 +39,6 @@ exports = module.exports = function(req, res) {
         // Load the modules by sortOrder
     	keystone.list('Module').model.findOne({ key: req.params.module }).exec(function(err, result) {
 
-			console.log(err, result);
 			if (err || result === null) {
 				return res.redirect('/user/dashboard');
 			}
