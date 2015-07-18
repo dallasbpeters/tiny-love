@@ -9,6 +9,11 @@ exports = module.exports = function(req, res) {
 	// item in the header navigation.
 	locals.section = 'user';
 
+    if (!req.user) {
+		res.redirect('/user/signin');
+		return;
+	}
+
 	// Render the view
 	view.render('user/pay');
 
