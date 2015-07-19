@@ -47,7 +47,7 @@ exports = module.exports = function(req, res) {
         var foundCurrent = false;
         async.eachSeries(locals.modules, function(module, iteratorCallback) {
 
-            keystone.list('Lesson').model.find({module: module.id, state: 'published'}).sort('sortOrder').exec(function(err, lessons) {
+            keystone.list('Lesson').model.find({module: module.id, state: 'published'}).exec(function(err, lessons) {
 
                 if (lessons.every(function(lesson) {
                     return currentUser.completedLessons.indexOf(lesson.id) !== -1;

@@ -55,7 +55,7 @@ exports = module.exports = function(req, res) {
 	view.on('init', function(next) {
 
         // Load the lessons by sortOrder
-    	keystone.list('Lesson').model.find({ module: locals.module.id }).exec(function(err, results) {
+    	keystone.list('Lesson').model.find({ module: locals.module.id }).sort('sortOrder').exec(function(err, results) {
             locals.lessons = results;
 
 			for (var i = 0; i < locals.lessons.length; ++i) {

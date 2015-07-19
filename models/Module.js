@@ -9,6 +9,6 @@ Module.add({
 	name: { type: String, required: true }
 });
 
-Module.relationship({ ref: 'Lesson', path: 'module' });
+Module.relationship({ path: 'lessons', ref: 'Lesson', path: 'module' });
 
 Module.register();
