@@ -18,6 +18,11 @@ exports = module.exports = function(req, res) {
 		return;
 	}
 
+	if (!req.user.payed && !req.user.isAdmin) {
+		res.redirect('/user/pay');
+		return;
+	}
+
     view.on('init', function(next) {
 
         keystone.list('User').model.findOne({_id: req.user._id}).exec(function(err, result) {

@@ -11,6 +11,19 @@ exports = module.exports = function(req, res) {
 
 	locals.title = 'Lesson';
 
+	view.on('init', function(next) {
+
+		if (!req.user || !req.user._id) {
+			return res.redirect('/');
+		}
+
+		if (!req.user.payed && !req.user.isAdmin) {
+			return res.redirect('/user/pay');
+		}
+
+		next();
+	});
+
     view.on('init', function(next) {
 
         // Load the modules by sortOrder

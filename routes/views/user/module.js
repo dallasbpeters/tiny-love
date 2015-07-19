@@ -18,11 +18,14 @@ exports = module.exports = function(req, res) {
 	view.on('init', function(next) {
 
 		if (!req.user || !req.user._id) {
-			res.redirect('/');
+			return res.redirect('/');
 		}
-		else {
-			next();
+
+		if (!req.user.payed && !req.user.isAdmin) {
+			return res.redirect('/user/pay');
 		}
+
+		next();
 	});
 
 	view.on('init', function(next) {
