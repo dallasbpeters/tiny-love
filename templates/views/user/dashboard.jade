@@ -2,6 +2,15 @@ extends ../../layouts/dashboard-layout
 
 block content
     h1.page-title Dashboard
+    
+    if allDone
+        .completed
+            h2 Congratulations!
+            
+            p Good job on completing the entire course.  We hope that you learned a lot.
+            
+            p
+                a.button.button--teal(href='/user/complete') Get Your Certificate
 
     ul.module-list
         if modules.length
@@ -13,5 +22,6 @@ block content
                     else
                         .module-list__link.module-list__link--disabled
                             h2.module-list__title= module.name
+
         else
             h2 Whoops, you need to make some more Modules
