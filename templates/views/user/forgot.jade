@@ -1,0 +1,23 @@
+extends ../../layouts/access-form
+
+block content
+    if done
+        p Please check your email for your login link.
+
+    else
+        .single-form.get-started
+            form.single-form__form(method="post", novalidate)
+                input(type='hidden', name='action', value='forgot')
+                input(type='hidden', name=csrf_token_key, value=csrf_token_value)
+                .form-group
+                    label(for='email') Email
+                    input(type='email', name='email', id='email', value=submitted.email).form-control
+
+                button(type='submit').button.button--green Look Me Up
+
+block js
+    //- Only focus the field after the shake animation is complete
+    if messages && messages.error.length
+        script setTimeout(function() { try { document.getElementById('email').focus(); } catch(e) {}; }, 800);
+    else
+        script try { document.getElementById('email').focus(); } catch(e) {};
