@@ -1692,6 +1692,10 @@ body.lesson {
   background-color: #71B3A7;
   border-color: #71B3A7; }
 
+ .progress__marker--completed {
+    background-color: #222;
+    border-color: #555; }
+
 nav.overview {
   position: absolute;
   top: 1.7rem;

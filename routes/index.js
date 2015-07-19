@@ -52,6 +52,7 @@ exports = module.exports = function(app) {
 	app.get('/user/resources', routes.views.user.resources);
 	app.get('/:module', routes.views.user.module);
 	app.get('/:module/:lesson', routes.views.user.lesson);
+	app.get('/user/markcomplete/:id', routes.views.user.markcomplete);
 
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
