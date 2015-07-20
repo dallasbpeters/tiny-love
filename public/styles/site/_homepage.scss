@@ -32,7 +32,7 @@ body.home {
     background-size: cover;
     background-position: center center;
     padding: 12em 1em 4em 1em;
-    height: 100%;
+    height: 96%;
     @media only screen and (max-width: 480px) {
         padding: 8em 1.5em 3em 1.5em;
     }
@@ -83,8 +83,7 @@ body.home {
 
 .introduction__headline {
     font-family: $display-font;
-    font-size: 2.6em;
-    text-shadow: $text-shadow-style;
+    font-size: 4em;
     margin-bottom: .4em;
     @media only screen and (max-width: 480px) {
         font-size: 2em;
@@ -94,10 +93,10 @@ body.home {
   font-family: $cursive;
   text-align: center;
   line-height: .8;
-  font-size: 3.3em;
+  font-size: 3.4em;
   margin-bottom: 0;
   color: white;
-  text-shadow: $text-shadow-style;
+  // text-shadow: $text-shadow-style;
   @media only screen and (max-width: 480px) {
     display: none;
   }
@@ -124,10 +123,10 @@ body.home {
   }
 }
 .scroll-instructions__text {
-    line-height: .8;
     font-size: 1.3em;
+    font-weight: 300;
     margin: 0 0 .5em 0;
-    text-shadow: $text-shadow-style;
+    // text-shadow: $text-shadow-style;
     text-align: center !important;
     @media only screen and (max-width: 480px) {
       display: none;

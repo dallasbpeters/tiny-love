@@ -382,7 +382,7 @@ html {
 
 body {
   height: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #313D4C;
   background-color: #F6F3F1;
   -webkit-font-smoothing: antialiased; }
@@ -403,7 +403,7 @@ body {
   background-color: #D7D9DC;
   color: white;
   text-decoration: none !important;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Lato", sans-serif !important;
   -webkit-transition: all 250ms ease;
   -moz-transition: all 250ms ease;
   transition: all 250ms ease; }
@@ -1032,7 +1032,7 @@ body.home {
   background-size: cover;
   background-position: center center;
   padding: 12em 1em 4em 1em;
-  height: 100%; }
+  height: 96%; }
   @media only screen and (max-width: 480px) {
     .section--first {
       padding: 8em 1.5em 3em 1.5em; } }
@@ -1076,8 +1076,7 @@ body.home {
 
 .introduction__headline {
   font-family: "Diehl Deco";
-  font-size: 2.6em;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  font-size: 4em;
   margin-bottom: .4em; }
   @media only screen and (max-width: 480px) {
     .introduction__headline {
@@ -1087,10 +1086,9 @@ body.home {
   font-family: "Learning Curve Pro";
   text-align: center;
   line-height: .8;
-  font-size: 3.3em;
+  font-size: 3.4em;
   margin-bottom: 0;
-  color: white;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
+  color: white; }
   @media only screen and (max-width: 480px) {
     .introduction__subheadline {
       display: none; } }
@@ -1116,10 +1114,9 @@ body.home {
     filter: alpha(opacity=0); }
 
 .scroll-instructions__text {
-  line-height: .8;
   font-size: 1.3em;
+  font-weight: 300;
   margin: 0 0 0.5em 0;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   text-align: center !important; }
   @media only screen and (max-width: 480px) {
     .scroll-instructions__text {
@@ -1691,10 +1688,6 @@ body.lesson {
 .progress__marker--current {
   background-color: #71B3A7;
   border-color: #71B3A7; }
-
- .progress__marker--completed {
-    background-color: #222;
-    border-color: #555; }
 
 nav.overview {
   position: absolute;
