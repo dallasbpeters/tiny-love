@@ -1258,8 +1258,18 @@ input[type="password"] {
   .form-actions .button {
     margin-bottom: 0; }
 
+.forgot-password {
+  margin-right: 1em;
+  display: inline-block;
+  font-size: .9em;
+  text-decoration: none;
+  color: #a1a5ac; }
+  .forgot-password:hover {
+    color: #ee6556; }
+
 .return-home {
   font-family: "Diehl Deco";
+  font-size: 1.2em;
   text-decoration: none;
   color: #313D4C;
   padding: 1em;
@@ -1295,8 +1305,7 @@ input[type="password"] {
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   position: relative;
-  max-width: 480px;
-  text-align: center; }
+  max-width: 480px; }
   .single-form:after {
     content: "";
     height: 14px;

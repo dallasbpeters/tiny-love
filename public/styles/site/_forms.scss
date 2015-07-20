@@ -37,11 +37,23 @@ input[type="password"] {
     }
 }
 
+.forgot-password {
+    margin-right: 1em;
+    display: inline-block;
+    font-size: .9em;
+    text-decoration: none;
+    color: darken($grey,20%);
+    &:hover {
+        color: $red;
+    }
+}
+
 
 
 // Single Form Page styles
 .return-home {
     font-family: $display-font;
+    font-size: 1.2em;
     text-decoration: none;
     color: $deep-blue;
     padding: 1em;
@@ -73,7 +85,6 @@ input[type="password"] {
     position: relative;
     @include torn-page;
     max-width: 480px;
-    text-align: center;
 }
 .single-form__title {
     border-top-right-radius: 2px;

@@ -21,9 +21,9 @@ block content
 				.form-group
 					label(for='password') Password
 					input(type='password', name='password', id='password').form-control
-
-				button(type='submit').button.button--green Sign In
-				a(href='/user/forgot') Forgot Password
+				.form-actions
+					a.forgot-password(href='/user/forgot') Forgot Password
+					button(type='submit').button.button--green Sign In
 
 			//- TODO generic forgotten password functionality
 			//- button(type='button').btn.btn-link Forgot Password?
