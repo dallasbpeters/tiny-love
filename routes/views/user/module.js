@@ -60,10 +60,10 @@ exports = module.exports = function(req, res) {
 
 			for (var i = 0; i < locals.lessons.length; ++i) {
 				if (locals.currentUser.completedLessons.indexOf(locals.lessons[i]._id.toString()) !== -1) {
-					locals.lessons[i].status = 'completed';
+					locals.lessons[i].status = 'lesson-list__link lesson-list__link--completed';
 				}
 				else {
-					locals.lessons[i].status = 'uncompleted';
+					locals.lessons[i].status = 'lesson-list__link';
 				}
 			}
 
