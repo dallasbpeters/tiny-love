@@ -882,38 +882,38 @@ h3 {
   line-height: .7;
   color: #71B3A7; }
 
-.lesson-body h1, .lesson-body h2, .lesson-body h3, .lesson-body h4, .lesson-body h5, .lesson-body h6 {
+.lesson-body h1, .lesson-body h2, .lesson-body h3, .lesson-body h4, .lesson-body h5, .lesson-body h6, .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
   font-family: "Diehl Deco";
   color: #313D4C;
   line-height: 1.3; }
 
-.lesson-body h1 {
+.lesson-body h1, .main-content h1 {
   font-size: 1.6em; }
 
-.lesson-body h2 {
+.lesson-body h2, .main-content h2 {
   font-size: 1.5em; }
 
-.lesson-body h3 {
+.lesson-body h3, .main-content h3 {
   font-size: 1.4em; }
 
-.lesson-body h4 {
+.lesson-body h4, .main-content h4 {
   font-size: 1.2em; }
 
-.lesson-body ul, .lesson-body ol {
+.lesson-body ul, .lesson-body ol, .main-content ul, .main-content ol {
   margin-bottom: 1.25rem;
   padding-left: 1em; }
 
-.lesson-body ul li {
+.lesson-body ul li, .main-content ul li {
   list-style-type: disc; }
 
-.lesson-body a {
+.lesson-body a, .main-content a {
   color: black;
   border-bottom: dotted 1px #ee6556;
   text-decoration: none;
   -webkit-transition: all 250ms ease-in;
   -moz-transition: all 250ms ease-in;
   transition: all 250ms ease-in; }
-  .lesson-body a:hover {
+  .lesson-body a:hover, .main-content a:hover {
     background-color: rgba(238, 101, 86, 0.3); }
 
 p {
@@ -1790,11 +1790,19 @@ nav.overview {
     background-image: url("/images/cut-effect.svg");
     background-repeat: repeat-x; }
   .main-content.main-content--full {
-    max-width: none; }
+    max-width: 1000px; }
   .main-content.main-content--two-col {
     -webkit-columns: 2;
     -moz-columns: 2;
-    columns: 2; }
+    columns: 2;
+    -webkit-column-gap: 4em;
+    -moz-column-gap: 4em;
+    column-gap: 4em; }
+    @media only screen and (max-width: 900px) {
+      .main-content.main-content--two-col {
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1; } }
 
 .lesson-list__link {
   color: black;
