@@ -441,6 +441,8 @@ body {
 .icon-arrows_right_double-31:before,
 .icon-basic_ban:before,
 .icon-basic_lock_open:before,
+.icon-basic_sheet:before,
+.icon-basic_sheet_txt :before,
 .icon-ecommerce_bag:before, .lesson-list__link.lesson-list__link--completed:before {
   display: inline-block;
   font-family: "TinyLove-Linea";
@@ -483,6 +485,12 @@ body {
 
 .icon-basic_lock_open:before {
   content: ""; }
+
+.icon-basic_sheet:before {
+  content: ""; }
+
+.icon-basic_sheet_txt :before {
+  content: ""; }
 
 .icon-ecommerce_bag:before {
   content: ""; }
