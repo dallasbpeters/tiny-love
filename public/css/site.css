@@ -1524,8 +1524,7 @@ body.lesson {
   padding-top: 3.6em; }
 
 .lesson-content {
-  padding: 0 3em 1.2em 7em;
-  margin-bottom: 80px; }
+  padding: 0 3em 5em 7em; }
   .lesson-content::after {
     clear: both;
     content: "";
@@ -1533,7 +1532,7 @@ body.lesson {
   @media only screen and (max-width: 768px) {
     .lesson-content {
       float: none;
-      padding: 80px 20px 20px 20px; } }
+      padding: 80px 20px 5em 20px; } }
   .lesson-content .module-name {
     font-family: "Learning Curve Pro";
     font-size: 2.2em;
@@ -1811,6 +1810,11 @@ nav.overview {
         -webkit-columns: 1;
         -moz-columns: 1;
         columns: 1; } }
+
+ul.lessons-list {
+  padding: 0 !important; }
+  ul.lessons-list li {
+    list-style-type: none !important; }
 
 .lesson-list__link {
   color: black;

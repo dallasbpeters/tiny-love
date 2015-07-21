@@ -18,6 +18,13 @@
 
 } // .main-content
 
+ul.lessons-list {
+  padding: 0 !important;
+  li {
+    list-style-type: none !important;
+  }
+}
+
 .lesson-list__link {
   color: darken($deep-blue, 80%);
   border-bottom: dotted 1px $red;
