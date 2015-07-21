@@ -1356,6 +1356,7 @@ input[type="password"] {
 
 .site-footer {
   background-color: #313D4C;
+  text-align: center;
   color: white;
   padding: 3em 1em; }
   @media only screen and (max-width: 480px) {
@@ -1837,3 +1838,22 @@ ul.lessons-list {
       top: -.3em;
       color: #8AC58C;
       font-size: 2.5em; }
+
+.page__article {
+  max-width: 800px;
+  margin: 3em auto;
+  padding: 3em 2.5em 2.5em 2.5em;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2); }
+
+.page__article ul, .page__article ol {
+  padding-left: 1em; }
+
+.page__article ul li {
+  list-style: disc; }
+
+.page__article ol li {
+  list-style: decimal; }
+
+.page__article h1, .page__article h2, .page__article h3, .page__article h4, .page__article h5, .page__article h6 {
+  text-align: center; }

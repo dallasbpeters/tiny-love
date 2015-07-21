@@ -1,0 +1,33 @@
+include ../mixins/flash-messages
+include ../mixins/html-header
+
+doctype html
+html
+
+    +html-header
+
+    body.page
+
+        block content
+
+
+        //- FOOTER
+        #footer.site-footer
+            img.logo.logo--initials-white(src="/images/logo-white.svg", alt="Tiny Love Logo", width="100")
+            p.made-in Made in Texas and Oregon with love.
+
+
+
+        //- jQuery is included by default, and required by both Bootstrap
+        //- and the KeystoneJS Content Editor.
+        script(src='/js/jquery/jquery-2.1.3.min.js')
+
+        //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
+        //- which generate links to edit content for users who can access Keystone
+        if user && user.canAccessKeystone
+            script(src='/keystone/js/content/editor.js')
+
+        //- Add scripts that are globally required by your site here.
+
+        //- Include template-specific javascript files by extending the js block
+        block js
