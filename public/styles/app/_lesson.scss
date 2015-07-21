@@ -155,6 +155,11 @@ body.lesson {
     border-color: $teal;
 }
 
+.progress__marker--completed {
+  background-color: $brown;
+  border-color: $brown;
+}
+
 nav.overview {
     position: absolute;
     top: 1.7rem;

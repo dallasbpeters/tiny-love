@@ -441,7 +441,7 @@ body {
 .icon-arrows_right_double-31:before,
 .icon-basic_ban:before,
 .icon-basic_lock_open:before,
-.icon-ecommerce_bag:before {
+.icon-ecommerce_bag:before, .lesson-list__link.lesson-list__link--completed:before {
   display: inline-block;
   font-family: "TinyLove-Linea";
   speak: none;
@@ -1698,6 +1698,10 @@ body.lesson {
   background-color: #71B3A7;
   border-color: #71B3A7; }
 
+.progress__marker--completed {
+  background-color: #C7BEB8;
+  border-color: #C7BEB8; }
+
 nav.overview {
   position: absolute;
   top: 1.7rem;
@@ -1791,20 +1795,25 @@ nav.overview {
     -webkit-columns: 2;
     -moz-columns: 2;
     columns: 2; }
-  .main-content a {
-    color: #313D4C;
-    text-decoration: none;
-    border-bottom: solid 1px white;
-    -webkit-transition: all 250ms ease-in-out;
-    -moz-transition: all 250ms ease-in-out;
-    transition: all 250ms ease-in-out; }
-    .main-content a:hover {
-      color: #ee6556;
-      border-bottom: dotted 1px #ee6556; }
-    .main-content a.current {
-      border-bottom: solid 3px #ee6556;
-      box-shadow: inset 0 -6px 0 #ee6556; }
 
-.lessons-list {
-  border-left: solid 1px #F6F3F1;
-  padding-left: 1em; }
+.lesson-list__link {
+  color: black;
+  border-bottom: dotted 1px #ee6556;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 250ms ease-in;
+  -moz-transition: all 250ms ease-in;
+  transition: all 250ms ease-in; }
+  .lesson-list__link:hover {
+    background-color: rgba(238, 101, 86, 0.3); }
+  .lesson-list__link.lesson-list__link--completed {
+    color: #858b95;
+    text-decoration: none;
+    border: none; }
+    .lesson-list__link.lesson-list__link--completed:before {
+      content: "";
+      position: absolute;
+      right: 94%;
+      top: -.3em;
+      color: #8AC58C;
+      font-size: 2.5em; }
