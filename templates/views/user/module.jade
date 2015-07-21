@@ -11,4 +11,5 @@ block content
 			if lessons.length
 				ul.lessons-list
 					each lesson in lessons
-						li(class=lesson.status): a(href='/' + module.key + '/' + lesson.key) #{lesson.name}
+						li
+							a(href='/' + module.key + '/' + lesson.key, class=lesson.status) #{lesson.name}
