@@ -1,0 +1,25 @@
+.page__article {
+  max-width: 800px;
+  margin: 3em auto;
+  padding: 3em 2.5em 2.5em 2.5em;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba($deep-blue,.2);
+}
+
+.page__article {
+  ul, ol {
+    padding-left: 1em;
+  }
+  ul li {
+    list-style: disc;
+  }
+  ol li {
+    list-style: decimal;
+  }
+}
+
+.page__article {
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+}

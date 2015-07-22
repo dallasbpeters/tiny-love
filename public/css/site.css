@@ -382,7 +382,7 @@ html {
 
 body {
   height: 100%;
-  font-family: "Gentium Basic", serif;
+  font-family: "Lato", sans-serif;
   color: #313D4C;
   background-color: #F6F3F1;
   -webkit-font-smoothing: antialiased; }
@@ -396,6 +396,21 @@ body {
 .hide-text {
   display: none;
   visibility: hidden; }
+
+.ks-editable-btn {
+  border-radius: 2px;
+  border: none !important;
+  background-color: #D7D9DC;
+  color: white;
+  text-decoration: none !important;
+  font-family: "Lato", sans-serif !important;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  transition: all 250ms ease; }
+  .ks-editable-btn:hover {
+    background-color: #ee6556 !important;
+    border: none;
+    color: white !important; }
 
 /*!
   Ionicons, v1.0.0
@@ -426,7 +441,9 @@ body {
 .icon-arrows_right_double-31:before,
 .icon-basic_ban:before,
 .icon-basic_lock_open:before,
-.icon-ecommerce_bag:before {
+.icon-basic_sheet:before,
+.icon-basic_sheet_txt :before,
+.icon-ecommerce_bag:before, .lesson-list__link.lesson-list__link--completed:before {
   display: inline-block;
   font-family: "TinyLove-Linea";
   speak: none;
@@ -468,6 +485,12 @@ body {
 
 .icon-basic_lock_open:before {
   content: ""; }
+
+.icon-basic_sheet:before {
+  content: ""; }
+
+.icon-basic_sheet_txt :before {
+  content: ""; }
 
 .icon-ecommerce_bag:before {
   content: ""; }
@@ -832,7 +855,7 @@ img {
   left: 100%;
   white-space: nowrap;
   padding: 1em;
-  font-size: 1.2rem;
+  font-size: 1em;
   background-color: #313D4C;
   box-shadow: 0 1px 3px rgba(49, 61, 76, 0.3);
   color: #fff;
@@ -867,15 +890,51 @@ h3 {
   line-height: .7;
   color: #71B3A7; }
 
+.lesson-body h1, .lesson-body h2, .lesson-body h3, .lesson-body h4, .lesson-body h5, .lesson-body h6, .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+  font-family: "Diehl Deco";
+  color: #313D4C;
+  line-height: 1.3; }
+
+.lesson-body h1, .main-content h1 {
+  font-size: 1.6em; }
+
+.lesson-body h2, .main-content h2 {
+  font-size: 1.5em; }
+
+.lesson-body h3, .main-content h3 {
+  font-size: 1.4em; }
+
+.lesson-body h4, .main-content h4 {
+  font-size: 1.2em; }
+
+.lesson-body ul, .lesson-body ol, .main-content ul, .main-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1em; }
+
+.lesson-body ul li, .main-content ul li {
+  list-style-type: disc; }
+
+.lesson-body a, .main-content a {
+  color: black;
+  border-bottom: dotted 1px #ee6556;
+  text-decoration: none;
+  -webkit-transition: all 250ms ease-in;
+  -moz-transition: all 250ms ease-in;
+  transition: all 250ms ease-in; }
+  .lesson-body a:hover, .main-content a:hover {
+    background-color: rgba(238, 101, 86, 0.3); }
+
 p {
-  font-size: 1.1em;
-  line-height: 1.3;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
   margin: 0 0 1.25rem 0; }
 
 ul, ol {
   margin: 0;
   padding: 0;
-  font-size: 1.1em;
+  font-size: 1em;
+  font-weight: 400;
   line-height: 1.3; }
   ul ul, ul ol, ol ul, ol ol {
     font-size: 1em; }
@@ -981,7 +1040,7 @@ body.home {
   background-size: cover;
   background-position: center center;
   padding: 12em 1em 4em 1em;
-  height: 100%; }
+  height: 96%; }
   @media only screen and (max-width: 480px) {
     .section--first {
       padding: 8em 1.5em 3em 1.5em; } }
@@ -1025,8 +1084,7 @@ body.home {
 
 .introduction__headline {
   font-family: "Diehl Deco";
-  font-size: 2.6em;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  font-size: 4em;
   margin-bottom: .4em; }
   @media only screen and (max-width: 480px) {
     .introduction__headline {
@@ -1036,10 +1094,9 @@ body.home {
   font-family: "Learning Curve Pro";
   text-align: center;
   line-height: .8;
-  font-size: 3.3em;
+  font-size: 3.4em;
   margin-bottom: 0;
-  color: white;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
+  color: white; }
   @media only screen and (max-width: 480px) {
     .introduction__subheadline {
       display: none; } }
@@ -1065,10 +1122,9 @@ body.home {
     filter: alpha(opacity=0); }
 
 .scroll-instructions__text {
-  line-height: .8;
   font-size: 1.3em;
+  font-weight: 300;
   margin: 0 0 0.5em 0;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   text-align: center !important; }
   @media only screen and (max-width: 480px) {
     .scroll-instructions__text {
@@ -1210,8 +1266,18 @@ input[type="password"] {
   .form-actions .button {
     margin-bottom: 0; }
 
+.forgot-password {
+  margin-right: 1em;
+  display: inline-block;
+  font-size: .9em;
+  text-decoration: none;
+  color: #a1a5ac; }
+  .forgot-password:hover {
+    color: #ee6556; }
+
 .return-home {
   font-family: "Diehl Deco";
+  font-size: 1.2em;
   text-decoration: none;
   color: #313D4C;
   padding: 1em;
@@ -1234,12 +1300,12 @@ input[type="password"] {
     -o-transform: scale(1.03);
     transform: scale(1.03); }
 
-.access-form .main {
+.access-form .main, .pay-form .main {
   max-width: 500px;
-  margin: 1em auto 5em; }
+  margin: 2em auto 5em; }
 
 .single-form {
-  margin: 0;
+  margin: .5em;
   position: relative;
   -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
@@ -1260,7 +1326,6 @@ input[type="password"] {
     background-repeat: repeat-x; }
 
 .single-form__title {
-  text-align: center;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   margin: 0;
@@ -1273,12 +1338,25 @@ input[type="password"] {
   padding: 3em 1em;
   -webkit-filter: grayscale(30%);
   filter: grayscale(30%); }
+  .single-form__title.single-form__title--pay {
+    background-image: url("../images/bg-pay@2x.jpg");
+    background-position: center 70%;
+    background-color: transparent;
+    padding: 2em 1em;
+    font-size: 2.5em; }
 
 .single-form__form {
   padding: 2.2em; }
 
+.buy-button {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  display: block; }
+
 .site-footer {
   background-color: #313D4C;
+  text-align: center;
   color: white;
   padding: 3em 1em; }
   @media only screen and (max-width: 480px) {
@@ -1377,13 +1455,13 @@ input[type="password"] {
 
 .module-list__title {
   margin: 0;
-  font-size: 1em; }
+  font-size: 1.5em; }
 
 .module-list__link {
   background-color: white;
   box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2);
   border-radius: 2px;
-  padding: 1.4em;
+  padding: 2em;
   color: #313D4C;
   display: block;
   text-decoration: none;
@@ -1447,8 +1525,7 @@ body.lesson {
   padding-top: 3.6em; }
 
 .lesson-content {
-  padding: 0 3em 1.2em 7em;
-  margin-bottom: 80px; }
+  padding: 0 3em 5em 7em; }
   .lesson-content::after {
     clear: both;
     content: "";
@@ -1456,7 +1533,7 @@ body.lesson {
   @media only screen and (max-width: 768px) {
     .lesson-content {
       float: none;
-      padding: 80px 20px 20px 20px; } }
+      padding: 80px 20px 5em 20px; } }
   .lesson-content .module-name {
     font-family: "Learning Curve Pro";
     font-size: 2.2em;
@@ -1470,23 +1547,6 @@ body.lesson {
     .lesson-body {
       float: none;
       width: 100%; } }
-  .lesson-body h1, .lesson-body h2, .lesson-body h3, .lesson-body h4, .lesson-body h5, .lesson-body h6 {
-    font-family: "Diehl Deco";
-    color: #313D4C;
-    line-height: 1.3; }
-  .lesson-body h1 {
-    font-size: 1.8em; }
-  .lesson-body h2 {
-    font-size: 1.6em; }
-  .lesson-body h3 {
-    font-size: 1.4em; }
-  .lesson-body h4 {
-    font-size: 1.2em; }
-  .lesson-body ul, .lesson-body ol {
-    margin-bottom: 1.25rem;
-    padding-left: 1em; }
-  .lesson-body ul li {
-    list-style-type: disc; }
   .lesson-body img {
     box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2);
     border-radius: 2px;
@@ -1495,15 +1555,6 @@ body.lesson {
     -ms-transform: rotate(-0.4deg);
     -o-transform: rotate(-0.4deg);
     transform: rotate(-0.4deg); }
-  .lesson-body a {
-    color: black;
-    border-bottom: dotted 1px #ee6556;
-    text-decoration: none;
-    -webkit-transition: all 250ms ease-in;
-    -moz-transition: all 250ms ease-in;
-    transition: all 250ms ease-in; }
-    .lesson-body a:hover {
-      background-color: rgba(238, 101, 86, 0.3); }
 
 .supplemental {
   float: left;
@@ -1562,7 +1613,7 @@ body.lesson {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1em;
+  padding: 1em 1.5em;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -1598,7 +1649,6 @@ body.lesson {
   margin: 0 0 0.5em 0; }
 
 .progress__list {
-  text-align: center;
   padding-top: .4em; }
 
 .progress__button {
@@ -1655,6 +1705,10 @@ body.lesson {
 .progress__marker--current {
   background-color: #71B3A7;
   border-color: #71B3A7; }
+
+.progress__marker--completed {
+  background-color: #C7BEB8;
+  border-color: #C7BEB8; }
 
 nav.overview {
   position: absolute;
@@ -1743,20 +1797,63 @@ nav.overview {
     z-index: 5;
     background-image: url("/images/cut-effect.svg");
     background-repeat: repeat-x; }
-  .main-content a {
-    color: #313D4C;
-    text-decoration: none;
-    border-bottom: solid 1px white;
-    -webkit-transition: all 250ms ease-in-out;
-    -moz-transition: all 250ms ease-in-out;
-    transition: all 250ms ease-in-out; }
-    .main-content a:hover {
-      color: #ee6556;
-      border-bottom: dotted 1px #ee6556; }
-    .main-content a.current {
-      border-bottom: solid 3px #ee6556;
-      box-shadow: inset 0 -6px 0 #ee6556; }
+  .main-content.main-content--full {
+    max-width: 1000px; }
+  .main-content.main-content--two-col {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    -webkit-column-gap: 4em;
+    -moz-column-gap: 4em;
+    column-gap: 4em; }
+    @media only screen and (max-width: 900px) {
+      .main-content.main-content--two-col {
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1; } }
 
-.lessons-list {
-  border-left: solid 1px #F6F3F1;
+ul.lessons-list {
+  padding: 0 !important; }
+  ul.lessons-list li {
+    list-style-type: none !important; }
+
+.lesson-list__link {
+  color: black;
+  border-bottom: dotted 1px #ee6556;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 250ms ease-in;
+  -moz-transition: all 250ms ease-in;
+  transition: all 250ms ease-in; }
+  .lesson-list__link:hover {
+    background-color: rgba(238, 101, 86, 0.3); }
+  .lesson-list__link.lesson-list__link--completed {
+    color: #858b95;
+    text-decoration: none;
+    border: none; }
+    .lesson-list__link.lesson-list__link--completed:before {
+      content: "";
+      position: absolute;
+      right: 94%;
+      top: -.3em;
+      color: #8AC58C;
+      font-size: 2.5em; }
+
+.page__article {
+  max-width: 800px;
+  margin: 3em auto;
+  padding: 3em 2.5em 2.5em 2.5em;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2); }
+
+.page__article ul, .page__article ol {
   padding-left: 1em; }
+
+.page__article ul li {
+  list-style: disc; }
+
+.page__article ol li {
+  list-style: decimal; }
+
+.page__article h1, .page__article h2, .page__article h3, .page__article h4, .page__article h5, .page__article h6 {
+  text-align: center; }

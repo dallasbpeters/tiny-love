@@ -1,28 +1,51 @@
+// this should probably go in a layout file, but moving on for now :)
+
 .main-content {
   @include torn-page;
   padding: 3em 2.5em 2.5em 2.5em;
   max-width: 750px;
   margin-bottom: 100px;
-
-    a {
-      color: $deep-blue;
-      text-decoration: none;
-      border-bottom: solid 1px white;
-      @include transition(all 250ms ease-in-out);
-      &:hover {
-          color: $red;
-          border-bottom: dotted 1px $red;
-      }
-      &.current {
-          border-bottom: solid 3px $red;
-          box-shadow: inset 0 -6px 0 $red;
-      }
+  &.main-content--full {
+      max-width: 1000px;
+  }
+  &.main-content--two-col {
+    @include columns(2);
+    @include column-gap(4em);
+    @media only screen and (max-width: 900px) {
+      @include columns(1);
     }
+  }
 
 } // .main-content
 
+ul.lessons-list {
+  padding: 0 !important;
+  li {
+    list-style-type: none !important;
+  }
+}
 
-.lessons-list {
-    border-left: solid 1px $tan;
-    padding-left: 1em;
+.lesson-list__link {
+  color: darken($deep-blue, 80%);
+  border-bottom: dotted 1px $red;
+  text-decoration: none;
+  position: relative;
+  @include transition(all 250ms ease-in);
+  &:hover {
+      background-color: rgba($red,.3);
+  }
+  &.lesson-list__link--completed {
+    color: darken($grey,30%);
+    text-decoration: none;
+    border: none;
+    &:before {
+      @extend .ion;
+      content: $ionicon-var-arrows_check;
+      position: absolute;
+      right: 94%;
+      top: -.3em;
+      color: $green;
+      font-size: 2.5em;
+    }
+  }
 }

@@ -11,6 +11,8 @@ exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 
+	locals.title = 'Sign up';
+
 	locals.section = 'user';
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
@@ -51,9 +53,28 @@ exports = module.exports = function(req, res) {
 					return next();
 				}
 
-				var onSuccess = function() {
+                var onSuccess = function() {
 
 					res.redirect('/user/pay');
+
+                    console.log('YOU NEED TO CHANGE THE FROM EMAIL');
+
+                    // send out the new signup email.
+                    new keystone.Email('signup').send({
+                        to: req.body.email,
+                        from: {
+                            name: 'Tiny Love',
+                            email: 'mark.bradshaw@gmail.com'
+                        },
+                        subject: 'New Signup for Tiny Love',
+                        email: req.body.email,
+                        firstName: req.body.firstname
+                    }, function(err) {
+
+                        if (err) {
+                            console.log('email error', err);
+                        }
+                    });
 				};
 
 				var onFail = function(err) {
@@ -64,7 +85,7 @@ exports = module.exports = function(req, res) {
 				};
 
 				keystone.session.signin({ email: req.body.email, password: req.body.password }, req, res, onSuccess, onFail);
-			});
+            });
 		});
 	});
 

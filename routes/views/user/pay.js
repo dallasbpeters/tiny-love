@@ -5,9 +5,16 @@ exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res),
 		locals = res.locals;
 
+    locals.title = 'Pay';
+
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'user';
+
+    if (!req.user) {
+		res.redirect('/user/signin');
+		return;
+	}
 
 	// Render the view
 	view.render('user/pay');

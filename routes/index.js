@@ -41,6 +41,8 @@ exports = module.exports = function(app) {
 	app.get('/page/:page', routes.views.page);
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
+	app.all('/user/forgot', routes.views.user.forgot);
+	app.get('/user/onetimelogin', routes.views.user.onetimelogin);
     app.all('/user/signin', routes.views.user.signin);
 	app.all('/user/signup', routes.views.user.signup);
 	app.all('/user/pay', routes.views.user.pay);
@@ -50,6 +52,7 @@ exports = module.exports = function(app) {
 	app.get('/user/resources', routes.views.user.resources);
 	app.get('/:module', routes.views.user.module);
 	app.get('/:module/:lesson', routes.views.user.lesson);
+	app.get('/user/markcomplete/:id', routes.views.user.markcomplete);
 
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:

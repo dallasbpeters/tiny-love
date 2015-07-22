@@ -3,15 +3,10 @@ extends ../../layouts/dashboard-layout
 block content
 		h1.page-title My Account
 		
-		//- Dummy form content. Replace with real form.
-		
 		.single-form.my-account
 		
 			form.single-form__form(method='post')
-				
-				.form-group
-					label Current Password
-					input(type='text', name='currentpass').form-control
+				input(type='hidden', name='action', value='changePassword')
 					
 				.form-group
 					label New Password

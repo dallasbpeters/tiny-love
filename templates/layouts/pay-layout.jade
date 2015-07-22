@@ -1,0 +1,28 @@
+include ../mixins/flash-messages
+include ../mixins/html-header
+
+doctype html
+html
+
+        +html-header
+
+        //- Include template-specific stylesheets by extending the css block
+        block css
+
+        //- Add any other template-specific HEAD tags by extending the head block
+        block head
+
+    body.pay-form
+
+        //- BODY
+        main.main(role="main")
+
+            +flash-messages(messages)
+
+            block content
+
+        //- jQuery is needed for editor
+        script(src='/js/jquery/jquery-2.1.3.min.js')
+
+        //- Include template-specific javascript files by extending the js block
+        block js

@@ -1,0 +1,10 @@
+extends /layouts/default
+
+block body-contents
+	h2 Hi #{name.first},
+    
+	p.text-larger Forget something?
+    
+	p It looks like you may have forgotten your password.  You can use the link below to login once.  Make sure you change your password to something you'll remember.
+    
+	+button({ url: '/user/onetimelogin?key=' + key, label: 'One Time Login' })

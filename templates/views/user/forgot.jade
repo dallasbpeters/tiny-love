@@ -1,0 +1,26 @@
+extends ../../layouts/access-form
+
+block content
+    if done
+        .flash-messages
+            p.alert.alert--info Please check your email for your login link.
+
+    else
+        .single-form.get-started
+            form.single-form__form(method="post", novalidate)
+                p Whoops, forgot your password? It's ok. We do it all the time. Just let us know your email address and we'll get you fixed right up.
+                input(type='hidden', name='action', value='forgot')
+                input(type='hidden', name=csrf_token_key, value=csrf_token_value)
+                .form-group
+                    label(for='email') Email
+                    input(type='email', name='email', id='email', value=submitted.email, placeholder='Your email address').form-control
+                .form-actions
+                    a.forgot-password(href='/user/signin') Nevermind, I remembered it.
+                    button(type='submit').button.button--green Look Me Up
+
+block js
+    //- Only focus the field after the shake animation is complete
+    if messages && messages.error.length
+        script setTimeout(function() { try { document.getElementById('email').focus(); } catch(e) {}; }, 800);
+    else
+        script try { document.getElementById('email').focus(); } catch(e) {};

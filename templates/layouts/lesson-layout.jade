@@ -15,10 +15,10 @@ html
 
             block lesson
         
-            //- TODO: this needs to be conditional based on existing content or not
-            aside.supplemental
-            
-                block supplemental
+            if lesson.supplemental
+                aside.supplemental
+                
+                    block supplemental
             
         footer.lesson-footer
             .progress
@@ -28,15 +28,22 @@ html
                         li.progress__list-item
                             a(href='/' + module.key + '/' + lesson.key, data-tooltip=lesson.name)
                                 span.hide-text= lesson.name
-                                span.progress__marker
+                                span(class='progress__marker progress__marker--' + lesson.status)
                 
             //- This will need some dynamic action for when it's the last lesson.
             if nextLesson
-                a.progress__button.button.button--red(href='/' + module.key + '/' + nextLesson.key) Next Lesson
+                a.progress__button.button.button--red(href='/user/markcomplete/' + lesson.id + '?next=/' + module.key + '/' + nextLesson.key) Next Lesson
             else
-                a.progress__button.button.button--green(href='/user/dashboard') Complete
+                a.progress__button.button.button--green(href='/user/markcomplete/' + lesson.id + '?next=/user/dashboard') Complete
 
         script(src='/js/jquery/jquery-2.1.3.min.js')
+        script(src='/js/jquery.fitvids.js')
+        script.
+          $(document).ready(function(){
+              // Target your .container, .wrapper, .post, etc.
+              $(".lesson-body").fitVids();
+          });
+
 
         //- The KeystoneJS Content Editor provides support for ks-editable data attributes,
         //- which generate links to edit content for users who can access Keystone

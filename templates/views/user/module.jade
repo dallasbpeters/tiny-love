@@ -6,11 +6,10 @@ block content
 		
 		.main-content
 			
-			//- Start putting the module overview here.
-			//- h1= module.name
-			h1= module.name
+			h1(data-ks-editable=editable(user, { list: 'Module', id: module.id }))= module.name
             
 			if lessons.length
 				ul.lessons-list
 					each lesson in lessons
-						li: a(href='/' + module.key + '/' + lesson.key)= lesson.name
+						li
+							a(href='/' + module.key + '/' + lesson.key, class=lesson.status) #{lesson.name}

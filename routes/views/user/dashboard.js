@@ -7,9 +7,21 @@ exports = module.exports = function(req, res) {
 		locals = res.locals,
         currentUser;
 
+	locals.title = 'Dashboard';
+
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'dashboard';
+
+	if (!req.user) {
+		res.redirect('/user/signin');
+		return;
+	}
+
+	if (!req.user.payed && !req.user.isAdmin) {
+		res.redirect('/user/pay');
+		return;
+	}
 
     view.on('init', function(next) {
 
@@ -35,7 +47,7 @@ exports = module.exports = function(req, res) {
         var foundCurrent = false;
         async.eachSeries(locals.modules, function(module, iteratorCallback) {
 
-            keystone.list('Lesson').model.find({module: module.id}).sort('sortOrder').exec(function(err, lessons) {
+            keystone.list('Lesson').model.find({module: module.id, state: 'published'}).exec(function(err, lessons) {
 
                 if (lessons.every(function(lesson) {
                     return currentUser.completedLessons.indexOf(lesson.id) !== -1;
@@ -55,6 +67,19 @@ exports = module.exports = function(req, res) {
             });
         }, next);
     });
+
+	view.on('init', function (next) {
+
+		locals.allDone = false;
+		if (locals.modules.every(function (module) {
+
+			return module.status === 'completed';
+		})) {
+			locals.allDone = true;
+		}
+
+		next();
+	});
 
 
 	// Render the view

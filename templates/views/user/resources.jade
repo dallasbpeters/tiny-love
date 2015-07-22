@@ -1,6 +1,9 @@
 extends ../../layouts/dashboard-layout
 
 block content
-		h1.page-title Resources
+
+		h1.page-title= page.title
+
+		.main-content.main-content--full.main-content--two-col(data-ks-editable=editable(user, { list: 'Page', id: page.id }))
 		
-		p do Resources type stuff
+			!= page.content

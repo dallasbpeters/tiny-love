@@ -2,7 +2,7 @@ extends ../../layouts/lesson-layout
 
 block lesson
 
-	.lesson-body
+	.lesson-body(data-ks-editable=editable(user, { list: 'Lesson', id: lesson.id }))
 		
 		h1.module-name= lesson.name
 		

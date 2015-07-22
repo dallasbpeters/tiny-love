@@ -13,7 +13,8 @@ User.add({
 	email: { type: Types.Email, initial: true, required: true, index: true },
 	password: { type: Types.Password, initial: true, required: true },
 	payed: { type: Types.Boolean, initial: false, required: false },
-    completedLessons: { type: Types.Relationship, ref: 'Lesson', many: true }
+    completedLessons: { type: Types.Relationship, ref: 'Lesson', many: true },
+    oneTimeLoginKey: { type: Types.Number, required: false, index: false }
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Is Admin', index: true }
 });

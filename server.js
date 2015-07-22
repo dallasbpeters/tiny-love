@@ -20,8 +20,11 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'jade',
 
-	'wysiwyg additional buttons': 'formatselect, media, uploadimage',
-	'wysiwyg additional plugins': 'media uploadimage',
+	'wysiwyg cloudinary images' : true,
+	// TODO: rethink how to pull in the styles for the WYSIWYG for more accurate authoring
+	// 'wysiwyg importcss' : "/css/site.css",
+	'wysiwyg additional buttons': 'blockquote, formatselect, media',
+	'wysiwyg additional plugins': 'media',
 
 	'emails': 'templates/emails',
 
@@ -58,16 +61,16 @@ keystone.set('signin url', '/user/signin');
 // default email templates, you may remove them if you're using your own.
 
 keystone.set('email locals', {
-	logo_src: '/images/logo-email.gif',
-	logo_width: 194,
-	logo_height: 76,
+	logo_src: '/images/logo.png',
+	logo_width: 71,
+	logo_height: 49,
 	theme: {
-		email_bg: '#f9f9f9',
-		link_color: '#2697de',
+		email_bg: '#F6F3F1',
+		link_color: '#ee6556',
 		buttons: {
 			color: '#fff',
-			background_color: '#2697de',
-			border_color: '#1a7cb7'
+			background_color: '#ee6556',
+			border_color: '#ee6556'
 		}
 	}
 });
@@ -93,18 +96,16 @@ keystone.set('email tests', require('./routes/emails'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
+	'user dashboard': [{
+		key: 'dashboard',
+		external: true,
+		path: '/user/dashboard'
+	}],
+
 	'modules': ['modules', 'lessons'],
 	'users': 'users',
 	'pages': 'pages'
 });
-
-// keystone.set('nav', {
-// 	'posts': ['posts', 'post-categories'],
-// 	'galleries': 'galleries',
-// 	'enquiries': 'enquiries',
-// 	'users': 'users',
-// 	'pages': 'pages'
-// });
 
 // Start Keystone to connect to your database and initialise the web server
 

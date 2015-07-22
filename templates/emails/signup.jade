@@ -1,0 +1,12 @@
+extends /layouts/default
+
+block body-contents
+	h2 Hi #{firstName},
+    
+	p.text-larger Thanks for signing up to #{brand}:
+    
+	p You are almost ready to begin your journey to become a doula, and we are here to help.
+    
+	p Now that you are signed up, your next step is to complete payment for the course so that you can start your training right away.
+    
+	+button({ url: '/user/pay', label: 'Pay For the Course' })

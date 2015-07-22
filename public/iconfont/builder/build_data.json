@@ -1,5 +1,5 @@
 {
-  "build_hash": "079ab3cf1a4bb79fa8a22404d1e1db59",
+  "build_hash": "b7a3c19e88b3063fbf02a8e95bc25d12",
   "prefix": "icon-",
   "version": "1.0.0",
   "name": "TinyLove-Linea",
@@ -43,6 +43,14 @@
     {
       "code": "0xf14c",
       "name": "basic_lock_open"
+    },
+    {
+      "code": "0xf155",
+      "name": "basic_sheet"
+    },
+    {
+      "code": "0xf156",
+      "name": "basic_sheet_txt "
     },
     {
       "code": "0xf14d",
