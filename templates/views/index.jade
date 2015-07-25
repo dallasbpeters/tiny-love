@@ -1,5 +1,10 @@
 extends ../layouts/default
 
+block js
+    // Go to www.addthis.com/dashboard to customize your tools
+    script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55b2dbd44d4c702c', async='async')
+
+
 block content
     .section.section--first
             .introduction
@@ -138,3 +143,15 @@ block content
               h3 You're just a few steps away from beginning your new career as a birth doula.
               a(href="/user/signup").button.button--red Sign me up!
               //- small Still have questions? Send us an email and we'll get right back with an answer.
+
+    if !user
+      .section.section--white
+          .share-the-love
+              h2 Help spread the word!
+              h3 Know someone else who might be planning their doula career?
+              p We'd love it if you helped us spread the word about Tiny Love!
+              // Go to www.addthis.com/dashboard to customize your tools
+              .addthis_sharing_toolbox
+
+      
+  
