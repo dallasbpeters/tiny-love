@@ -36,7 +36,7 @@ exports = module.exports = function(req, res) {
         var surveyCombined = '';
         questionNames.forEach(function (name) {
 
-            surveyCombined += name + ': ' + req.body[name] + '<br/>';
+            surveyCombined += '<p>' + name + ': ' + req.body[name] + '</p>';
         });
 
         currentUser.surveyAnswer = surveyCombined;
