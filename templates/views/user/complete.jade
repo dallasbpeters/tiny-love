@@ -1,0 +1,20 @@
+extends ../../layouts/dashboard-layout
+
+block content
+    h1.page-title Complete
+    
+    if showSurvey
+        p Congratulations on completing the course.  Before you go please fill out this small survey to help us make this course better.  After you submit the survey we'll create your printable certificate.
+        
+        form(method="post")
+            p What problems, if any, did you have completing the course?
+            textarea(name="problems-with-the-course")
+            
+            p Do you feel confident that you were well prepared by this course?
+            textarea(name="well-prepared-by-course")
+            
+            p
+                button(type="submit") Send
+        
+    else
+        h2 Certificate Here
