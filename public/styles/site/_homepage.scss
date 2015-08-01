@@ -33,6 +33,7 @@ body.home {
     background-position: center center;
     padding: 12em 1em 4em 1em;
     height: 96%;
+    min-height: 600px;
     @media only screen and (max-width: 480px) {
         padding: 8em 1.5em 3em 1.5em;
     }
@@ -120,6 +121,10 @@ body.home {
   }
   &.scroll-instructions--hidden {
     @include opacity(0);
+    z-index: -1
+  }
+  @media only screen and (max-height: 43em) {
+    display:none;
   }
 }
 .scroll-instructions__text {
