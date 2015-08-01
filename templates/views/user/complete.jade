@@ -3,33 +3,36 @@ extends ../../layouts/dashboard-layout
 block content
     h1.page-title Complete
     
-    if showSurvey
-        p Congratulations on completing the course.  We need you to fill in this final questionaire about your work.  After you finish this we will mail your certificate to you.
-        
-        form(method="post")
-            ol
-                li
-                    input(type="checkbox", name="I have attended 3 births and collected good evaluations from the mother or another family member", value="true")
-                    span I have attended 3 births and collected good evaluations from the mother or another family member. (keep evaluations in your portfolio)
-                
-                li
-                    input(type="checkbox", name="I have attended 3 births and completed the labor and birth record form for each", value="true")
-                    span I have attended 3 births and completed the labor and birth record form for each. (keep evaluations in your portfolio)
-                
-                li
-                    div I personally guarantee that all of the modules and all assignments above have been completed.
-                    input(name="I guarantee that I have completed all modules", placeholder="please type your name as your signature", required)
-                    
-                li
-                    div I have read the Standards of Practice Commitment. I understand and agree to adhere to the Standards in my actions and profession as a TL Birth Doula.
-                    input(name="I understand and agree to adhere to the Standards in my actions and profession as a TL Birth Doula.", placeholder="please type your name as your signature", required)
-                
-                li
-                    div Address to mail your certificate
-                    textarea(name="Mailing address", style="width: 400px")
+    .single-form.complete
+    
+      if showSurvey
+          
+          form.single-form__form(method="post")
             
-            p
-                button(type="submit") Send
-        
-    else
-        h2 Certificate Here
+            p Congratulations on completing the course.  We need you to fill in this final questionaire about your work.  After you finish this we will mail your certificate to you.
+            
+            .form-group
+              input(type="checkbox", name="I have attended 3 births and collected good evaluations from the mother or another family member", value="true")
+              span I have attended 3 births and collected good evaluations from the mother or another family member. (keep evaluations in your portfolio)
+                  
+            .form-group
+              input(type="checkbox", name="I have attended 3 births and completed the labor and birth record form for each", value="true")
+              span I have attended 3 births and completed the labor and birth record form for each. (keep evaluations in your portfolio)
+                  
+            .form-group
+              div I personally guarantee that all of the modules and all assignments above have been completed.
+              input(name="I guarantee that I have completed all modules", placeholder="please type your name as your signature", required)
+                      
+            .form-group
+              div I have read the Standards of Practice Commitment. I understand and agree to adhere to the Standards in my actions and profession as a TL Birth Doula.
+                      input(name="I understand and agree to adhere to the Standards in my actions and profession as a TL Birth Doula.", placeholder="please type your name as your signature", required)
+                  
+            .form-group
+              div Address to mail your certificate
+              textarea(name="Mailing address", style="width: 400px")
+            
+            .form-actions
+              button(type='submit').button.button--green Send
+          
+      else
+          h2 Certificate Here
