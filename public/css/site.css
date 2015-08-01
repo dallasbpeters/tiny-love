@@ -1040,7 +1040,8 @@ body.home {
   background-size: cover;
   background-position: center center;
   padding: 12em 1em 4em 1em;
-  height: 96%; }
+  height: 96%;
+  min-height: 600px; }
   @media only screen and (max-width: 480px) {
     .section--first {
       padding: 8em 1.5em 3em 1.5em; } }
@@ -1119,7 +1120,11 @@ body.home {
     font-size: 2.3em; }
   .scroll-instructions.scroll-instructions--hidden {
     opacity: 0;
-    filter: alpha(opacity=0); }
+    filter: alpha(opacity=0);
+    z-index: -1; }
+  @media only screen and (max-height: 43em) {
+    .scroll-instructions {
+      display: none; } }
 
 .scroll-instructions__text {
   font-size: 1.3em;
