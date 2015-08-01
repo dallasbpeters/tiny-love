@@ -14,7 +14,8 @@ User.add({
 	password: { type: Types.Password, initial: true, required: true },
 	payed: { type: Types.Boolean, initial: false, required: false },
     completedLessons: { type: Types.Relationship, ref: 'Lesson', many: true },
-    oneTimeLoginKey: { type: Types.Number, required: false, index: false }
+    oneTimeLoginKey: { type: Types.Number, required: false, index: false },
+    surveyAnswer: { type: Types.Html, wysiwyg: true, height: 400 }
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Is Admin', index: true }
 });
