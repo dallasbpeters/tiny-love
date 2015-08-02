@@ -51,7 +51,7 @@ exports = module.exports = function(req, res) {
                     to: user.email,
                     from: {
                         name: 'Tiny Love',
-                        email: 'mark.bradshaw@gmail.com'
+                        email: 'tinylove@beadoula.com'
                     },
                     subject: 'Forgot Password on Tiny Love',
                     key: key,
