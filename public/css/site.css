@@ -443,7 +443,7 @@ body {
 .icon-basic_lock_open:before,
 .icon-basic_sheet:before,
 .icon-basic_sheet_txt :before,
-.icon-ecommerce_bag:before, .lesson-list__link.lesson-list__link--completed:before {
+.icon-ecommerce_bag:before, .module-list__link--completed:before, .lesson-list__link.lesson-list__link--completed:before {
   display: inline-block;
   font-family: "TinyLove-Linea";
   speak: none;
@@ -1489,19 +1489,13 @@ input[type="password"] {
     transform-origin: center center;
     box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2), 0 10px 13px rgba(49, 61, 76, 0.1); }
 
-.module-list__link--completed:after {
-  content: "Complete";
-  font-family: "Learning Curve Pro";
-  color: #8AC58C;
+.module-list__link--completed:before {
+  content: "";
   position: absolute;
-  top: 4px;
-  right: 10px;
-  -webkit-transform: rotate(4deg);
-  -moz-transform: rotate(4deg);
-  -ms-transform: rotate(4deg);
-  -o-transform: rotate(4deg);
-  transform: rotate(4deg);
-  font-size: 1.3em; }
+  left: 10px;
+  top: 10px;
+  color: #8AC58C;
+  font-size: 3em; }
 
 .module-list__link--current {
   color: #ee6556; }
@@ -1709,9 +1703,6 @@ body.lesson {
   border: solid 1px #C7BEB8;
   display: block;
   border-radius: 500px; }
-  .progress__marker:hover {
-    border-color: #313D4C;
-    background-color: #313D4C; }
 
 .progress__marker--current {
   background-color: #71B3A7;
@@ -1720,6 +1711,9 @@ body.lesson {
 .progress__marker--completed {
   background-color: #C7BEB8;
   border-color: #C7BEB8; }
+  .progress__marker--completed:hover {
+    border-color: #313D4C;
+    background-color: #313D4C; }
 
 nav.overview {
   position: absolute;
@@ -1830,18 +1824,21 @@ ul.lessons-list {
 
 .lesson-list__link {
   color: black;
-  border-bottom: dotted 1px #ee6556;
+  border-bottom: 3px solid #ee6556 !important;
+  box-shadow: inset 0 -5px 0 #ee6556;
   text-decoration: none;
   position: relative;
   -webkit-transition: all 250ms ease-in;
   -moz-transition: all 250ms ease-in;
   transition: all 250ms ease-in; }
   .lesson-list__link:hover {
-    background-color: rgba(238, 101, 86, 0.3); }
+    background-color: rgba(238, 101, 86, 0.3);
+    border-color: rgba(238, 101, 86, 0.3); }
   .lesson-list__link.lesson-list__link--completed {
     color: #858b95;
     text-decoration: none;
-    border: none; }
+    border: none !important;
+    box-shadow: none; }
     .lesson-list__link.lesson-list__link--completed:hover {
       background-color: rgba(138, 197, 140, 0.3); }
     .lesson-list__link.lesson-list__link--completed:before {
