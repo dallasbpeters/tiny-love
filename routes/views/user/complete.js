@@ -42,6 +42,22 @@ exports = module.exports = function(req, res) {
         currentUser.surveyAnswer = surveyCombined;
         currentUser.save(next);
         locals.showSurvey = false;
+
+        new keystone.Email('complete').send({
+            to: 'tinylove@beadoula.com',
+            from: {
+                name: 'Tiny Love',
+                email: 'tinylove@beadoula.com'
+            },
+            subject: 'User completed the Tiny Love course',
+            email: req.body.email,
+            userLink: 'http://www.beadoula.com/keystone/users/' + req.user._id
+        }, function(err) {
+
+            if (err) {
+                console.log('email error', err);
+            }
+        });
     });
 
     // Render the view
