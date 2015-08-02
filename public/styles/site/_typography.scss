@@ -1,6 +1,6 @@
 // Headings
 h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 1.75rem 0;
+    margin: 0 0 1em 0;
     line-height: 1.3;
     font-weight: 400;
 }
@@ -19,9 +19,11 @@ h3 {
 
 .lesson-body, .main-content {
     h1, h2, h3, h4, h5, h6 {
-        font-family: $display-font;
+        font-family: $ui-font;
+        font-weight: 600;
         color: $deep-blue;
         line-height: 1.3;
+        margin: .5em 0 1em 0;
     }
     h1 {font-size: 1.6em}
     h2 {font-size: 1.5em}
