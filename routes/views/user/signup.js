@@ -21,7 +21,6 @@ exports = module.exports = function(req, res) {
 
 	locals.noCaptcha = req.body.newDoula || false; // the name is just to obfuscate the form value
 	locals.site_key = process.env.RECAPTCHA_SITE_KEY;
-	locals.sk = process.env.RECAPTCHA_SECRET_KEY;
 
 	function createUser(next) {
 		var userData = {
@@ -112,13 +111,14 @@ exports = module.exports = function(req, res) {
 				remoteip: req.connection.remoteAddress
 			};
 
-
 			request.post({
 				url: 'https://www.google.com/recaptcha/api/siteverify',
 				form: form
 			}, function optionalCallback(err, httpResponse, body) {
 
-				// console.log('err', err, 'body', body);
+				locals.rcErr = err;
+				locals.rcBody = body;
+				return next();
 				if (req.headers.host.indexOf('localhost') === -1 && (err || !body.sucess)) {
 					req.flash('error', 'There was a problem validating your information.  Please try again or contact us.');
 					return next();

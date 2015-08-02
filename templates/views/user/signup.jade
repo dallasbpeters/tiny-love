@@ -5,12 +5,13 @@ block content
 
 	.single-form.get-started
 		h1.single-form__title Let's get started
+		div #{rcErr}
+		div #{rcBody}
 
 		form.single-form__form(method='post')
 			p First let's create an account. We'll take care of the payment in a moment.
 			input(type='hidden', name='action', value='signup')
 			input(type='hidden', name='newDoula', value=noCaptcha)
-			input(type='hidden', name='sk', value=sk)
 			.form-group
 				label First Name
 				input(type='text', name='firstname', value=formData['firstname']).form-control
