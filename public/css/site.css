@@ -1836,10 +1836,17 @@ ul.lessons-list {
     color: #858b95;
     text-decoration: none;
     border: none; }
+    .lesson-list__link.lesson-list__link--completed:hover {
+      background-color: rgba(138, 197, 140, 0.3); }
     .lesson-list__link.lesson-list__link--completed:before {
       content: "";
       position: absolute;
-      right: 94%;
+      left: -20px;
+      -webkit-transform: rotate(-4deg);
+      -moz-transform: rotate(-4deg);
+      -ms-transform: rotate(-4deg);
+      -o-transform: rotate(-4deg);
+      transform: rotate(-4deg);
       top: -.3em;
       color: #8AC58C;
       font-size: 2.5em; }
