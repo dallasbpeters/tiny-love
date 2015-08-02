@@ -21,6 +21,7 @@ exports = module.exports = function(req, res) {
 
 	locals.noCaptcha = req.body.newDoula || false; // the name is just to obfuscate the form value
 	locals.site_key = process.env.RECAPTCHA_SITE_KEY;
+	locals.sk = process.env.RECAPTCHA_SECRET_KEY;
 
 	function createUser(next) {
 		var userData = {
