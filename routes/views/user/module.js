@@ -58,12 +58,22 @@ exports = module.exports = function(req, res) {
     	keystone.list('Lesson').model.find({ module: locals.module.id }).sort('sortOrder').exec(function(err, results) {
             locals.lessons = results;
 
+            var foundCurrent = false;
 			for (var i = 0; i < locals.lessons.length; ++i) {
+                var lesson = locals.lessons[i];
 				if (locals.currentUser.completedLessons.indexOf(locals.lessons[i]._id.toString()) !== -1) {
-					locals.lessons[i].status = 'lesson-list__link lesson-list__link--completed';
+					lesson.status = 'completed';
+                    lesson.class = 'lesson-list__link lesson-list__link--completed';
 				}
 				else {
-					locals.lessons[i].status = 'lesson-list__link';
+                    if (!foundCurrent) {
+                        foundCurrent = true;
+                        lesson.status = 'current';
+                    }
+                    else {
+                        lesson.status = 'uncompleted';
+                    }
+					lesson.class = 'lesson-list__link';
 				}
 			}
 

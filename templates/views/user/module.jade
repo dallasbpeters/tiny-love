@@ -12,4 +12,7 @@ block content
 				ul.lessons-list
 					each lesson in lessons
 						li
-							a(href='/' + module.key + '/' + lesson.key, class=lesson.status) #{lesson.name}
+							if lesson.status !== 'uncompleted'
+								a(href='/' + module.key + '/' + lesson.key, class=lesson.class) #{lesson.name}
+							else
+								span #{lesson.name}

@@ -26,11 +26,14 @@ html
                 ul.progress__list
                     each lesson in lessons
                         li.progress__list-item
-                            a(href='/' + module.key + '/' + lesson.key, data-tooltip=lesson.name)
+                            if lesson.status !== 'uncompleted'
+                                a(href='/' + module.key + '/' + lesson.key, data-tooltip=lesson.name)
+                                    span.hide-text= lesson.name
+                                    span(class='progress__marker progress__marker--' + lesson.status)
+                            else
                                 span.hide-text= lesson.name
                                 span(class='progress__marker progress__marker--' + lesson.status)
-                
-            //- This will need some dynamic action for when it's the last lesson.
+
             if nextLesson
                 a.progress__button.button.button--red(href='/user/markcomplete/' + lesson.id + '?next=/' + module.key + '/' + nextLesson.key) Next Lesson
             else
