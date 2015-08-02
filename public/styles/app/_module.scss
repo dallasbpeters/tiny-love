@@ -38,11 +38,15 @@ ul.lessons-list {
     color: darken($grey,30%);
     text-decoration: none;
     border: none;
+    &:hover {
+        background-color: rgba($green,.3);
+    }
     &:before {
       @extend .ion;
       content: $ionicon-var-arrows_check;
       position: absolute;
-      right: 94%;
+      left:-20px;
+      @include transform(rotate(-4deg));
       top: -.3em;
       color: $green;
       font-size: 2.5em;
