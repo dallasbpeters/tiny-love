@@ -22,9 +22,8 @@ exports = module.exports = function(req, res) {
 		}
 	}
 
-	console.log('PAYMENT CHECKING IS STILL LOOKING AT THE SANDBOX!');
 	var options = {
-		url: 'https://www.sandbox.paypal.com/cgi-bin/webscr',
+		url: 'https://www.paypal.com/cgi-bin/webscr',
 		method: 'POST',
 		headers: {
 			'Connection': 'close'
