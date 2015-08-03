@@ -1,5 +1,10 @@
 'use strict';
 
+// This page is hit automatically by paypal after a successful payment.  It is
+// not part of the client redirect, so end users will never need to come here
+// directly.  Only paypal's servers will come here, and they don't need a
+// response.
+
 //https://developer.paypal.com/webapps/developer/applications/accounts
 
 var keystone = require('keystone');
