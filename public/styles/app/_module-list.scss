@@ -24,16 +24,15 @@
 
 // States of modules
 .module-list__link--completed {
-        &:after {
-            content: "Complete";
-            font-family: $cursive;
-            color: $green;
-            position: absolute;
-            top: 4px;
-            right: 10px;
-            @include transform(rotate(4deg));
-            font-size: 1.3em;
-        }
+  &:before {
+    @extend .ion;
+    content: $ionicon-var-arrows_check;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: $green;
+    font-size: 3em;
+  }
 }
 .module-list__link--current {
         color: $red;

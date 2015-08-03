@@ -148,10 +148,6 @@ body.lesson {
     border: solid 1px $brown;
     display: block;
     border-radius: 500px;
-    &:hover {
-        border-color: $deep-blue;
-        background-color: $deep-blue;
-    }
 }
 .progress__marker--current {
     background-color: $teal;
@@ -161,6 +157,10 @@ body.lesson {
 .progress__marker--completed {
   background-color: $brown;
   border-color: $brown;
+  &:hover {
+      border-color: $deep-blue;
+      background-color: $deep-blue;
+  }
 }
 
 nav.overview {
