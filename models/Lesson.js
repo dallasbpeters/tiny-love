@@ -3,7 +3,8 @@ var Types = keystone.Field.Types;
 
 var Lesson = new keystone.List('Lesson', {
 	autokey: { from: 'name', path: 'key', unique: true },
-	sortable: true
+	sortable: true,
+	sortContext: 'Module:lessons'
 });
 
 Lesson.add({
@@ -16,5 +17,4 @@ Lesson.add({
 });
 
 Lesson.defaultColumns = 'module, state, sortOrder';
-Lesson.defaultSort = 'module sortOrder name';
 Lesson.register();

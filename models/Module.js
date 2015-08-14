@@ -9,7 +9,7 @@ Module.add({
 	name: { type: String, required: true }
 });
 
-Module.relationship({ path: 'lessons', ref: 'Lesson', path: 'module' });
+Module.relationship({ path: 'lessons', ref: 'Lesson', refPath: 'module' });
 Module.defaultColumns = 'name, sortOrder';
 
 Module.register();
