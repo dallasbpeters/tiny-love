@@ -15,5 +15,6 @@ Lesson.add({
 	supplemental: { type: Types.Html, wysiwyg: true, height: 200 }
 });
 
-Lesson.defaultColumns = 'module, state';
+Lesson.defaultColumns = 'module, state, sortOrder';
+Lesson.defaultSort = 'module sortOrder name';
 Lesson.register();

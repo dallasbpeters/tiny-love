@@ -10,5 +10,6 @@ Module.add({
 });
 
 Module.relationship({ path: 'lessons', ref: 'Lesson', path: 'module' });
+Module.defaultColumns = 'name, sortOrder';
 
 Module.register();
