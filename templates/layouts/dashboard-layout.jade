@@ -26,7 +26,11 @@ html
               a(href='/keystone/signout', data-tooltip="Sign Out") 
                 span.hide-text Sign Out
                 i.icon-basic_ban
-                //- i.icon-arrows_down_double
+            if user.canAccessKeystone
+              li
+                a(href='/keystone', data-tooltip="Admin")
+                  span.hide-text Keystone Admin
+                  i.icon-arrows_hamburger
       
         main.user-content(role="main")
             
