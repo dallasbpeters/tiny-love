@@ -15,7 +15,8 @@ User.add({
 	payed: { type: Types.Boolean, initial: false, required: false },
     completedLessons: { type: Types.Relationship, ref: 'Lesson', many: true },
     oneTimeLoginKey: { type: Types.Number, required: false, index: false },
-    surveyAnswer: { type: Types.Html, wysiwyg: true, height: 400 }
+    surveyAnswer: { type: Types.Html, wysiwyg: true, height: 400 },
+    createdAt: { type: Types.Date, initial: Date.now() }
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Is Admin', index: true }
 });
@@ -37,5 +38,5 @@ User.schema.virtual('canAccessKeystone').get(function() {
  * Registration
  */
 
-User.defaultColumns = 'name, email, isAdmin, payed';
+User.defaultColumns = 'name, email, isAdmin, payed, createdAt';
 User.register();
