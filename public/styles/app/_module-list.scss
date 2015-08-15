@@ -1,5 +1,5 @@
 .module-list {
-  max-width: 700px;
+  max-width: 600px;
 }
 .module-list__title {
   margin: 0;
@@ -24,18 +24,21 @@
 
 // States of modules
 .module-list__link--completed {
-  &:before {
+  box-shadow: 0 1px 2px rgba($deep-blue,.1);
+  h2:before {
     @extend .ion;
     content: $ionicon-var-arrows_check;
-    position: absolute;
-    left: 10px;
-    top: 10px;
     color: $green;
-    font-size: 3em;
+    font-size: 1.7em;
   }
 }
 .module-list__link--current {
-        color: $red;
+        h2:before {
+          @extend .ion;
+          content: $ionicon-var-arrows_right_double-31;
+          color: $red;
+          font-size: 1.5em;
+        }
 }
 .module-list__link--disabled {
   @include opacity(0.5);
