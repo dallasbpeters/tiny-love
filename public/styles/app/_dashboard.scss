@@ -60,3 +60,12 @@
   max-width: none;
   vertical-align: middle;
 }
+
+
+.completed {
+  @include torn-page;
+  max-width: 600px;
+  padding: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}

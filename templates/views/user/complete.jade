@@ -3,41 +3,51 @@ extends ../../layouts/dashboard-layout
 block content
     h1.page-title Complete
     
-    .single-form.complete
+    if showSurvey
     
-      if showSurvey
+      .single-form.complete
+            
+        form.single-form__form.single-form__form--groups-have-lines(method="post")
           
-          form.single-form__form(method="post")
-            
-            p Congratulations on completing the course.  We need you to fill in this final questionaire about your work.  After you finish this we will mail your certificate to you.
-            
-            .form-group
+          h2 Congratulations!
+          
+          p Please fill in this final questionaire about your work.  After you finish this we will mail your certificate to you.
+          
+          .form-group
+            p I have attended 3 births and collected good evaluations from the mother or another family member. (keep evaluations in your portfolio)
+            label 
               input(type="checkbox", name="I have attended 3 births and collected good evaluations from the mother or another family member", value="true")
-              span I have attended 3 births and collected good evaluations from the mother or another family member. (keep evaluations in your portfolio)
-                  
-            .form-group
+              | Yes, I have
+                
+          .form-group
+            p I have attended 3 births and completed the labor and birth record form for each. (keep evaluations in your portfolio)
+            label 
               input(type="checkbox", name="I have attended 3 births and completed the labor and birth record form for each", value="true")
-              span I have attended 3 births and completed the labor and birth record form for each. (keep evaluations in your portfolio)
-                  
-            .form-group
-              div I personally guarantee that all of the modules and all assignments above have been completed.
-              input(name="I guarantee that I have completed all modules", placeholder="please type your name as your signature", required)
-                      
-            .form-group
-              div I have read the Standards of Practice Commitment. I understand and agree to adhere to the Standards in my actions and profession as a TL Birth Doula.
-                      input(name="I understand and agree to adhere to the Standards in my actions and profession as a TL Birth Doula.", placeholder="please type your name as your signature", required)
-                  
-            .form-group
-              div Address to mail your certificate
-              textarea(name="Mailing address", style="width: 400px")
-            
-            .form-actions
-              button(type='submit').button.button--green Send
+              | Yes, I have
+                
+          .form-group
+            p I personally guarantee that all of the modules and all assignments above have been completed.
+            label Signature
+            input.signature(type="text" name="I guarantee that I have completed all modules", placeholder="Type your name as your signature", required)
+                    
+          .form-group
+            p I have read the Standards of Practice Commitment. I understand and agree to adhere to the Standards in my actions and profession as a TL Birth Doula.
+            label Signature
+            input.signature(type="text" name="I understand and agree to adhere to the Standards in my actions and profession as a TL Birth Doula.", placeholder="Type your name as your signature", required)
+                
+          .form-group
+            label Address to mail your certificate
+            textarea(name="Mailing address")
           
-      else
+          .form-actions
+            button.button.button--green(type='submit') Send
+            
+    else
+      .single-form
+        form.single-form__form
           h2 Certificate of Completion
           
           p You certificate will be mailed to you at the address you provided.  Thank you for training with us.  In order to make this training the best it can be, we'd appreciate it if you would take a few minutes and let us know about your experience.
           
           p
-            a(href="https://onedrive.live.com/survey?resid=3CAC87F679CF00CD!147&authkey=!AI-WSIhDcansipo", target="_blank") Experience Survey
+            a.button.button--teal(href="https://onedrive.live.com/survey?resid=3CAC87F679CF00CD!147&authkey=!AI-WSIhDcansipo", target="_blank") Tell us about your experience
