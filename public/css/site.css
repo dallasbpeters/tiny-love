@@ -754,6 +754,7 @@ html.remodal-is-locked {
   background-color: #313D4C;
   color: #ffffff;
   text-decoration: none;
+  text-shadow: none;
   padding: 0.4em 1.35em;
   border-radius: 2px;
   box-shadow: 0px 3px #090E16;
@@ -961,16 +962,16 @@ ul, ol {
     list-style-type: decimal; }
 
 .price {
-  color: #313D4C;
+  color: #4A984C;
   position: relative;
   top: .1em;
-  margin-left: .5em;
+  margin-left: .25em;
   display: inline-block;
-  -webkit-transform: scale(1.4) rotate(-3deg);
-  -moz-transform: scale(1.4) rotate(-3deg);
-  -ms-transform: scale(1.4) rotate(-3deg);
-  -o-transform: scale(1.4) rotate(-3deg);
-  transform: scale(1.4) rotate(-3deg); }
+  -webkit-transform: scale(1.2) rotate(-4deg);
+  -moz-transform: scale(1.2) rotate(-4deg);
+  -ms-transform: scale(1.2) rotate(-4deg);
+  -o-transform: scale(1.2) rotate(-4deg);
+  transform: scale(1.2) rotate(-4deg); }
   @media only screen and (max-width: 480px) {
     .price {
       -webkit-transform: scale(1.1) rotate(-3deg);
@@ -1041,17 +1042,20 @@ body.home {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: 12em 1em 4em 1em;
+  padding: 9em 1em 4em 1em;
   height: 96%;
   min-height: 600px; }
   @media only screen and (max-width: 480px) {
     .section--first {
-      padding: 8em 1.5em 3em 1.5em; } }
+      padding: 8em 1.5em 3em 1.5em;
+      min-height: none;
+      height: auto; } }
   .section--first > div {
     max-width: 800px; }
 
 .introduction {
-  color: white; }
+  color: white;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
   .introduction .main-cta {
     margin: 2.5em 0; }
     @media only screen and (max-width: 480px) {
@@ -1060,10 +1064,10 @@ body.home {
 
 .introduction--logo-white {
   display: block;
-  height: 80px;
-  width: 180px;
+  height: 86px;
+  width: 190px;
   text-indent: -5000px;
-  background-image: url("../../images/tiny-love-logo-full-white.svg");
+  background-image: url("../../images/tiny-love-logo-full-white-thick.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
@@ -1071,7 +1075,11 @@ body.home {
   left: 1em; }
   @media only screen and (max-width: 40em) {
     .introduction--logo-white {
-      height: 56px;
+      height: 70px;
+      width: 160px; } }
+  @media only screen and (max-width: 320px) {
+    .introduction--logo-white {
+      height: 60px;
       width: 140px; } }
 
 .introduction__access {
@@ -1087,17 +1095,20 @@ body.home {
 
 .introduction__headline {
   font-family: "Diehl Deco";
-  font-size: 4em;
+  font-size: 3.5em;
   margin-bottom: .4em; }
   @media only screen and (max-width: 480px) {
     .introduction__headline {
-      font-size: 2em; } }
+      font-size: 2.8em; } }
+  @media only screen and (max-width: 320px) {
+    .introduction__headline {
+      font-size: 2.6em; } }
 
 .introduction__subheadline {
   font-family: "Learning Curve Pro";
   text-align: center;
   line-height: .8;
-  font-size: 3.4em;
+  font-size: 3.5em;
   margin-bottom: 0;
   color: white; }
   @media only screen and (max-width: 480px) {
@@ -1148,6 +1159,13 @@ body.home {
   background-repeat: no-repeat;
   background-position: 50% 100%;
   padding-bottom: 4em; }
+  .requirements ul {
+    margin-bottom: 2em; }
+  .requirements li {
+    margin-bottom: .75em; }
+
+.tips h3 {
+  margin-bottom: .5em !important; }
 
 .books {
   background-image: url("../images/twig.svg");
