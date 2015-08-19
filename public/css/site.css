@@ -791,10 +791,10 @@ html.remodal-is-locked {
     background-color: #6fb771; }
 
 .button--teal {
-  background-color: #71B3A7;
+  background-color: #2DA38E;
   box-shadow: 0px 3px #327D6D; }
   .button--teal:hover {
-    background-color: #58a496; }
+    background-color: #248372; }
 
 .button--small {
   font-size: .8em;
@@ -887,9 +887,9 @@ h2 {
 
 h3 {
   font-family: "Learning Curve Pro";
-  font-size: 2.6em;
+  font-size: 2.9em;
   line-height: .7;
-  color: #71B3A7; }
+  color: #2DA38E; }
 
 .lesson-body h1, .lesson-body h2, .lesson-body h3, .lesson-body h4, .lesson-body h5, .lesson-body h6, .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
   font-family: "Merriweather", serif;
@@ -1270,8 +1270,8 @@ textarea {
   input[type="email"]:focus,
   input[type="password"]:focus,
   textarea:focus {
-    box-shadow: 0 0 10px rgba(113, 179, 167, 0.5);
-    border: 1px solid rgba(113, 179, 167, 0.5);
+    box-shadow: 0 0 10px rgba(45, 163, 142, 0.5);
+    border: 1px solid rgba(45, 163, 142, 0.5);
     outline: none;
     -webkit-transform: scale(1.03);
     -moz-transform: scale(1.03);
@@ -1579,7 +1579,7 @@ input[type="checkbox"] {
 
 .page-title {
   font-family: "Learning Curve Pro";
-  color: #71B3A7;
+  color: #2DA38E;
   font-size: 2.75em;
   margin-bottom: .25em; }
   @media only screen and (max-width: 420px) {
@@ -1605,7 +1605,7 @@ body.lesson {
     margin-top: 0;
     font-size: 2.5em;
     line-height: .7;
-    color: #71B3A7; }
+    color: #2DA38E; }
 
 .lesson-body {
   float: left;
@@ -1640,7 +1640,7 @@ body.lesson {
 .supplemental__title {
   font-size: 2.1em;
   margin-bottom: .75em;
-  color: #71B3A7;
+  color: #2DA38E;
   position: relative;
   font-family: "Learning Curve Pro"; }
   .supplemental__title:after {
@@ -1770,8 +1770,8 @@ body.lesson {
   border-radius: 500px; }
 
 .progress__marker--current {
-  background-color: #71B3A7;
-  border-color: #71B3A7; }
+  background-color: #2DA38E;
+  border-color: #2DA38E; }
 
 .progress__marker--completed {
   background-color: #C7BEB8;
