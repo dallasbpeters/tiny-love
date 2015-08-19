@@ -754,6 +754,7 @@ html.remodal-is-locked {
   background-color: #313D4C;
   color: #ffffff;
   text-decoration: none;
+  text-shadow: none;
   padding: 0.4em 1.35em;
   border-radius: 2px;
   box-shadow: 0px 3px #090E16;
@@ -1041,17 +1042,20 @@ body.home {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: 12em 1em 4em 1em;
+  padding: 9em 1em 4em 1em;
   height: 96%;
   min-height: 600px; }
   @media only screen and (max-width: 480px) {
     .section--first {
-      padding: 8em 1.5em 3em 1.5em; } }
+      padding: 8em 1.5em 3em 1.5em;
+      min-height: none;
+      height: auto; } }
   .section--first > div {
     max-width: 800px; }
 
 .introduction {
-  color: white; }
+  color: white;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
   .introduction .main-cta {
     margin: 2.5em 0; }
     @media only screen and (max-width: 480px) {
@@ -1071,7 +1075,11 @@ body.home {
   left: 1em; }
   @media only screen and (max-width: 40em) {
     .introduction--logo-white {
-      height: 56px;
+      height: 70px;
+      width: 160px; } }
+  @media only screen and (max-width: 320px) {
+    .introduction--logo-white {
+      height: 60px;
       width: 140px; } }
 
 .introduction__access {
@@ -1087,17 +1095,20 @@ body.home {
 
 .introduction__headline {
   font-family: "Diehl Deco";
-  font-size: 4em;
+  font-size: 3.5em;
   margin-bottom: .4em; }
   @media only screen and (max-width: 480px) {
     .introduction__headline {
-      font-size: 2em; } }
+      font-size: 2.8em; } }
+  @media only screen and (max-width: 320px) {
+    .introduction__headline {
+      font-size: 2.6em; } }
 
 .introduction__subheadline {
   font-family: "Learning Curve Pro";
   text-align: center;
   line-height: .8;
-  font-size: 3.4em;
+  font-size: 3.5em;
   margin-bottom: 0;
   color: white; }
   @media only screen and (max-width: 480px) {
