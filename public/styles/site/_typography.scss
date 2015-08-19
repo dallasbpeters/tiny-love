@@ -86,12 +86,12 @@ ul, ol {
 
 
 .price {
-    color: $deep-blue;
+    color: $green-dark;
     position: relative;
     top: .1em;
-    margin-left: .5em;
+    margin-left: .25em;
     display: inline-block;
-    @include transform(scale(1.4) rotate(-3deg));
+    @include transform(scale(1.2) rotate(-4deg));
     @media only screen and (max-width: 480px) {
       @include transform(scale(1.1) rotate(-3deg));
       margin-left: .2em;

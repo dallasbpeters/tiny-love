@@ -962,16 +962,16 @@ ul, ol {
     list-style-type: decimal; }
 
 .price {
-  color: #313D4C;
+  color: #4A984C;
   position: relative;
   top: .1em;
-  margin-left: .5em;
+  margin-left: .25em;
   display: inline-block;
-  -webkit-transform: scale(1.4) rotate(-3deg);
-  -moz-transform: scale(1.4) rotate(-3deg);
-  -ms-transform: scale(1.4) rotate(-3deg);
-  -o-transform: scale(1.4) rotate(-3deg);
-  transform: scale(1.4) rotate(-3deg); }
+  -webkit-transform: scale(1.2) rotate(-4deg);
+  -moz-transform: scale(1.2) rotate(-4deg);
+  -ms-transform: scale(1.2) rotate(-4deg);
+  -o-transform: scale(1.2) rotate(-4deg);
+  transform: scale(1.2) rotate(-4deg); }
   @media only screen and (max-width: 480px) {
     .price {
       -webkit-transform: scale(1.1) rotate(-3deg);
@@ -1159,6 +1159,13 @@ body.home {
   background-repeat: no-repeat;
   background-position: 50% 100%;
   padding-bottom: 4em; }
+  .requirements ul {
+    margin-bottom: 2em; }
+  .requirements li {
+    margin-bottom: .75em; }
+
+.tips h3 {
+  margin-bottom: .5em !important; }
 
 .books {
   background-image: url("../images/twig.svg");
