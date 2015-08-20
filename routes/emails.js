@@ -51,7 +51,8 @@ module.exports = {
 
         callback(null, {
             userLink: 'http://site.com/user',
-            email: 'user@example.com'
+            email: 'user@example.com',
+			name: 'Mark Bradshaw'
         });
     }
 
