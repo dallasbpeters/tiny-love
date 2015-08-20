@@ -45,7 +45,14 @@ module.exports = {
 		callback(null, {
 			firstName: 'FirstName'
 		});
+	},
 
-	}
+    'complete': function(req, res, callback) {
+
+        callback(null, {
+            userLink: 'http://site.com/user',
+            email: 'user@example.com'
+        });
+    }
 
 };
