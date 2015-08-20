@@ -7,7 +7,7 @@ block content
     
       .single-form.complete
             
-        form.single-form__form.single-form__form--groups-have-lines(method="post")
+        form.single-form__form.single-form__form--groups-have-lines(method="post", onSubmit="return document.forms[0].checkValidity();")
           
           h2 Congratulations!
           
