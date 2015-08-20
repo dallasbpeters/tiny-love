@@ -16,13 +16,13 @@ block content
           .form-group
             p I have attended 3 births and collected good evaluations from the mother or another family member. (keep evaluations in your portfolio)
             label 
-              input(type="checkbox", name="I have attended 3 births and collected good evaluations from the mother or another family member", value="true")
+              input(type="checkbox", name="I have attended 3 births and collected good evaluations from the mother or another family member", value="true", required)
               | Yes, I have
                 
           .form-group
             p I have attended 3 births and completed the labor and birth record form for each. (keep evaluations in your portfolio)
             label 
-              input(type="checkbox", name="I have attended 3 births and completed the labor and birth record form for each", value="true")
+              input(type="checkbox", name="I have attended 3 births and completed the labor and birth record form for each", value="true", required)
               | Yes, I have
                 
           .form-group
@@ -37,7 +37,7 @@ block content
                 
           .form-group
             label Address to mail your certificate
-            textarea(name="Mailing address")
+            textarea(name="Mailing address", required)
           
           .form-actions
             button.button.button--green(type='submit') Send
