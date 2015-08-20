@@ -50,7 +50,7 @@ exports = module.exports = function(req, res) {
                 email: 'tinylove@beadoula.com'
             },
             subject: 'User completed the Tiny Love course',
-            email: req.body.email,
+            email: currentUser.email,
             userLink: 'http://www.beadoula.com/keystone/users/' + req.user._id
         }, function(err) {
 
