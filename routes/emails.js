@@ -43,7 +43,7 @@ module.exports = {
 	'signup': function(req, res, callback) {
 
 		callback(null, {
-			firstName: 'FirstName'			
+			firstName: 'FirstName'
 		});
 
 	}
