@@ -23,11 +23,16 @@ exports = module.exports = function(req, res) {
 		return;
 	}
 
+	locals.showSurvey = false;
+
     view.on('init', function(next) {
 
         keystone.list('User').model.findOne({_id: req.user._id}).exec(function(err, result) {
 
             currentUser = result;
+			if (currentUser.surveyAnswer !== undefined && currentUser.surveyAnswer !== '') {
+                locals.showSurvey = true;
+            }
             next(err);
         });
     });

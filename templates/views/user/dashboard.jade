@@ -9,8 +9,12 @@ block content
           
           p Well done! You've worked hard through the course. You can always come back here and review any of the course materials.
           
-          p
-              a.button.button--teal(href='/user/complete') Get Your Certificate
+          if !showSurvey
+              p
+                a.button.button--teal(href='/user/complete') Get Your Certificate
+          else 
+              p
+                a.button.button--teal(href="https://onedrive.live.com/survey?resid=3CAC87F679CF00CD!147&authkey=!AI-WSIhDcansipo", target="_blank") Tell us about your experience
 
     ul.module-list
         if modules.length
