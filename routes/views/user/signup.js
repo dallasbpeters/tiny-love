@@ -116,12 +116,13 @@ exports = module.exports = function(req, res) {
 				url: 'https://www.google.com/recaptcha/api/siteverify',
 				form: form
 			}, function optionalCallback(err, httpResponse, body) {
+				console.log(body);
 
 				locals.rcErr = err;
 				locals.rcBody = body;
 
 				if (req.headers.host.indexOf('localhost') === -1 && (err || !body.success)) {
-					req.flash('error', 'There was a problem validating your information.  Please try again or contact us. (' + req.headers.host + '-' + (err ? err.toString() : '') + '-' + body.success + ')');
+					req.flash('error', 'There was a problem validating your information.  Please try again or contact us. (' + req.headers.host + '-' + (err ? err.toString() : '') + '-' + JSON.stringify(body) + ')');
 					return next();
 				}
 				else {
