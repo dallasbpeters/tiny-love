@@ -116,6 +116,7 @@ exports = module.exports = function(req, res) {
 				url: 'https://www.google.com/recaptcha/api/siteverify',
 				form: form
 			}, function optionalCallback(err, httpResponse, body) {
+				body = JSON.parse(body);
 				console.log(body);
 
 				locals.rcErr = err;
