@@ -121,7 +121,7 @@ exports = module.exports = function(req, res) {
 				locals.rcBody = body;
 
 				if (req.headers.host.indexOf('localhost') === -1 && (err || !body.sucess)) {
-					req.flash('error', 'There was a problem validating your information.  Please try again or contact us.');
+					req.flash('error', 'There was a problem validating your information.  Please try again or contact us. (' + req.headers.host + ' ' + err.toString() + ' ' + body.success + ')');
 					return next();
 				}
 				else {
