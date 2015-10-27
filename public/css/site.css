@@ -1010,6 +1010,19 @@ ul, ol {
 .alert--danger {
   background-color: #ee6556; }
 
+.promo-banner {
+  background-color: #ee6556;
+  color: white;
+  padding: 1em;
+  box-shadow: 0 2px 8px rgba(9, 14, 22, 0.3); }
+  .promo-banner p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 300; }
+    @media only screen and (max-width: 480px) {
+      .promo-banner p {
+        font-size: .9rem; } }
+
 body.home {
   text-align: center; }
 
