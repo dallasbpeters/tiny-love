@@ -20,12 +20,14 @@ exports = module.exports = function(req, res) {
 	//https://developer.paypal.com/developer/ipnSimulator
 	// Now, send out a POST to paypal to verify what we got.
 	var postreq = 'cmd=_notify-validate';
+	console.log('pay_check', req.body);
 	for (var key in req.body) {
 		if (req.body.hasOwnProperty(key)) {
 			var value = querystring.escape(req.body[key]);
 			postreq = postreq + '&' + key + '=' + value;
 		}
 	}
+	console.log('postreq', postreq);
 
 	var options = {
 		url: 'https://www.paypal.com/cgi-bin/webscr',
@@ -42,6 +44,7 @@ exports = module.exports = function(req, res) {
 
 	request(options, function callback(error, response, body) {
 
+		console.log('got back', response.statusCode, body);
 		if (!error && response.statusCode === 200) {
 			if (body.substring(0, 8) === 'VERIFIED') {
 				var paymentStatus = req.body.payment_status;
