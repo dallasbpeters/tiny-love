@@ -26,7 +26,7 @@ html
               a(href='/keystone/signout', data-tooltip="Sign Out") 
                 span.hide-text Sign Out
                 i.icon-basic_ban
-            if user.canAccessKeystone
+            if user && user.canAccessKeystone
               li
                 a(href='/keystone', data-tooltip="Admin")
                   span.hide-text Keystone Admin

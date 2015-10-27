@@ -22,7 +22,7 @@ block content
                 //-         li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
                 ul.introduction__access
                     if user
-                        if user.canAccessKeystone
+                        if user && user.canAccessKeystone
                             li: a(href='/keystone') Open Admin
                         li: a(href='/keystone/signout') Sign Out
                     else
