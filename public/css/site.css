@@ -238,7 +238,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -755,7 +756,7 @@ html.remodal-is-locked {
   color: #ffffff;
   text-decoration: none;
   text-shadow: none;
-  padding: 0.4em 1.35em;
+  padding: .4em 1.35em;
   border-radius: 2px;
   box-shadow: 0px 3px #090E16;
   position: relative;
@@ -798,7 +799,7 @@ html.remodal-is-locked {
 
 .button--small {
   font-size: .8em;
-  padding: 0.4em 1.15em; }
+  padding: .4em 1.15em; }
 
 img {
   max-width: 100%; }
@@ -883,7 +884,7 @@ h1, h2, h4, h5, h5, h6 {
   font-family: "Diehl Deco"; }
 
 h2 {
-  font-size: 1.875em; }
+  font-size: 1.375em; }
 
 h3 {
   font-family: "Learning Curve Pro";
@@ -896,7 +897,7 @@ h3 {
   font-weight: 600;
   color: #313D4C;
   line-height: 1.3;
-  margin: 0.5em 0 1em 0; }
+  margin: .5em 0 1em 0; }
 
 .lesson-body h1, .main-content h1 {
   font-size: 1.6em; }
@@ -1155,7 +1156,7 @@ body.home {
 .scroll-instructions__text {
   font-size: 1.1em;
   font-weight: 300;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 .5em 0;
   text-align: center !important; }
   @media only screen and (max-width: 480px) {
     .scroll-instructions__text {
@@ -1219,7 +1220,7 @@ body.home {
   text-transform: uppercase;
   font-size: .75em;
   letter-spacing: .08em;
-  padding: 0.5em 3em;
+  padding: .5em 3em;
   -webkit-transform: rotate(-35deg);
   -moz-transform: rotate(-35deg);
   -ms-transform: rotate(-35deg);
@@ -1588,7 +1589,7 @@ input[type="checkbox"] {
   padding: 1.2em 2.2em 1.2em 7em; }
   @media only screen and (max-width: 420px) {
     .user-content {
-      padding: 80px 0.6em 0.6em 0.6em; } }
+      padding: 80px .6em .6em .6em; } }
 
 .page-title {
   font-family: "Learning Curve Pro";
@@ -1729,7 +1730,7 @@ body.lesson {
 
 .progress__module-name {
   font-size: 1em;
-  margin: 0 0 0.5em 0; }
+  margin: 0 0 .5em 0; }
 
 .progress__list {
   padding-top: .4em; }
@@ -1750,7 +1751,7 @@ body.lesson {
   margin: .4em;
   position: relative; }
   .progress__list-item [data-tooltip]:before {
-    padding: 0.5em 1em;
+    padding: .5em 1em;
     top: -5px;
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
@@ -1934,7 +1935,7 @@ ul.lessons-list {
 
 .page__article {
   max-width: 800px;
-  margin: 3em auto;
+  margin: 1em auto 3em;
   padding: 3em 2.5em 2.5em 2.5em;
   background-color: white;
   box-shadow: 0 1px 3px rgba(49, 61, 76, 0.2); }
