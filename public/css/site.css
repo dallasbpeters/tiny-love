@@ -1430,13 +1430,18 @@ input[type="checkbox"] {
 
 .made-in {
   font-family: "Learning Curve Pro";
-  font-size: 1.8em;
+  font-size: 2em;
   line-height: .8;
-  margin: 0;
+  margin: 0 0 .8em 0;
   text-align: center !important; }
   @media only screen and (max-width: 480px) {
     .made-in {
       font-size: 1.5em; } }
+
+.contact {
+  font-size: .9em; }
+  .contact a {
+    color: white; }
 
 .user-navigation {
   background-color: white;

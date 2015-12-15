@@ -13,11 +13,18 @@
 
 .made-in {
     font-family: $cursive;
-    font-size: 1.8em;
+    font-size: 2em;
     line-height: .8;
-    margin: 0;
+    margin: 0 0 .8em 0;
     text-align: center !important;
     @media only screen and (max-width: 480px) {
       font-size: 1.5em;
+    }
+}
+
+.contact {
+    font-size: .9em;
+    a {
+        color: white;
     }
 }
