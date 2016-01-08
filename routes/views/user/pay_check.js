@@ -29,6 +29,21 @@ exports = module.exports = function(req, res) {
 	}
 	console.log('postreq', postreq);
 
+	new keystone.Email('payment').send({
+		to: 'mark.bradshaw@gmail.com',
+		from: {
+			name: 'Tiny Love',
+			email: 'tinylove@beadoula.com'
+		},
+		subject: 'New Tiny Love Payment',
+		content: JSON.stringify(req.body)
+	}, function(err) {
+
+		if (err) {
+			console.log('email error', err);
+		}
+	});
+
 	var options = {
 		url: 'https://www.paypal.com/cgi-bin/webscr',
 		method: 'POST',
