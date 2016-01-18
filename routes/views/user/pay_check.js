@@ -60,6 +60,22 @@ exports = module.exports = function(req, res) {
 	request(options, function callback(error, response, body) {
 
 		console.log('got back', response.statusCode, body);
+
+		new keystone.Email('payment').send({
+			to: 'mark.bradshaw@gmail.com',
+			from: {
+				name: 'Tiny Love',
+				email: 'tinylove@beadoula.com'
+			},
+			subject: 'New Tiny Love Payment Response',
+			content: 'status' + response.statusCode + ' ' + JSON.stringify(body)
+		}, function(err) {
+
+			if (err) {
+				console.log('email error', err);
+			}
+		});
+
 		if (!error && response.statusCode === 200) {
 			if (body.substring(0, 8) === 'VERIFIED') {
 				var paymentStatus = req.body.payment_status;
