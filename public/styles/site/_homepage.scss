@@ -72,7 +72,7 @@ body.home {
     color: white;
     text-shadow: 1px 2px 2px rgba(0,0,0,0.4);
     .main-cta {
-        margin: 2.5em 0;
+        margin: 1.6rem 0;
         @media only screen and (max-width: 480px) {
           margin: 1.5em 0;
         }
@@ -140,12 +140,13 @@ body.home {
 
 .scroll-instructions {
   background: rgba(28,32,29,0.60);
+  color: #fff;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 5000;
-  padding: 2em 2em 1em 2em;
+  padding: 1.2em 1.2em 1em 1.2em;
   @include transition(all 300ms ease-in-out);
   @media only screen and (max-width: 480px) {
     padding: 1em;
@@ -157,18 +158,25 @@ body.home {
     @include opacity(0);
     z-index: -1
   }
-  @media only screen and (max-height: 43em) {
-    display:none;
-  }
 }
 .scroll-instructions__text {
-    font-size: 1.1em;
+    font-size: 1rem;
     font-weight: 300;
-    margin: 0 0 .5em 0;
+    margin: 0;
     // text-shadow: $text-shadow-style;
     text-align: center !important;
     @media only screen and (max-width: 480px) {
       display: none;
+    }
+}
+
+// Let's tweak the font size for smaller screens so that the scroll message can be seen.
+@media only screen and (max-height: 38em) {
+    .introduction__headline {
+        font-size: 3rem;
+    }
+    .introduction__subheadline {
+        font-size: 2.7rem;
     }
 }
 
