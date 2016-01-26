@@ -753,7 +753,7 @@ html.remodal-is-locked {
   font-family: "Diehl Deco";
   font-size: 1.2rem;
   background-color: #313D4C;
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   text-shadow: none;
   padding: .4em 1.35em;
@@ -1050,6 +1050,8 @@ body.home {
   .section.section--blue {
     background-color: #090E16;
     color: white; }
+  .section a {
+    color: #ee6556; }
 
 .section--first {
   background-image: url("../../images/home-flower-darker.jpg");
