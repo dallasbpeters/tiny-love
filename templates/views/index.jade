@@ -10,6 +10,11 @@ block content
     //- .promo-banner
     //-     p Celebrate the holidays with a 40% discount!
     
+    if !user
+        .scroll-instructions
+            p.scroll-instructions__text Still curious about becoming a doula? Keep scrolling.
+            i.icon-arrows_down_double
+    
     .section.section--first
             .introduction
 
@@ -29,17 +34,14 @@ block content
                         li: a.button.button--teal(href='/user/signin') Sign In
 
                 h2.introduction__headline 
-                  | Imagine being there for <br />
-                  | #[em that] moment
+                  | Imagine being there <br />
+                  | for #[em that] moment
                 h3.introduction__subheadline 
                   | Prepare to change the world, <br />
                   | with Tiny Love
                 
                 if !user
                     a(href='/user/signup').main-cta.button.button--red Signup for the program!
-                    .scroll-instructions
-                      p.scroll-instructions__text Still curious about becoming a doula? Keep scrolling.
-                      i.icon-arrows_down_double
                 else 
                     a(href='/user/dashboard').main-cta.button.button--red Go to my dashboard
 
