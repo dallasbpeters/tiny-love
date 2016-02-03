@@ -753,7 +753,7 @@ html.remodal-is-locked {
   font-family: "Diehl Deco";
   font-size: 1.2rem;
   background-color: #313D4C;
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   text-shadow: none;
   padding: .4em 1.35em;
@@ -1050,6 +1050,8 @@ body.home {
   .section.section--blue {
     background-color: #090E16;
     color: white; }
+  .section a {
+    color: #ee6556; }
 
 .section--first {
   background-image: url("../../images/home-flower-darker.jpg");
@@ -1071,7 +1073,7 @@ body.home {
   color: white;
   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
   .introduction .main-cta {
-    margin: 2.5em 0; }
+    margin: 1.6rem 0; }
     @media only screen and (max-width: 480px) {
       .introduction .main-cta {
         margin: 1.5em 0; } }
@@ -1131,12 +1133,13 @@ body.home {
 
 .scroll-instructions {
   background: rgba(28, 32, 29, 0.6);
+  color: #fff;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 5000;
-  padding: 2em 2em 1em 2em;
+  padding: 1.2em 1.2em 1em 1.2em;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out; }
@@ -1149,18 +1152,21 @@ body.home {
     opacity: 0;
     filter: alpha(opacity=0);
     z-index: -1; }
-  @media only screen and (max-height: 43em) {
-    .scroll-instructions {
-      display: none; } }
 
 .scroll-instructions__text {
-  font-size: 1.1em;
+  font-size: 1rem;
   font-weight: 300;
-  margin: 0 0 .5em 0;
+  margin: 0;
   text-align: center !important; }
   @media only screen and (max-width: 480px) {
     .scroll-instructions__text {
       display: none; } }
+
+@media only screen and (max-height: 38em) {
+  .introduction__headline {
+    font-size: 3rem; }
+  .introduction__subheadline {
+    font-size: 2.7rem; } }
 
 .how-it-works {
   background-image: url("../images/cherry-blossom.svg");
