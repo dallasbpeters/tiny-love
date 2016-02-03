@@ -82,7 +82,12 @@ exports = module.exports = function(req, res) {
 				var payerEmail = req.body.payer_email;
 				console.log('got a good payment:', paymentStatus, '-', payerEmail);
 
-				keystone.list('User').model.findOne({email: payerEmail}, function(err, user) {
+				keystone.list('User').model.findOne({
+					$or: [
+						{ email: payerEmail },
+						{ _id: req.user._id }
+					]
+				}, function(err, user) {
 
 					if (err || !user) {
 						console.log('The payment went through, but there was a user error.');
