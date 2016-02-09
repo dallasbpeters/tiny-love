@@ -47,6 +47,7 @@ exports = module.exports = function(app) {
     app.all('/user/signin', routes.views.user.signin);
 	app.all('/user/signup', routes.views.user.signup);
 	app.all('/user/pay', routes.views.user.pay);
+	app.all('/user/payments', routes.views.user.payments);
 	app.all('/user/pay_check', routes.views.user.pay_check);
 	app.get('/user/dashboard', routes.views.user.dashboard);
 	app.all('/user/account', routes.views.user.account);
