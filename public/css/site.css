@@ -1273,6 +1273,9 @@ body.home {
 .get-started .button {
   margin-bottom: 1.25rem; }
 
+.addthis_sharing_toolbox {
+  margin-bottom: 1.25rem; }
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
