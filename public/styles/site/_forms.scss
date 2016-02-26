@@ -134,6 +134,9 @@ input[type="checkbox"] {
 }
 .single-form__form {
     padding: 2.2em;
+    & ~ form {
+        padding-top: 0;
+    }
 }
 
 

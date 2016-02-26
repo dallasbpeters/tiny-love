@@ -1419,6 +1419,8 @@ input[type="checkbox"] {
 
 .single-form__form {
   padding: 2.2em; }
+  .single-form__form ~ form {
+    padding-top: 0; }
 
 .buy-button {
   text-align: center;
