@@ -11,13 +11,12 @@ block content
 			p We’ve created an account for you. Now let’s take care of the payment and get you started on the course materials!
 			
 			input(type="hidden", name="cmd", value="_s-xclick")
-			
 			input(type="hidden", name="hosted_button_id", value="FNYRG7ZQ5N57G")
-			
 			input.buy-button(type="image", src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/buy-logo-large.png", border="0", name="submit", alt="Buy now with PayPal")
-			
 			img(alt="", border="0", src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif", width="1", height="1")
 			
+		form.single-form__form(action="https://www.paypal.com/cgi-bin/webscr", method="post", target="_top")
+		
 			p We gladly accept payments as well! We ask that you pay $115 at checkout and then three equal payments of $115 over the next three months. Once we recive your initial payment you will have access to course materials within 24 hours.
 			
 			input(type='hidden', name='cmd', value='_s-xclick')
